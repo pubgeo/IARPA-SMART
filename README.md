@@ -1,12 +1,12 @@
 # IARPA SMART Overview
 The [IARPA Space-Based Machine Automated Recognition Technique (SMART) program](https://www.iarpa.gov/research-programs/smart) 
 
-For more information on the problem formulation and the dataset, please see our [publication](https://doi.org/10.1117/12.2663071). A video recording of the presentation of this paper can be found [here](https://doi.org/10.1117/12.2663071) as well. 
+For more information on the problem formulation and the dataset, please see our [publication](https://doi.org/10.1117/12.2663071). A video recording of the presentation of this paper can be found [here](https://doi.org/10.1117/12.2663071) as well. For a copy of the paper, 
 
 
 # About this repository
 
-The Johns Hopkins University Applied Physics Laboratory (JHU/APL)  led the development of a large dataset containing spatio-temporal annotations of large scale heavy construction activity. 
+The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large dataset containing spatio-temporal annotations of large scale heavy construction activity. 
 
 TODO: ADD MORE
 
@@ -26,8 +26,11 @@ TODO: ADD MORE
 
 ### File Format Specifications
 
+The IARPA SMART Heavy Construction Annotation Dataset 
+
 ## Obtaining the Satellite Imagery
 
+See [here](documentation/obtain_imagery.md) for more information on obtaining the satellite imagery corresponding to this dataset. 
 
 # Terms and Conditions
 The contents of this public dataset are provided under the <____________> license. 
@@ -52,6 +55,9 @@ This work was supported by the Office of the Director of National Intelligence (
 Development of the dataset was also supported by: 
 - CrowdAI
 - iMERIT
+
+# Contact the authors
+Please reach out to pubgeo@jhuapl.edu with any questions or comments. 
 
 
 
