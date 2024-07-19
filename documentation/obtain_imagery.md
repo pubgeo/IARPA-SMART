@@ -32,10 +32,11 @@ The use of [SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en) facil
 |----|----|----|----|
 | Landsat 8<br>Collection 2 Level 1 | https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l1/items | <div align="center">COG*</div> | <div align="center">us-west-2</div> |
 | Landsat 8<br>Collection 2 Level 2 | https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items | <div align="center">COG*</div> | <div align="center">us-west-2</div> |
-| Sentinel 2<br>Level 1C | https://earth-search.aws.element84.com/v1/collections/sentinel-2-l1c/items, <br> https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l1c/items (retired) | <div align="center">JPEG 2000</div> | <div align="center">eu-central-1</div> |
-| Sentinel 2<br>Level 2A | https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items, <br> https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a/items (retired) | <div align="center">JPEG 2000</div> | <div align="center">eu-central-1</div> |
+| Sentinel 2<br>Level 1C | https://earth-search.aws.element84.com/v1/collections/sentinel-2-l1c/items, <br> https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l1c/items** | <div align="center">JPEG 2000</div> | <div align="center">eu-central-1</div> |
+| Sentinel 2<br>Level 2A | https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items, <br> https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a/items** | <div align="center">JPEG 2000</div> | <div align="center">eu-central-1</div> |
 
-*[COG: Cloud Optimizied GeoTIFF Format Description](https://www.usgs.gov/media/files/landsat-cloud-optimized-geotiff-data-format-control-book)
+- *[COG: Cloud Optimizied GeoTIFF Format Description](https://www.usgs.gov/media/files/landsat-cloud-optimized-geotiff-data-format-control-book)
+- **The Sentinel 2 v0 STAC is retired now, but was used for most annotations, and may occasionally have images that v1 does not
 
 Examples demonstrating proper calls to the STAC endpoints can be found in (TODO: INSERT LINK HERE). We have also included requirements (TODO: INSERT LINK HERE) for the environment to run the examples.
 
