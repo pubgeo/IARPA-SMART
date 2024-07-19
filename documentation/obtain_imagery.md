@@ -36,7 +36,7 @@ The use of [SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en) facil
 | Sentinel 2<br>Level 2A | https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items, <br> https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a/items** | <div align="center">JPEG 2000</div> | <div align="center">eu-central-1</div> |
 
 - *[COG: Cloud Optimizied GeoTIFF Format Description](https://www.usgs.gov/media/files/landsat-cloud-optimized-geotiff-data-format-control-book)
-- **The Sentinel 2 v0 STAC is retired now, but was used for most annotations, and may occasionally have images that v1 does not
+- **The Sentinel 2 v0 STAC catalog is retired now, but was used for most annotations, and may occasionally have images that v1 does not
 
 Examples demonstrating proper calls to the STAC endpoints can be found in (TODO: INSERT LINK HERE). We have also included requirements (TODO: INSERT LINK HERE) for the environment to run the examples.
 
