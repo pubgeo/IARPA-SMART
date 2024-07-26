@@ -1,6 +1,6 @@
 This is the schema specification for a _Site Model_. [TODO: Link to JSON Schema.](TODO: FIX)
 
-_Site models_ describe all observed activity in a given site or activity both spatially and temporally. One _site model_ is produced for each activity/site.
+_Site models_ describe all observed activity in a given site/activity, both spatially and temporally. One _site model_ is produced for each activity/site.
 
 A _Site Model_ is also a FeatureCollection, which means at the top level it must define the keys type and features. Unlike the Region Model, a Site Model’s two features are 'site' and 'observation'.
 
