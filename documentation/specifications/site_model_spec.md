@@ -49,13 +49,9 @@ Versioning will use a Semantic Versioning construct (MAJOR.MINOR.PATCH). Updates
 
 Incrementation indicates a single operation has taken place, not that a single modification has taken place. For example, a task that added three observations to a file versioned 1.0.0 would change the semantic version to 1.1.0, not to 1.3.0.
 
-The test harness saves this attribute to the database.
-
 ### `mgrs` (string)
 
 This is the \[MGRS\](https://en.wikipedia.org/wiki/Military_Grid_Reference_System grid ID at the 100km precision level for the region’s centroid. For non-polar regions, the grid zone designator should be zero-padded e.g. rather than `4QFJ` you would use `04QFJ`. Accordingly, non-polar regions should have a five-letter MGRS string, two numerics followed by three alphabetics. Polar regions should have only three alphabetics.
-
-The test harness saves this attribute to the database.
 
 ### `status` (string)
 
@@ -67,7 +63,7 @@ This value may be `null` ,or a datestring of the format `"YYYY-MM-DD"`.
 
 If it is a datestring, it corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the (TODO: UPDATE[canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types)).
 
-NOTE: This date is not the same as the observed start of the activity described by the site model. It is simply the very first observation noted in the annotation (ground truth) file, which could be 'No Activiy' (prior to activity starting). 
+NOTE: This date is not the same as the observed start of the activity described by the site model. It is simply the very first observation noted in the annotation (ground truth) file, which could be 'No Activity' (prior to activity starting). 
 
 ### `end_date` (string or null)
 
@@ -119,7 +115,7 @@ NOTE: In early versions of the site model schema, a `misc_info` property was def
 
 # Observation Feature
 
-An _Observation Feature_ corresponds to a specific observation made on a specific date associated with a specific site activity. Unlike all other defined features, the Obersvation Feature's geometry is of type **MultiPolygon**.
+An _Observation Feature_ corresponds to a specific observation made on a specific date associated with a specific site activity. Unlike all other defined features, the Observation Feature's geometry is of type **MultiPolygon**.
 
 The following properties must all be defined for an _Observation Feature_.
 
@@ -152,6 +148,8 @@ A best practice for this property would be to use file link to the artifact in q
 This value must be one of the strings `["Landsat 8", "Sentinel-2", "WorldView", "Planet"]`, or `null`.
 
 Name of satellite sensor platform associated with this observation. If this observation is not associated with a particular sensor, then this value is to be set to `null`.
+
+### Note
 
 The following fields are all comma-space-separated formatted strings, owing to technology use decisions. A comma-space separated string does not contain quotes or other string delimiters, and indicates the break between adjacent values by use of the substring `", "`. For example, the command-space-separated form of the list `["one", "two", "three"]` would look like `"one, two, three"`, while the comma-space-separated form of the list `["one"]` would look like `"one"`.
 
