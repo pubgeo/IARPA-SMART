@@ -67,7 +67,6 @@ This must be one of the three strings `["empty", "annotation", "proposed"]`
 </tr>
 <tr>
 <td>'annotation'</td>
-<td>T&E Only</td>
 <td>
 
 Indicates that the region model contains annotated (ground truth) site models.
@@ -117,7 +116,7 @@ As with a Region, a Site Summary is expected to be a Polygon, and may contain vo
 
 Site Summary features within the Region Model are summaries of Site Models. All of the information herein should be extracted directly from the corresponding Site Model.
 
-The following is a list of all properties defined within a Site Summary feature's `properties`. With one exception, they are all **mandatory.**
+The following is a list of all properties defined within a Site Summary feature's `properties`. Unless explicitly noted, they are all **mandatory.**
 
 ### `type` (string)
 
