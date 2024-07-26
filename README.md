@@ -10,15 +10,20 @@ The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the develo
 
 This repository contains the annotation dataset (found in `annotations/`) along with [instructions for how to obtain some of the imagery](documentation/obtain_imagery.md) in which these activities can be observed. Also included here are useful utilities (found in `utilities/`) to help get started and make use of the dataset. 
 
+NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing. 
+
 ## Terminology
 
 - **Observation**:
   - A single image capturing the actitivy of interest on a specific day. A day is the most granular time-scale considered by SMART
+
 - **Region**: 
   -  An area of interest defining spatial bounds for processing and annotation
+
 - **Region Model**:
   - A data format that represents a region's spatial and temporal bounds
-- Site / Site Boundary: 
+
+- **Site / Site Boundary**: 
   - A geographical area defining the spatial boundaries of large-scale change (anthropogenic or not). 
   - This is the fundamental unit of activity that SMART is focused on; it is what human annotators will be labeling and what algorithms are expected to detect and classify. 
   - For SMART, sites of interest must be larger than 8000 m². (Note that this size is in reference to the entire site area, not the objects within the site.). 
@@ -27,6 +32,7 @@ This repository contains the annotation dataset (found in `annotations/`) along 
 - **Sub-site / Sub-site Boundary**: 
   - Used to indicate that an area within the site boundary is in a different activity phase as the surrounding or neighboring plots of land
   - Sub-site boundaries are only required _**if and only if**_ the site is exhibiting multiple activity phases in a single time slice
+
 - **"Cleared" regions**: 
   - A region is said to be "cleared" when all activity (positive, negative, ignore) has been labeled and site models for each activity have been generated. Clearing regions is necessary for evaluation purposes.
 
@@ -34,11 +40,23 @@ TODO: Add an image of a region with sites
 
 ## Heavy Construction Annotation Dataset
 
-For the purposes of the IARPA SMART problem formulation, heavy construction activity is defined as activity related to the construction of 
+For the purposes of the IARPA SMART problem formulation, heavy construction activity is defined as any activity related to the construction of large scale buildings and associated infrastructure. 
 
-Note that for this problem, we are interested in spatially and temporally localizing the bounds of all construction related activity. This means that we are 
+Note that for this application, we are interested in spatially and temporally localizing the bounds of _all_ construction related activity. This means that we are not simply interested in the footprints of the buildings alone (as many remote sensing applications and existing benchmark datasets are). Instead, we consider all activity associated with the construction to be part of the activity including, but not limited to, preparation of the entire plot of land undergoing change and being used to support the construction activity or facilities and infrastructure that support the use of the final facility/buildings (e.g. parking lots associated with the buildings). 
 
-Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity. 
+Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (Heavy Construction for which we intend algorithms to detect) and negative examples (heavy construction or large scale change for which we intend algorithms **_not_** detect). 
+
+(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of how each site 
+
+### Positive activity types
+
+TODO: Add the list here
+
+
+### Negative activity types
+
+TODO: Add the list here
+
 
 - Define what heavy construction is and isn't (size, activity types, etc.)
 - Pictures of heavy construction
