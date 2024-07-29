@@ -1,4 +1,4 @@
-This is the schema specification for the _Region model_. [TODO: Link to JSON Schema.](TODO: FIX)
+This is the schema specification for the _Region model_. [TODO: Link to JSON Schema.] Region model files can be validated by running the validate.py utility. [TODO: Link to validation script]
 
 A _Region Model_ defines a large spatio-temporal area of interest (a "Region"). Consequently, a Region Model **must** contain exactly one feature of the Region type, as specified below. It may include zero or more _Site Summary_ features, also specified below.
 
