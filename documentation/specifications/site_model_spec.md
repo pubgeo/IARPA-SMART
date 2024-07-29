@@ -1,4 +1,4 @@
-This is the schema specification for a _Site Model_. [TODO: Link to JSON Schema.](TODO: FIX)
+This is the schema specification for a _Site Model_. [TODO: Link to JSON Schema.] Site model files can be validated by running the validate.py utility. [TODO: Link to validation script]
 
 _Site models_ describe all observed activity in a given site/activity, both spatially and temporally. One _site model_ is produced for each activity/site.
 
