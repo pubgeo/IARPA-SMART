@@ -31,8 +31,7 @@ These rules define the required spatial relationships between and within sites a
 - Subsites must always exist fully within site boundaries. Subsites cannot exist on their own and must not extend outside the site boundary of which they are a part.
   - Caveat: Subsites can share boundaries with the site polygon(s) in which they exist. 
 
-
-# Tempoural Bounds
+# Temporal Bounds
 
 The timespan of a site may be referred to differently depending on the completeness of the annotation (i.e. inclusion of phase classifications).
 
