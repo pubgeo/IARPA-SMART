@@ -46,25 +46,51 @@ Note that for this application, we are interested in spatially and temporally lo
 
 Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (Heavy Construction for which we intend algorithms to detect) and negative examples (heavy construction or large scale change for which we intend algorithms **_not_** detect). 
 
-(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of how each site 
+(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found here <TODO: Add a link to this list>.)
 
 ### Positive activity types
 
-TODO: Add the list here
+For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'positive' set. That is, we expect algorithms to detect these types of heavy construction activity. 
 
+- Medium Residential (Low-rise apartments/condos, townhouse/row homes with 5 stories or below, Does not matter how many of these buildings there are)
+- Heavy Residential (Large apartment or condo high rise building that is over 5 stories tall)
+- Commercial (E.g. malls, grocery stores, strip malls, gas stations, hospitals, stadiums, office buildings, hotels, storage units)
+- Industrial (E.g. factories, power plants, manufacturing facility, warehouses, distribution center, shipping infrastructure (shipping ports) etc.)
+- Other- A known type that doesn't fall into any of the above categories. E.g. schools, parking garages, religious buildings, power substations, fire stations, etc.)
+
+Other considerations for 'Positive' activity ypes:
+
+- Sports fields if also associated with large-scale construction buildings (i.e., a school with new sports fields)
+- Roads/driveways/Parking lots that are associated with construction of a build (i.e., a parking lot that is part of a new store, a new access road that leads to a new factory)
+- The creation of artificial islands/land if associated with the construction of a man-made structure on that land
+
+TODO: Add pictures
 
 ### Negative activity types
 
-TODO: Add the list here
+For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'negative' set. That is, we expect algorithms to detect these types of heavy construction activity. 
 
+- Light residential (A collection of one or more detached single family homes)
+- Sports fields not associated with the construction of large building or facility
+- Golf courses (even with the presence of a clubhouse)
+- Standalone surface parking lots not associated with the construction of at least one other 'Positive' example (e.g. a park and ride, an airport parking lot)
+- Standalone roads infrastructure (not directly associated with the construction of buildings) including interchanges, bridges, tunnels
+- Change that is a result of a natural disaster (e.g. tornado, hurricane, flood, etc.)
+- The general clearing of land or destruction of a building/structure without the explicit or immediate purpose of continued construction (e.g. the destruction of a stadium or factory on land that is then abandoned)
+- The creation of water retention ponds, unless directly associated with the construction of a 'Positive' example
+- Solar panel "fields"
+
+TODO: Add pictures
+
+### Ignore
+
+For the purposes of the IARPA SMART Heavy Construction Dataset, activiy types that are either ambiguous or otherwise unknown at the time of annotation are  categorized as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
 
 - Define what heavy construction is and isn't (size, activity types, etc.)
-- Pictures of heavy construction
 - Chart showing how many sites are annotated in each region
-- Map with locations of regions
 - Distinction between different annotation types 
 
-### File Format Specifications
+## File Format Specifications
 
 The IARPA SMART Heavy Construction Annotation Dataset is provided in a custom, yet simple human- and machine-readable format ([geoJSON](https://geojson.org/)). More details can on the format can be found in our documentation (found in `documentation/specifications/`). 
 
