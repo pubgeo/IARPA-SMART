@@ -1,0 +1,136 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "IN_C000",
+                "site_id": "IN_C000_0414",
+                "version": "2.0.0",
+                "status": "positive_pending",
+                "mgrs": "43RGM",
+                "score": 1.0,
+                "start_date": "2020-03-20",
+                "end_date": "2021-07-23",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "0783c71a6864f6a7478bf1c46ad4cdfc05cadbbd"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.527358,
+                            28.569335
+                        ],
+                        [
+                            77.527734,
+                            28.570113
+                        ],
+                        [
+                            77.529777,
+                            28.569342
+                        ],
+                        [
+                            77.5294,
+                            28.568564
+                        ],
+                        [
+                            77.527358,
+                            28.569335
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-03-20",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                77.5294,
+                                28.568564
+                            ],
+                            [
+                                77.527358,
+                                28.569335
+                            ],
+                            [
+                                77.527734,
+                                28.570113
+                            ],
+                            [
+                                77.529777,
+                                28.569342
+                            ],
+                            [
+                                77.5294,
+                                28.568564
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2021-07-23",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                77.5294,
+                                28.568564
+                            ],
+                            [
+                                77.527358,
+                                28.569335
+                            ],
+                            [
+                                77.527734,
+                                28.570113
+                            ],
+                            [
+                                77.529777,
+                                28.569342
+                            ],
+                            [
+                                77.5294,
+                                28.568564
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

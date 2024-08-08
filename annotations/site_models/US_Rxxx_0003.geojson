@@ -1,0 +1,1948 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "US_Rxxx",
+                "site_id": "US_Rxxx_0003",
+                "version": "2.0.1",
+                "status": "positive_annotated",
+                "mgrs": "17RMP",
+                "score": 1.0,
+                "start_date": "2019-03-01",
+                "end_date": "2020-04-04",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "269d539f02fdc48eccdc4cefa6dc4535ecdf3cda"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -81.739411,
+                            30.3286
+                        ],
+                        [
+                            -81.739409,
+                            30.328567
+                        ],
+                        [
+                            -81.742559,
+                            30.328588
+                        ],
+                        [
+                            -81.742559,
+                            30.328617
+                        ],
+                        [
+                            -81.742591,
+                            30.328617
+                        ],
+                        [
+                            -81.742591,
+                            30.328624
+                        ],
+                        [
+                            -81.742612,
+                            30.328624
+                        ],
+                        [
+                            -81.742611,
+                            30.328674
+                        ],
+                        [
+                            -81.742615,
+                            30.328674
+                        ],
+                        [
+                            -81.742613,
+                            30.328815
+                        ],
+                        [
+                            -81.742617,
+                            30.328815
+                        ],
+                        [
+                            -81.742607,
+                            30.329466
+                        ],
+                        [
+                            -81.742427,
+                            30.330393
+                        ],
+                        [
+                            -81.74006,
+                            30.330438
+                        ],
+                        [
+                            -81.739568,
+                            30.330248
+                        ],
+                        [
+                            -81.739568,
+                            30.330241
+                        ],
+                        [
+                            -81.739495,
+                            30.330213
+                        ],
+                        [
+                            -81.739495,
+                            30.330212
+                        ],
+                        [
+                            -81.739472,
+                            30.330203
+                        ],
+                        [
+                            -81.739469,
+                            30.330132
+                        ],
+                        [
+                            -81.739448,
+                            30.330124
+                        ],
+                        [
+                            -81.739377,
+                            30.328652
+                        ],
+                        [
+                            -81.73939,
+                            30.328652
+                        ],
+                        [
+                            -81.739388,
+                            30.328614
+                        ],
+                        [
+                            -81.739402,
+                            30.328614
+                        ],
+                        [
+                            -81.739402,
+                            30.32861
+                        ],
+                        [
+                            -81.739407,
+                            30.32861
+                        ],
+                        [
+                            -81.739407,
+                            30.3286
+                        ],
+                        [
+                            -81.739411,
+                            30.3286
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-03-01",
+                "source": "19MAR01162710-P1BS-012579341010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "No Activity",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739424,
+                                30.328741
+                            ],
+                            [
+                                -81.739495,
+                                30.330213
+                            ],
+                            [
+                                -81.739992,
+                                30.330406
+                            ],
+                            [
+                                -81.742387,
+                                30.33036
+                            ],
+                            [
+                                -81.74257,
+                                30.329422
+                            ],
+                            [
+                                -81.742579,
+                                30.328762
+                            ],
+                            [
+                                -81.739424,
+                                30.328741
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-04-20",
+                "source": "LC08_L1TP_017039_20190420_20200828_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739498,
+                                30.328794
+                            ],
+                            [
+                                -81.739568,
+                                30.330248
+                            ],
+                            [
+                                -81.74006,
+                                30.330438
+                            ],
+                            [
+                                -81.742427,
+                                30.330393
+                            ],
+                            [
+                                -81.742607,
+                                30.329466
+                            ],
+                            [
+                                -81.742617,
+                                30.328815
+                            ],
+                            [
+                                -81.739498,
+                                30.328794
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-05-04",
+                "source": "S2B_17RMP_20190504_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Site Preparation",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739377,
+                                30.328652
+                            ],
+                            [
+                                -81.739448,
+                                30.330124
+                            ],
+                            [
+                                -81.739945,
+                                30.330316
+                            ],
+                            [
+                                -81.742335,
+                                30.33027
+                            ],
+                            [
+                                -81.742518,
+                                30.329333
+                            ],
+                            [
+                                -81.742527,
+                                30.328673
+                            ],
+                            [
+                                -81.739377,
+                                30.328652
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-05-14",
+                "source": "S2B_17RMP_20190514_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Site Preparation",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739377,
+                                30.328652
+                            ],
+                            [
+                                -81.739448,
+                                30.330124
+                            ],
+                            [
+                                -81.739945,
+                                30.330316
+                            ],
+                            [
+                                -81.742335,
+                                30.33027
+                            ],
+                            [
+                                -81.742518,
+                                30.329333
+                            ],
+                            [
+                                -81.742527,
+                                30.328673
+                            ],
+                            [
+                                -81.739377,
+                                30.328652
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-05-22",
+                "source": "LC08_L1TP_017039_20190522_20200828_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Site Preparation",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742581,
+                                30.328744
+                            ],
+                            [
+                                -81.742572,
+                                30.329395
+                            ],
+                            [
+                                -81.742391,
+                                30.330322
+                            ],
+                            [
+                                -81.740025,
+                                30.330368
+                            ],
+                            [
+                                -81.739533,
+                                30.330177
+                            ],
+                            [
+                                -81.739463,
+                                30.328723
+                            ],
+                            [
+                                -81.742581,
+                                30.328744
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-05-24",
+                "source": "S2B_17RMP_20190524_1_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Site Preparation",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.74256,
+                                30.328703
+                            ],
+                            [
+                                -81.74255,
+                                30.329362
+                            ],
+                            [
+                                -81.742368,
+                                30.3303
+                            ],
+                            [
+                                -81.739977,
+                                30.330346
+                            ],
+                            [
+                                -81.739481,
+                                30.330153
+                            ],
+                            [
+                                -81.73941,
+                                30.328682
+                            ],
+                            [
+                                -81.74256,
+                                30.328703
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-05-29",
+                "source": "S2A_17RMP_20190529_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742551,
+                                30.328753
+                            ],
+                            [
+                                -81.742541,
+                                30.329412
+                            ],
+                            [
+                                -81.742359,
+                                30.33035
+                            ],
+                            [
+                                -81.739968,
+                                30.330396
+                            ],
+                            [
+                                -81.739472,
+                                30.330203
+                            ],
+                            [
+                                -81.739401,
+                                30.328732
+                            ],
+                            [
+                                -81.742551,
+                                30.328753
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-06-03",
+                "source": "S2B_17RMP_20190603_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.74255,
+                                30.328713
+                            ],
+                            [
+                                -81.742541,
+                                30.329372
+                            ],
+                            [
+                                -81.742358,
+                                30.33031
+                            ],
+                            [
+                                -81.739968,
+                                30.330356
+                            ],
+                            [
+                                -81.739471,
+                                30.330163
+                            ],
+                            [
+                                -81.7394,
+                                30.328692
+                            ],
+                            [
+                                -81.74255,
+                                30.328713
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-08-12",
+                "source": "S2B_17RMP_20190812_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739388,
+                                30.328614
+                            ],
+                            [
+                                -81.739459,
+                                30.330086
+                            ],
+                            [
+                                -81.739955,
+                                30.330278
+                            ],
+                            [
+                                -81.742346,
+                                30.330232
+                            ],
+                            [
+                                -81.742528,
+                                30.329295
+                            ],
+                            [
+                                -81.742538,
+                                30.328635
+                            ],
+                            [
+                                -81.739388,
+                                30.328614
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-08-22",
+                "source": "S2B_17RMP_20190822_1_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742556,
+                                30.328633
+                            ],
+                            [
+                                -81.742547,
+                                30.329292
+                            ],
+                            [
+                                -81.742364,
+                                30.330229
+                            ],
+                            [
+                                -81.739974,
+                                30.330276
+                            ],
+                            [
+                                -81.739477,
+                                30.330083
+                            ],
+                            [
+                                -81.739406,
+                                30.328611
+                            ],
+                            [
+                                -81.742556,
+                                30.328633
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-09-06",
+                "source": "S2A_17RMP_20190906_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742575,
+                                30.32863
+                            ],
+                            [
+                                -81.742565,
+                                30.329289
+                            ],
+                            [
+                                -81.742383,
+                                30.330227
+                            ],
+                            [
+                                -81.739993,
+                                30.330273
+                            ],
+                            [
+                                -81.739496,
+                                30.33008
+                            ],
+                            [
+                                -81.739425,
+                                30.328609
+                            ],
+                            [
+                                -81.742575,
+                                30.32863
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-10",
+                "source": "S2B_17RMP_20191110_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742612,
+                                30.328624
+                            ],
+                            [
+                                -81.742603,
+                                30.329284
+                            ],
+                            [
+                                -81.74242,
+                                30.330221
+                            ],
+                            [
+                                -81.74003,
+                                30.330267
+                            ],
+                            [
+                                -81.739533,
+                                30.330075
+                            ],
+                            [
+                                -81.739462,
+                                30.328603
+                            ],
+                            [
+                                -81.742612,
+                                30.328624
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-20",
+                "source": "S2B_17RMP_20191120_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742591,
+                                30.328617
+                            ],
+                            [
+                                -81.742582,
+                                30.329276
+                            ],
+                            [
+                                -81.742399,
+                                30.330214
+                            ],
+                            [
+                                -81.740009,
+                                30.33026
+                            ],
+                            [
+                                -81.739512,
+                                30.330067
+                            ],
+                            [
+                                -81.739441,
+                                30.328596
+                            ],
+                            [
+                                -81.742591,
+                                30.328617
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-23",
+                "source": "LC08_L1TP_016039_20191123_20200825_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742615,
+                                30.328674
+                            ],
+                            [
+                                -81.742605,
+                                30.329326
+                            ],
+                            [
+                                -81.742425,
+                                30.330252
+                            ],
+                            [
+                                -81.740058,
+                                30.330298
+                            ],
+                            [
+                                -81.739566,
+                                30.330107
+                            ],
+                            [
+                                -81.739496,
+                                30.328653
+                            ],
+                            [
+                                -81.742615,
+                                30.328674
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-25",
+                "source": "S2A_17RMP_20191125_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742574,
+                                30.328627
+                            ],
+                            [
+                                -81.742564,
+                                30.329287
+                            ],
+                            [
+                                -81.742382,
+                                30.330224
+                            ],
+                            [
+                                -81.739991,
+                                30.33027
+                            ],
+                            [
+                                -81.739495,
+                                30.330078
+                            ],
+                            [
+                                -81.739424,
+                                30.328606
+                            ],
+                            [
+                                -81.742574,
+                                30.328627
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-30",
+                "source": "LC08_L1TP_017039_20191130_20200825_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742597,
+                                30.328684
+                            ],
+                            [
+                                -81.742588,
+                                30.329336
+                            ],
+                            [
+                                -81.742407,
+                                30.330263
+                            ],
+                            [
+                                -81.740041,
+                                30.330308
+                            ],
+                            [
+                                -81.739549,
+                                30.330118
+                            ],
+                            [
+                                -81.739479,
+                                30.328663
+                            ],
+                            [
+                                -81.742597,
+                                30.328684
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-30",
+                "source": "S2B_17RMP_20191130_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742557,
+                                30.328638
+                            ],
+                            [
+                                -81.742547,
+                                30.329297
+                            ],
+                            [
+                                -81.742365,
+                                30.330235
+                            ],
+                            [
+                                -81.739974,
+                                30.330281
+                            ],
+                            [
+                                -81.739478,
+                                30.330088
+                            ],
+                            [
+                                -81.739407,
+                                30.328617
+                            ],
+                            [
+                                -81.742557,
+                                30.328638
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-05",
+                "source": "S2A_17RMP_20191205_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742548,
+                                30.328674
+                            ],
+                            [
+                                -81.742538,
+                                30.329333
+                            ],
+                            [
+                                -81.742356,
+                                30.330271
+                            ],
+                            [
+                                -81.739966,
+                                30.330317
+                            ],
+                            [
+                                -81.739469,
+                                30.330124
+                            ],
+                            [
+                                -81.739398,
+                                30.328653
+                            ],
+                            [
+                                -81.742548,
+                                30.328674
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-09",
+                "source": "LC08_L1TP_016039_20191209_20200824_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742583,
+                                30.328783
+                            ],
+                            [
+                                -81.742573,
+                                30.329435
+                            ],
+                            [
+                                -81.742393,
+                                30.330362
+                            ],
+                            [
+                                -81.740026,
+                                30.330407
+                            ],
+                            [
+                                -81.739535,
+                                30.330217
+                            ],
+                            [
+                                -81.739464,
+                                30.328762
+                            ],
+                            [
+                                -81.742583,
+                                30.328783
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-10",
+                "source": "S2B_17RMP_20191210_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742552,
+                                30.328632
+                            ],
+                            [
+                                -81.742542,
+                                30.329291
+                            ],
+                            [
+                                -81.74236,
+                                30.330228
+                            ],
+                            [
+                                -81.739969,
+                                30.330274
+                            ],
+                            [
+                                -81.739473,
+                                30.330082
+                            ],
+                            [
+                                -81.739402,
+                                30.32861
+                            ],
+                            [
+                                -81.742552,
+                                30.328632
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-15",
+                "source": "S2A_17RMP_20191215_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742552,
+                                30.328637
+                            ],
+                            [
+                                -81.742542,
+                                30.329296
+                            ],
+                            [
+                                -81.74236,
+                                30.330233
+                            ],
+                            [
+                                -81.739969,
+                                30.33028
+                            ],
+                            [
+                                -81.739473,
+                                30.330087
+                            ],
+                            [
+                                -81.739402,
+                                30.328615
+                            ],
+                            [
+                                -81.742552,
+                                30.328637
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-16",
+                "source": "LC08_L1TP_017039_20191216_20200825_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742584,
+                                30.328693
+                            ],
+                            [
+                                -81.742574,
+                                30.329345
+                            ],
+                            [
+                                -81.742394,
+                                30.330271
+                            ],
+                            [
+                                -81.740027,
+                                30.330317
+                            ],
+                            [
+                                -81.739535,
+                                30.330127
+                            ],
+                            [
+                                -81.739465,
+                                30.328672
+                            ],
+                            [
+                                -81.742584,
+                                30.328693
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-01-17",
+                "source": "LC08_L1TP_017039_20200117_20200823_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742591,
+                                30.328687
+                            ],
+                            [
+                                -81.742581,
+                                30.329339
+                            ],
+                            [
+                                -81.7424,
+                                30.330266
+                            ],
+                            [
+                                -81.740034,
+                                30.330311
+                            ],
+                            [
+                                -81.739542,
+                                30.330121
+                            ],
+                            [
+                                -81.739472,
+                                30.328666
+                            ],
+                            [
+                                -81.742591,
+                                30.328687
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-02-02",
+                "source": "LC08_L1TP_017039_20200202_20200823_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742594,
+                                30.328682
+                            ],
+                            [
+                                -81.742585,
+                                30.329334
+                            ],
+                            [
+                                -81.742404,
+                                30.33026
+                            ],
+                            [
+                                -81.740037,
+                                30.330306
+                            ],
+                            [
+                                -81.739546,
+                                30.330115
+                            ],
+                            [
+                                -81.739476,
+                                30.328661
+                            ],
+                            [
+                                -81.742594,
+                                30.328682
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-02-03",
+                "source": "S2A_17RMP_20200203_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742566,
+                                30.328625
+                            ],
+                            [
+                                -81.742556,
+                                30.329284
+                            ],
+                            [
+                                -81.742374,
+                                30.330222
+                            ],
+                            [
+                                -81.739983,
+                                30.330268
+                            ],
+                            [
+                                -81.739487,
+                                30.330075
+                            ],
+                            [
+                                -81.739416,
+                                30.328604
+                            ],
+                            [
+                                -81.742566,
+                                30.328625
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-02-08",
+                "source": "S2B_17RMP_20200208_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739409,
+                                30.328567
+                            ],
+                            [
+                                -81.73948,
+                                30.330039
+                            ],
+                            [
+                                -81.739977,
+                                30.330231
+                            ],
+                            [
+                                -81.742367,
+                                30.330185
+                            ],
+                            [
+                                -81.74255,
+                                30.329247
+                            ],
+                            [
+                                -81.742559,
+                                30.328588
+                            ],
+                            [
+                                -81.739409,
+                                30.328567
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-02-23",
+                "source": "S2A_17RMP_20200223_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "True",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739377,
+                                30.328652
+                            ],
+                            [
+                                -81.739448,
+                                30.330124
+                            ],
+                            [
+                                -81.739945,
+                                30.330316
+                            ],
+                            [
+                                -81.742335,
+                                30.33027
+                            ],
+                            [
+                                -81.742518,
+                                30.329333
+                            ],
+                            [
+                                -81.742527,
+                                30.328673
+                            ],
+                            [
+                                -81.739377,
+                                30.328652
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-02-27",
+                "source": "LC08_L1TP_016039_20200227_20200822_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742575,
+                                30.328699
+                            ],
+                            [
+                                -81.742565,
+                                30.32935
+                            ],
+                            [
+                                -81.742385,
+                                30.330277
+                            ],
+                            [
+                                -81.740018,
+                                30.330323
+                            ],
+                            [
+                                -81.739526,
+                                30.330132
+                            ],
+                            [
+                                -81.739456,
+                                30.328678
+                            ],
+                            [
+                                -81.742575,
+                                30.328699
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-02-28",
+                "source": "S2B_17RMP_20200228_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742557,
+                                30.328621
+                            ],
+                            [
+                                -81.742548,
+                                30.32928
+                            ],
+                            [
+                                -81.742365,
+                                30.330218
+                            ],
+                            [
+                                -81.739975,
+                                30.330264
+                            ],
+                            [
+                                -81.739478,
+                                30.330072
+                            ],
+                            [
+                                -81.739407,
+                                30.3286
+                            ],
+                            [
+                                -81.742557,
+                                30.328621
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-03-14",
+                "source": "LC08_L1TP_016039_20200314_20200822_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742612,
+                                30.328683
+                            ],
+                            [
+                                -81.742603,
+                                30.329334
+                            ],
+                            [
+                                -81.742422,
+                                30.330261
+                            ],
+                            [
+                                -81.740055,
+                                30.330307
+                            ],
+                            [
+                                -81.739564,
+                                30.330116
+                            ],
+                            [
+                                -81.739494,
+                                30.328662
+                            ],
+                            [
+                                -81.742612,
+                                30.328683
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-03-14",
+                "source": "S2A_17RMP_20200314_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742588,
+                                30.328634
+                            ],
+                            [
+                                -81.742578,
+                                30.329294
+                            ],
+                            [
+                                -81.742396,
+                                30.330231
+                            ],
+                            [
+                                -81.740005,
+                                30.330277
+                            ],
+                            [
+                                -81.739509,
+                                30.330085
+                            ],
+                            [
+                                -81.739438,
+                                30.328613
+                            ],
+                            [
+                                -81.742588,
+                                30.328634
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-03-19",
+                "source": "S2B_17RMP_20200319_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742595,
+                                30.328638
+                            ],
+                            [
+                                -81.742586,
+                                30.329297
+                            ],
+                            [
+                                -81.742403,
+                                30.330234
+                            ],
+                            [
+                                -81.740013,
+                                30.330281
+                            ],
+                            [
+                                -81.739516,
+                                30.330088
+                            ],
+                            [
+                                -81.739445,
+                                30.328616
+                            ],
+                            [
+                                -81.742595,
+                                30.328638
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-03-24",
+                "source": "S2A_17RMP_20200324_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742608,
+                                30.32871
+                            ],
+                            [
+                                -81.742598,
+                                30.329369
+                            ],
+                            [
+                                -81.742416,
+                                30.330307
+                            ],
+                            [
+                                -81.740025,
+                                30.330353
+                            ],
+                            [
+                                -81.739529,
+                                30.33016
+                            ],
+                            [
+                                -81.739458,
+                                30.328689
+                            ],
+                            [
+                                -81.742608,
+                                30.32871
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-03-29",
+                "source": "S2B_17RMP_20200329_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.742602,
+                                30.328628
+                            ],
+                            [
+                                -81.742593,
+                                30.329287
+                            ],
+                            [
+                                -81.74241,
+                                30.330225
+                            ],
+                            [
+                                -81.74002,
+                                30.330271
+                            ],
+                            [
+                                -81.739523,
+                                30.330078
+                            ],
+                            [
+                                -81.739452,
+                                30.328607
+                            ],
+                            [
+                                -81.742602,
+                                30.328628
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-04-03",
+                "source": "S2A_17RMP_20200403_0_L2A",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739435,
+                                30.328614
+                            ],
+                            [
+                                -81.739506,
+                                30.330086
+                            ],
+                            [
+                                -81.740002,
+                                30.330278
+                            ],
+                            [
+                                -81.742393,
+                                30.330232
+                            ],
+                            [
+                                -81.742575,
+                                30.329295
+                            ],
+                            [
+                                -81.742585,
+                                30.328635
+                            ],
+                            [
+                                -81.739435,
+                                30.328614
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-04-04",
+                "source": "20APR04160013-M1BS-014233129010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Post Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.739424,
+                                30.328741
+                            ],
+                            [
+                                -81.739495,
+                                30.330213
+                            ],
+                            [
+                                -81.739992,
+                                30.330406
+                            ],
+                            [
+                                -81.742387,
+                                30.33036
+                            ],
+                            [
+                                -81.74257,
+                                30.329422
+                            ],
+                            [
+                                -81.742579,
+                                30.328762
+                            ],
+                            [
+                                -81.739424,
+                                30.328741
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

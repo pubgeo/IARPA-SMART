@@ -1,0 +1,136 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "KR_R002",
+                "site_id": "KR_R002_0137",
+                "version": "2.0.3",
+                "status": "ignore",
+                "mgrs": "52SDG",
+                "score": 1.0,
+                "start_date": "2012-07-01",
+                "end_date": "2019-10-31",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "013aa25babc64c94ea36c17079205d561e518f59"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            128.866257,
+                            37.757902
+                        ],
+                        [
+                            128.870204,
+                            37.758
+                        ],
+                        [
+                            128.870269,
+                            37.756605
+                        ],
+                        [
+                            128.866442,
+                            37.756553
+                        ],
+                        [
+                            128.866257,
+                            37.757902
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2012-07-01",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                128.866257,
+                                37.757902
+                            ],
+                            [
+                                128.866442,
+                                37.756553
+                            ],
+                            [
+                                128.870269,
+                                37.756605
+                            ],
+                            [
+                                128.870204,
+                                37.758
+                            ],
+                            [
+                                128.866257,
+                                37.757902
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-10-31",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                128.866257,
+                                37.757902
+                            ],
+                            [
+                                128.866442,
+                                37.756553
+                            ],
+                            [
+                                128.870269,
+                                37.756605
+                            ],
+                            [
+                                128.870204,
+                                37.758
+                            ],
+                            [
+                                128.866257,
+                                37.757902
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

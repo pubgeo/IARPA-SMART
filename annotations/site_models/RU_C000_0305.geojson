@@ -1,0 +1,160 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "RU_C000",
+                "site_id": "RU_C000_0305",
+                "version": "2.0.0",
+                "status": "positive_pending",
+                "mgrs": "37UDB",
+                "score": 1.0,
+                "start_date": "2017-05-07",
+                "end_date": "2020-06-10",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "0783c71a6864f6a7478bf1c46ad4cdfc05cadbbd"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            37.724542,
+                            55.605943
+                        ],
+                        [
+                            37.725625,
+                            55.603569
+                        ],
+                        [
+                            37.724106,
+                            55.603317
+                        ],
+                        [
+                            37.723947,
+                            55.603577
+                        ],
+                        [
+                            37.721984,
+                            55.603256
+                        ],
+                        [
+                            37.720866,
+                            55.605321
+                        ],
+                        [
+                            37.724542,
+                            55.605943
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2017-05-07",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                37.720866,
+                                55.605321
+                            ],
+                            [
+                                37.724542,
+                                55.605943
+                            ],
+                            [
+                                37.725625,
+                                55.603569
+                            ],
+                            [
+                                37.724106,
+                                55.603317
+                            ],
+                            [
+                                37.723947,
+                                55.603577
+                            ],
+                            [
+                                37.721984,
+                                55.603256
+                            ],
+                            [
+                                37.720866,
+                                55.605321
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-06-10",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                37.720866,
+                                55.605321
+                            ],
+                            [
+                                37.724542,
+                                55.605943
+                            ],
+                            [
+                                37.725625,
+                                55.603569
+                            ],
+                            [
+                                37.724106,
+                                55.603317
+                            ],
+                            [
+                                37.723947,
+                                55.603577
+                            ],
+                            [
+                                37.721984,
+                                55.603256
+                            ],
+                            [
+                                37.720866,
+                                55.605321
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
