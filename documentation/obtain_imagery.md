@@ -38,7 +38,7 @@ The use of [SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en) facil
 - *[COG: Cloud Optimizied GeoTIFF Format Description](https://www.usgs.gov/media/files/landsat-cloud-optimized-geotiff-data-format-control-book)
 - **The Sentinel 2 v0 STAC catalog is retired now, but was used for most annotations, and may occasionally have images that v1 does not
 
-Examples demonstrating proper calls to the STAC endpoints can be found in IARPA-SMART/utilities/stac_query_example.py. We have also included requirements for the environment at IARPA-SMART/utilities/requirements.txt to run the examples.
+Examples demonstrating querying calls to the STAC endpoints can be found in IARPA-SMART/utilities/stac_query_example.py. We have also included requirements for the environment at IARPA-SMART/utilities/requirements.txt to run the examples. For downloading imagery, see the *[USGS Landsat Commercial Cloud Access Guide](https://www.usgs.gov/landsat-missions/landsat-commercial-cloud-data-access) and the *[Copernicus Sentinel-2 API Guide](https://dataspace.copernicus.eu/news/2023-9-28-accessing-sentinel-mission-data-new-copernicus-data-space-ecosystem-apis).
 
 We recommend using some or all of the images listed in these files:
 - obtain_imagery_supplemental/suggested_LS_images_with_annotated_sites.csv
