@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # REPO must point to root directory of IARPA-SMART
-REPO="$HOME"
+REPO="$PWD"
 alias python3=python
 python3 -V
 export PYTHONPATH=.
 
 if ! [ -z "$1" ]; then
-    parentdir="$(dirname "$1")"
-    REPO=$parentdir
+    REPO=$1
 fi
 echo "Using $REPO home directory"
 
@@ -24,23 +23,23 @@ TEMPORAL_IOT="0.2"
 TEMPORAL_IOP="0.1"
 
 # directory with performer site models
-INPUT_DIR="$REPO/IARPA-SMART/example/input/proposals/"
+INPUT_DIR="$REPO/example/input/proposals/"
 
 # run the test harness for each region
 EVAL_NUM=0
 for REGION in ${REGIONS[@]}; do
     ((EVAL_NUM++))
 
-    OUTPUT_DIR="$REPO/IARPA-SMART/example/output/$REGION/"
+    OUTPUT_DIR="$REPO/example/output/$REGION/"
     mkdir -p $OUTPUT_DIR
 
     echo "started evaluation for" $REGION
     date
 
-    python3 "$REPO/IARPA-SMART/iarpa_smart_metrics/run_evaluation.py" \
+    python3 "$REPO/iarpa_smart_metrics/run_evaluation.py" \
         --roi $REGION \
-        --gt_dir "$REPO/IARPA-SMART/example/input/truth/site_models/" \
-        --rm_dir "$REPO/IARPA-SMART/example/input/truth/region_models/" \
+        --gt_dir "$REPO/example/input/truth/site_models/" \
+        --rm_dir "$REPO/example/input/truth/region_models/" \
         --sm_dir $INPUT_DIR \
         --output_dir $OUTPUT_DIR \
         --tau $TAU \

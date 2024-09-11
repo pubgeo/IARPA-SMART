@@ -17,7 +17,7 @@ Supported operating systems: Unix and macOS
 ## Installation
 
 Install the `iarpa_smart_metrics` module using pip:
-
+```cd src```
 ```pip3 install -e .```
 
 
