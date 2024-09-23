@@ -8,7 +8,9 @@ For more information on the problem formulation and the dataset, please see our 
 
 The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large Computer Vision/Machine Learning (CV/ML) dataset containing spatio-temporal annotations of large scale heavy construction activity for the purposes of algorithm development and evaluation. 
 
-This repository contains the annotation dataset (found in `annotations/`) along with [instructions for how to obtain some of the imagery](documentation/obtain_imagery.md) in which these activities can be observed. Also included here are useful utilities (found in `utilities/`) to help get started and make use of the dataset. 
+This repository contains the annotation dataset (found in `annotations/`) along with [instructions for how to obtain some of the imagery](documentation/obtain_imagery.md) in which these activities can be observed. Also included here are useful utilities (found in `utilities/`) to help get started and make use of the dataset.
+
+A Python-based implementation of custom performance evaluation metrics (tailored specifically to the data formats and application introduced here) can be found in `src/`. A publication describing the evaluation metrics is available here (COMING SOON).
 
 NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing. 
 
@@ -21,7 +23,10 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   -  An area of interest defining spatial bounds for processing and annotation
 
 - **Region Model**:
-  - A data format that represents a region's spatial and temporal bounds
+  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/region_models/). 
+
+  ***Empty Region Model***: 
+  - We also define the concept of an _empty region model_, which defines only the spatial and temporal bounds of the region without the list of sites contained within those regions bounds. These files (also in GeoJSON format) are meant to serve as an input to an algorithm for the sole purpose of defining the spatial and temporal extents over which the algorithm is expected to process (search for activity). 
 
 - **Site / Site Boundary**: 
   - A geographical area defining the spatial boundaries of large-scale change (anthropogenic or not). 
@@ -34,9 +39,15 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   - Sub-site boundaries are only required _**if and only if**_ the site is exhibiting multiple activity phases in a single time slice
 
 - **"Cleared" regions**: 
-  - A region is said to be "cleared" when all activity (positive, negative, ignore) has been labeled and site models for each activity have been generated. Clearing regions is necessary for evaluation purposes.
+  - A region is said to be "cleared" when all activity (positive, negative, ignore) has been labeled and site models for each activity have been generated. Clearing regions is necessary for evaluation purposes. Not all regions in the SMART dataset are cleared. For a list of cleared regions, see <COMING SOON: Add list of cleared regions>
 
-TODO: Add an image of a region with sites
+<div style="text-align: center;">
+  <figure>
+    <img src="resources/example_region.png" alt="Description" style="width: 750px;">
+    <figcaption>Illustration of an annotated region in the vicinity of Rio de Janeiro, Brazil. The region boundaries are indicated by the yellow rectangle. Annotated heavy construction sites from the SMART dataset are indicated by the green polygons.</figcaption>
+  </figure>
+</div>
+
 
 ## Heavy Construction Annotation Dataset
 
@@ -44,7 +55,7 @@ For the purposes of the IARPA SMART problem formulation, heavy construction acti
 
 Note that for this application, we are interested in spatially and temporally localizing the bounds of _all_ construction related activity. This means that we are not simply interested in the footprints of the buildings alone (as many remote sensing applications and existing benchmark datasets are). Instead, we consider all activity associated with the construction to be part of the activity including, but not limited to, preparation of the entire plot of land undergoing change and being used to support the construction activity or facilities and infrastructure that support the use of the final facility/buildings (e.g. parking lots associated with the buildings). 
 
-Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (Heavy Construction for which we intend algorithms to detect) and negative examples (heavy construction or large scale change for which we intend algorithms **_not_** detect). 
+Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity, not simply the building footprints of the buildings being constructed. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (heavy construction activity which we intend algorithms to detect) and negative examples (heavy construction or large scale change which we intend algorithms **_not_** detect). 
 
 (NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found here <TODO: Add a link to this list>.)
 
@@ -54,17 +65,45 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 
 - Medium Residential (Low-rise apartments/condos, townhouse/row homes with 5 stories or below, Does not matter how many of these buildings there are)
 - Heavy Residential (Large apartment or condo high rise building that is over 5 stories tall)
-- Commercial (E.g. malls, grocery stores, strip malls, gas stations, hospitals, stadiums, office buildings, hotels, storage units)
-- Industrial (E.g. factories, power plants, manufacturing facility, warehouses, distribution center, shipping infrastructure (shipping ports) etc.)
-- Other- A known type that doesn't fall into any of the above categories. E.g. schools, parking garages, religious buildings, power substations, fire stations, etc.)
+- Commercial (e.g. malls, grocery stores, strip malls, gas stations, hospitals, stadiums, office buildings, hotels, storage units)
+- Industrial (e.g. factories, power plants, manufacturing facility, warehouses, distribution center, shipping infrastructure (shipping ports) etc.)
+- Other: A known type that doesn't fall into any of the above categories. (e.g. schools, parking garages, religious buildings, power substations, fire stations, etc.)
 
-Other considerations for 'Positive' activity ypes:
+Other considerations for 'Positive' activity types, or activity that should be included within site boundaries:
 
 - Sports fields if also associated with large-scale construction buildings (i.e., a school with new sports fields)
 - Roads/driveways/Parking lots that are associated with construction of a build (i.e., a parking lot that is part of a new store, a new access road that leads to a new factory)
 - The creation of artificial islands/land if associated with the construction of a man-made structure on that land
 
-TODO: Add pictures
+| ![Image 1](resources/pos_activity_industrial_1.png) | ![Image 2](resources/pos_activity_heavyres_2.png) | ![Image 3](resources/pos_activity_commercial_1.png) | ![Image 4](resources/pos_activity_commercial_2.png) |
+|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
+| Industrial              | Industrial              | Commercial              | Commercial              |
+
+| ![Image 5](resources/pos_activity_heavyres_1.png) | ![Image 6](resources/pos_activity_heavyres_2.png) | ![Image 7](resources/pos_activity_medres_1.png) | ![Image 8](resources/pos_activity_medres_2.png) |
+|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
+| Heavy Residential              | Heavy Residential              | Medium Residential              | Medium Residential               |
+
+#### _Examples of site progressions over time_
+
+<div style="text-align: center;">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
+      <video width="400" height="400" controls>
+        <source src="resources/pos_site_US.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video width="400" height="400" controls>
+        <source src="resources/pos_site_BR.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video width="400" height="400" controls>
+        <source src="resources/pos_site_AE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+  </div>
+
+  <p style="margin-top: 10px; font-size: 16px;">Examples of time-lapsed progression of heavy construction activity. Imagery shown is Sentinel 2 imagery from Copernicus Sentinel Hub EO Browser
+  </p>
+</div>
 
 ### Negative activity types
 
