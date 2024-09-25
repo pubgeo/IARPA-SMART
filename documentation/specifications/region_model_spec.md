@@ -1,3 +1,5 @@
+# Region Model Specification
+
 This is the schema specification for the _Region model_. [TODO: Link to JSON Schema.] Region model files can be validated by running the validate.py utility. [TODO: Link to validation script]
 
 A _Region Model_ defines a large spatio-temporal area of interest (a "Region"). Consequently, a Region Model **must** contain exactly one feature of the Region type, as specified below. It may include zero or more _Site Summary_ features, also specified below.
@@ -8,9 +10,9 @@ The _region model_ may either be fed into the inference algorithm to initiate in
 
 The _site_id_ is a unique index that serves as the primary link between sites that exist within region bounds and the site model annotation itself. 
 
-# Region Feature
+## Region Feature
 
-As mentioned in the common model documentation, a Region Feature is expected to define its geometry and type. A Region Feature's geometry **must be** a Polygon. The following is a list of properties that are also expected to be defined in the Region's `properties` property. **All of these are mandatory**.
+As mentioned in the common model documentation (TODO: Add common model documentation), a Region Feature is expected to define its geometry and type. A Region Feature's geometry **must be** a Polygon. The following is a list of properties that are also expected to be defined in the Region's `properties` property. **All of these are mandatory**.
 
 ### `type` (string)
 

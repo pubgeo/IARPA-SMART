@@ -1,10 +1,12 @@
+# Site Model Specification
+
 This is the schema specification for a _Site Model_. [TODO: Link to JSON Schema.] Site model files can be validated by running the validate.py utility. [TODO: Link to validation script]
 
 _Site models_ describe all observed activity in a given site/activity, both spatially and temporally. One _site model_ is produced for each activity/site.
 
 A _Site Model_ is also a FeatureCollection, which means at the top level it must define the keys type and features. Unlike the Region Model, a Site Model’s two features are 'site' and 'observation'.
 
-# 'Site' Feature
+## 'Site' Feature
 
 As mentioned in the common model documentation, a Site feature is expected to define its type and geometry. A Site's geometry, as with a Site Summary's geometry, **must be** 'Polygon'. The following are defined properties - unless explicitly noted, all of these are mandatory.
 

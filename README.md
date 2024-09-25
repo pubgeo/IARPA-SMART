@@ -6,13 +6,16 @@ For more information on the problem formulation and the dataset, please see our 
 
 # About this repository
 
-The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large Computer Vision/Machine Learning (CV/ML) dataset containing spatio-temporal annotations of large scale heavy construction activity for the purposes of algorithm development and evaluation. 
+The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large Computer Vision/Machine Learning (CV/ML) dataset containing spatio-temporal annotations of large scale heavy construction activity for the purposes of algorithm development and evaluation for automated broad area search and classification of anthropogenic activities from satellite iamgery. 
 
-This repository contains the annotation dataset (found in `annotations/`) along with [instructions for how to obtain some of the imagery](documentation/obtain_imagery.md) in which these activities can be observed. Also included here are useful utilities (found in `utilities/`) to help get started and make use of the dataset.
+This repository contains the following key components. 
 
-A Python-based implementation of custom performance evaluation metrics (tailored specifically to the data formats and application introduced here) can be found in `src/`. A publication describing the evaluation metrics is available here (COMING SOON).
+- The annotation dataset (found in [`annotations/`](annotations/)). Throughout the documentation in this Github repository, we refer to this dataset as the `SMART Heavy Construction Dataset`.
+- [Instructions for how to obtain some of the underlying and corresponding satellite imagery](documentation/obtain_imagery.md) in which these activities can be observed. 
+- Useful utilities (found in [`utilities/`](utilities/)) to help get started and make use of the dataset. 
+- A Python-based implementation of custom performance evaluation metrics (tailored specifically to the data formats and application introduced here) can be found in `src/`. A publication describing the evaluation metrics is available here (COMING SOON).
 
-NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing. 
+NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing by the program. Expected release is by January 2025. 
 
 ## Terminology
 
@@ -23,7 +26,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   -  An area of interest defining spatial bounds for processing and annotation
 
 - **Region Model**:
-  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/region_models/). 
+  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md). 
 
   ***Empty Region Model***: 
   - We also define the concept of an _empty region model_, which defines only the spatial and temporal bounds of the region without the list of sites contained within those regions bounds. These files (also in GeoJSON format) are meant to serve as an input to an algorithm for the sole purpose of defining the spatial and temporal extents over which the algorithm is expected to process (search for activity). 
@@ -37,6 +40,12 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
 - **Sub-site / Sub-site Boundary**: 
   - Used to indicate that an area within the site boundary is in a different activity phase as the surrounding or neighboring plots of land
   - Sub-site boundaries are only required _**if and only if**_ the site is exhibiting multiple activity phases in a single time slice
+  - Program-defined custom definitions of site and subsite boundaries can be found [here](documentation/boundary_definitions.md).
+
+  **Site Model**:
+  - A data format (GeoJSON) that temporally and spatially describes a single activity. Each site model contains some number (N) of observations, each containing spatial and temporal information of the site as well as a phase label describing the observed status of the activity on that observation date. 
+  - A site model format specification file can be found [here](documentation/specifications/site_model_spec.md).
+  - A cartoon representation of a site model can be found below. 
 
 - **"Cleared" regions**: 
   - A region is said to be "cleared" when all activity (positive, negative, ignore) has been labeled and site models for each activity have been generated. Clearing regions is necessary for evaluation purposes. Not all regions in the SMART dataset are cleared. For a list of cleared regions, see <COMING SOON: Add list of cleared regions>
@@ -48,6 +57,12 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   </figure>
 </div>
 
+<div style="text-align: center;">
+  <figure>
+    <img src="resources/site_model_cartoon.png" alt="Description" style="width: 200px;">
+    <figcaption>Cartoon illustration of an annotated site model with nine (9) observations at times t<sub>1</sub> through t<sub>9</sub>. Each observation contains a polygon representing the spatial boundary of the activity at that time step. Notice how the polygon size can change with time as the activity (construction) expands. Each observation also contains one of five (5) phase labels (shown here in different colors) representing the phase of activity observed at that time step.</figcaption>
+  </figure>
+</div>
 
 ## Heavy Construction Annotation Dataset
 
@@ -57,7 +72,7 @@ Note that for this application, we are interested in spatially and temporally lo
 
 Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity, not simply the building footprints of the buildings being constructed. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (heavy construction activity which we intend algorithms to detect) and negative examples (heavy construction or large scale change which we intend algorithms **_not_** detect). 
 
-(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found here <TODO: Add a link to this list>.)
+(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found [here](annotations\supplemental_data\supplemental_annotation_info.json).
 
 ### Positive activity types
 
@@ -89,15 +104,12 @@ Other considerations for 'Positive' activity types, or activity that should be i
   <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
       <video width="400" height="400" controls>
         <source src="resources/pos_site_US.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
       <video width="400" height="400" controls>
         <source src="resources/pos_site_BR.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
       <video width="400" height="400" controls>
         <source src="resources/pos_site_AE.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
   </div>
 
@@ -119,11 +131,17 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 - The creation of water retention ponds, unless directly associated with the construction of a 'Positive' example
 - Solar panel "fields"
 
-TODO: Add pictures
+| ![Image 1](resources/neg_activity_light_res.png) | ![Image 2](resources/neg_activity_infra.png) | ![Image 3](resources/neg_activity_inf_roads.png) |
+|:----------------------:|:----------------------:|:----------------------:|
+| Light residential              | Infrastructure              | Road Infrastructure              |
+
+| ![Image 5](resources/neg_activity_rec_fields.png) | ![Image 6](resources/neg_activity_resurfacing.png) | ![Image 7](resources/neg_activity_solar_panels.png) |
+|:----------------------:|:----------------------:|:----------------------:|
+| Recreational Fields             | Resurfacing       | Solar Panels              |
 
 ### Ignore
 
-For the purposes of the IARPA SMART Heavy Construction Dataset, activiy types that are either ambiguous or otherwise unknown at the time of annotation are  categorized as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
+For the purposes of the IARPA SMART Heavy Construction Dataset, activiy types that are either ambiguous or otherwise unknown at the time of annotation are labeled as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
 
 - Define what heavy construction is and isn't (size, activity types, etc.)
 - Chart showing how many sites are annotated in each region
@@ -138,9 +156,9 @@ The IARPA SMART Heavy Construction Annotation Dataset is provided in a custom, y
 See [here](documentation/obtain_imagery.md) for more information on obtaining the satellite imagery corresponding to this dataset. 
 
 # Terms and Conditions
-The contents of this public dataset are provided under the <____________> license. 
+The contents of this public dataset are provided under the MIT License license. 
 
-Any publication using the dataset or any contents herein in any way shall refer to the following paper: 
+Any publication using the dataset or any contents herein in any way should refer to the following paper: 
 
 ```
 @inproceedings{goldberg2023spie,
@@ -162,7 +180,7 @@ Development of the dataset was also supported by:
 - iMERIT
 
 # Contact the authors
-Please reach out to pubgeo@jhuapl.edu with any questions or comments. 
+Please reach out to iarpa.smart@jhuapl.edu with any questions or feedback. 
 
 
 

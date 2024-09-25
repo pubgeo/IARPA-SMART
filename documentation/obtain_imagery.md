@@ -59,8 +59,8 @@ We recommend obtaining some or all of the images listed in these files:
 
 There may be additional images beyond those listed that can also be used but this set represents a sufficient baseline. 
 
-## Obtaining imagery for early annotations
-The first 50 annotations produced for this effort were created before we used STACs as part of our workflow, and as a result, these annotations include references to some Sentinel and Landsat imagery that we’ve had difficulty locating in the public Sentinel and Landsat STACs. Some of this is related to inconsistency in how image source IDs were annotated for these early sites, with some observations receiving non-standard ID values from other whole or partial image metadata ID fields. Other observations include the standard ID format, but that ID simply isn’t present when we query the STACs. We are continuing to work to track down the affected images, and will update the site models and imagery lists when we resolve this disparity.
+## Obtaining imagery for certain sites
+The first 50 annotations produced for this effort were created before STAC was used as part of the workflow. As a result, these annotations include references to some Sentinel and Landsat imagery that are no longer found in the currently-available public Sentinel and Landsat STACs. Some of this is related to inconsistency in how image source IDs were annotated for these early sites, with some observations receiving non-standard ID values from other whole or partial image metadata ID fields. Other observations include the standard ID format, but that ID isn’t present when querying the current STACs. We are continuing to work to track down the affected images, and will update the site models and imagery lists when we resolve this disparity.
 
 Sites with affected observations:
 -	BH_R001 sites 0000-0005
