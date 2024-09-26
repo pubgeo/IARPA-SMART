@@ -12,7 +12,7 @@ The _site_id_ is a unique index that serves as the primary link between sites th
 
 ## Region Feature
 
-As mentioned in the common model documentation (TODO: Add common model documentation), a Region Feature is expected to define its geometry and type. A Region Feature's geometry **must be** a Polygon. The following is a list of properties that are also expected to be defined in the Region's `properties` property. **All of these are mandatory**.
+A `region` Feature is expected to define its geometry and type. A `region` feature's geometry **must be** of type `Polygon`. The following is a list of properties that are also expected to be defined in the Region's `properties` property. **All of these are mandatory**.
 
 ### `type` (string)
 

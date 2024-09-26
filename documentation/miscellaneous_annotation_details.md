@@ -25,6 +25,3 @@ This page describes the possible values of the 'status' field in the site_model 
 
 
 <a name="Activity Phase Labels"></a>
-
-## Phase Labels
-TODO: Describe the 5 phase labels here

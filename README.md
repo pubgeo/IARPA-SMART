@@ -8,16 +8,16 @@ For more information on the problem formulation and the dataset, please see our 
 
 The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large Computer Vision/Machine Learning (CV/ML) dataset containing spatio-temporal annotations of large scale heavy construction activity for the purposes of algorithm development and evaluation for automated broad area search and classification of anthropogenic activities from satellite iamgery. 
 
-This repository contains the following key components. 
+This repository contains the following key components: 
 
-- The annotation dataset (found in [`annotations/`](annotations/)). Throughout the documentation in this Github repository, we refer to this dataset as the `SMART Heavy Construction Dataset`.
+- The **annotation dataset** (found in [`annotations/`](annotations/)). Throughout the documentation in this Github repository, we refer to this dataset as the `SMART Heavy Construction Dataset`.
 - [Instructions for how to obtain some of the underlying and corresponding satellite imagery](documentation/obtain_imagery.md) in which these activities can be observed. 
-- Useful utilities (found in [`utilities/`](utilities/)) to help get started and make use of the dataset. 
-- A Python-based implementation of custom performance evaluation metrics (tailored specifically to the data formats and application introduced here) can be found in `src/`. A publication describing the evaluation metrics is available here (COMING SOON).
+- Useful **utilities** (found in [`utilities/`](utilities/)) to help get started with and make use of the dataset. 
+- A Python-based implementation of **semi-custom performance evaluation metrics** (tailored specifically to the data formats and application introduced here) can be found in `src/`. A publication describing the formulation of the evaluation metrics will be made available soon (expected May 2025 but available upon request prior to official release). 
 
 NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing by the program. Expected release is by January 2025. 
 
-## Terminology
+# Terminology
 
 - **Observation**:
   - A single image capturing the actitivy of interest on a specific day. A day is the most granular time-scale considered by SMART
@@ -64,7 +64,18 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   </figure>
 </div>
 
-## Heavy Construction Annotation Dataset
+# Capabilities
+
+The IARPA SMART Heavy Construction dataset was created to promote development of algorithms capable of three tasks: 
+
+- **Broad area search (BAS)**: Detect and localize (spatially and temporally) activities in a sequence of
+images
+- **Activity classification (AC)**: Label the detected activity at each observation (time step) as one of a
+specified set of activity phases (See Table 1)
+- **Activity prediction (AP)**: For a given site that is not yet observed in an end-state, predict when the
+end-state transition will occur
+
+# SMART Heavy Construction Annotation Dataset 
 
 For the purposes of the IARPA SMART problem formulation, heavy construction activity is defined as any activity related to the construction of large scale buildings and associated infrastructure. 
 
@@ -74,7 +85,7 @@ Therefore, for our problem, we have defined the concept of a `site` which is mea
 
 (NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found [here](annotations\supplemental_data\supplemental_annotation_info.json).
 
-### Positive activity types
+## Positive activity types
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'positive' set. That is, we expect algorithms to detect these types of heavy construction activity. 
 
@@ -98,7 +109,7 @@ Other considerations for 'Positive' activity types, or activity that should be i
 |:----------------------:|:----------------------:|:----------------------:|:----------------------:|
 | Heavy Residential              | Heavy Residential              | Medium Residential              | Medium Residential               |
 
-#### _Examples of site progressions over time_
+### _Examples of site progressions over time_
 
 <div style="text-align: center;">
   <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
@@ -117,7 +128,7 @@ Other considerations for 'Positive' activity types, or activity that should be i
   </p>
 </div>
 
-### Negative activity types
+## Negative activity types
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'negative' set. That is, we expect algorithms to detect these types of heavy construction activity. 
 
@@ -139,13 +150,160 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 |:----------------------:|:----------------------:|:----------------------:|
 | Recreational Fields             | Resurfacing       | Solar Panels              |
 
-### Ignore
+## '_Ignore_' Sites
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, activiy types that are either ambiguous or otherwise unknown at the time of annotation are labeled as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
 
-- Define what heavy construction is and isn't (size, activity types, etc.)
-- Chart showing how many sites are annotated in each region
-- Distinction between different annotation types 
+## Phase Labels
+
+To support Activity Classification (AC) and Activity Prediction (AP) tasks, the SMART Heavy Construction dataset defines the following labels to describe the phase of activity at any point in time. These definitions are pulled from [1] (TODO: Add this citation). 
+
+<table style="width: 80%; margin: auto; border: 1px solid white;">
+  <tr>
+    <th style="width: 20%; text-align: center; vertical-align: middle;">Phase</th>
+    <th style="width: 80%; text-align: center; vertical-align: middle;">Description</th>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle; background-color: #DFDFDF; color: black;">No Activity</td>
+    <td>
+      <ul>
+        <li>Status quo for any given site. What the scene looks like before activity started.</li>
+        <li>Default class for un-annotated areas before any activity begins</li>
+        <li>An algorithm is not expected to detect this phase or anticipate transitions out of this phase. Observations of sites in this phase are included in site models for algorithm training purposes only.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle; background-color: #FFDFBF; color: black;">Site Preparation</td>
+    <td>
+      <ul>
+        <li>Includes activity such as ground clearing, ground shaping, and other activity related to preparing the site for construction.</li>
+        <li>Earliest possible annotated activity phase class for a site.</li>
+      </ul>
+    </td>
+  </tr>
+    <tr>
+    <td style="text-align: center; vertical-align: middle; background-color: #F3B1AC; color: black;">Active Construction</td>
+    <td>
+      <ul>
+        <li>This phase defines when objects in the scene are actively being built, including building foundations and supporting infrastructure.</li>
+        <li>Includes activity such as pre-foundation and foundation building, transient construction, building of intermediate structures, etc.</li>
+      </ul>
+    </td>
+  </tr>
+    <tr>
+    <td style="text-align: center; vertical-align: middle; background-color: #8BBBEB; color: black;">Post Construction</td>
+    <td>
+      <ul>
+        <li>Phase in which apparent completion of all construction activity within the site or sub-site bounds has occurred.</li>
+        <li>At least one view of post-construction is required to be annotated for each site model, assuming the construction has been completed within the temporal bounds of the datacube. More may be provided if available.</li>
+      </ul>
+    </td>
+  </tr>
+    <tr>
+    <td style="text-align: center; vertical-align: middle; background-color: #C87FF5; color: black;">Unknown</td>
+    <td>
+      <ul>
+        <li>No image or external information source is available to reliably classify that observation as being in a specific phase.</li>
+        <li>Will always occur in the temporal gap between phase transitions (e.g. between ‘Site Prep’ and ‘Active Construction’). Unknown labels will never occur between two labels of the same activity (e.g. between two 'Site Prep' labels). This is because it is assumed that once a given phase starts, it is assumed to continue until and unless indicated otherwise in a subsequent observation.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<div style="text-align: center;">
+  <figure>
+    <img src="resources/phase_transitions.png" alt="Description" style="width: 750px;">
+    <figcaption>Progression of four construction sites through each of the four phases defined above. All images shown are from Sentinel-2. Figure is taken from [1].</figcaption>
+  </figure>
+</div>
+
+## Annotation Types
+
+The SMART Heavy Construction Dataset consists of different types of annotations, each with unique characteristics and intended for a specific purpose. The table below provides a description of these site types. While all types can be used for BAS algorithm development and evaluation, only Types 1 and 2 can be used for AC and AP. Type 3 sites are intended to be the `negative` class.
+
+<div style="display: flex; justify-content: center;">
+  <table>
+    <tr>
+      <th style="text-align: center;">Type</th>
+      <th style="text-align: center;">No. of Annotated<br>Observations Per Site</th>
+      <th style="text-align: center;">Has Phase Labels?</th>
+      <th style="text-align: center;">Completed Activity?</th>
+      <th style="text-align: center;">Notes</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">1</td>
+      <td style="text-align: center;">Many</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Positive Sites</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">2</td>
+      <td style="text-align: center;">Many</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Positive Sites</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">3</td>
+      <td style="text-align: center;">2 (Start and End)</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Negative Sites</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">4</td>
+      <td style="text-align: center;">2 (Start and End)</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Yes or No</td>
+      <td style="text-align: center;">Positive sites pending phase labels</td>
+    </tr>
+  </table>
+</div>
+
+## Primary and Supplemental Datasets
+
+The content of this section is extracted from [1].
+
+The SMART Heavy Construction dataset is further categorized by the annotation process and the purpose for which annotations were generated. These categories, described in the table below, notionally describe a tradeoff between annotation quality and quantity. This table also notes which site types are included in each dataset. The following sections provide additional nformation on each of these two dataset categories, which we generically refer to here as the `Primary Dataset` and the `Supplemental Dataset`. 
+
+<div style="display: flex; justify-content: center;">
+  <table>
+    <tr>
+      <th style="text-align: center;">Dataset</th>
+      <th style="text-align: center;">No. of Annotated<br>Site Models (All Types)</th>
+      <th style="text-align: center;">Relative Quality</th>
+      <th style="text-align: center;">Used For</th>
+      <th style="text-align: center;">Site Types Included</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">Primary</td>
+      <td style="text-align: center;">Lower</td>
+      <td style="text-align: center;">Higher</td>
+      <td style="text-align: center;">BAS, AC, and AP</td>
+      <td style="text-align: center;">1, 2, 3, 4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">Supplemental</td>
+      <td style="text-align: center;">Much Higher</td>
+      <td style="text-align: center;">Lower</td>
+      <td style="text-align: center;">BAS Only</td>
+      <td style="text-align: center;">4</td>
+    </tr>
+  </table>
+</div>
+
+- TODO: Add a list of regions and an indication of whether they are Primary/Secondary and whether the region is cleared. 
+
+## Dataset Statistics
+
+Activity in all regions are annotated over the span of more than 7.5 years from at least January 2014 through August 2021. In many cases, sites outside of these temporal bounds are also included for algorithm training and validation purposes. However, evaluation is limited to the dates identified above due to increased reliability and availability of sufficient information to support annotation of site boundaries and phase labels. [1].
+
+TODO: Add Map
+TODO: Chart showing total number of positive and negatives sites in each dataset
+TODO: Chart showing how many observations and annotated phase labels
+
 
 ## File Format Specifications
 
@@ -178,6 +336,9 @@ This work was supported by the Office of the Director of National Intelligence (
 Development of the dataset was also supported by: 
 - CrowdAI
 - iMERIT
+
+# References
+[1]: H.R. Goldberg et al., "Automated global-scale detection and characterization of anthropogenic activity using multi-source satellite-based remote sensing imagery" in Geospatial Informatics XIII, SPIE, vol. 12525, pp. 12525-1, 2023.
 
 # Contact the authors
 Please reach out to iarpa.smart@jhuapl.edu with any questions or feedback. 
