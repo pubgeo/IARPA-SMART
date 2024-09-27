@@ -53,17 +53,17 @@ Incrementation indicates a single operation has taken place, not that a single m
 
 ### `mgrs` (string)
 
-This is the \[MGRS\](https://en.wikipedia.org/wiki/Military_Grid_Reference_System grid ID at the 100km precision level for the region’s centroid. For non-polar regions, the grid zone designator should be zero-padded e.g. rather than `4QFJ` you would use `04QFJ`. Accordingly, non-polar regions should have a five-letter MGRS string, two numerics followed by three alphabetics. Polar regions should have only three alphabetics.
+This is the [MGRS](https://en.wikipedia.org/wiki/Military_Grid_Reference_System) grid ID at the 100km precision level for the region’s centroid. For non-polar regions, the grid zone designator should be zero-padded e.g. rather than `4QFJ` you would use `04QFJ`. Accordingly, non-polar regions should have a five-letter MGRS string, two numerics followed by three alphabetics. Polar regions should have only three alphabetics.
 
 ### `status` (string)
 
-This must be one of the strings found on the list of (TODO: UPDATE [canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types).)
+This must be one of the strings found on the list of [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 ### `start_date` (string or null)
 
 This value may be `null` ,or a datestring of the format `"YYYY-MM-DD"`.
 
-If it is a datestring, it corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the (TODO: UPDATE[canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types)).
+If it is a datestring, it corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 NOTE: This date is not the same as the observed start of the activity described by the site model. It is simply the very first observation noted in the annotation (ground truth) file, which could be 'No Activity' (prior to activity starting). 
 
@@ -71,7 +71,7 @@ NOTE: This date is not the same as the observed start of the activity described 
 
 This value may be `null` ,or a datestring of the format `"YYYY-MM-DD"`.
 
-If it is a datestring, it corresponds to the latest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the (TODO: UPDATE[canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types)).
+If it is a datestring, it corresponds to the latest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 NOTE: This date is not the same as the observed end of the activity described by the site model. It is simply the very last observation noted in the annotation (ground truth) file, which could be the last of several 'Post Construction' activities. 
 
@@ -187,7 +187,7 @@ If there are no site boundary notes (which can happen in certain annotation mode
 
 ### Notes on the observation geometries
 
-Polygon geometries should follow the (TODO: Add these [site/sub-site boundary rules](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Terminology-and-Boundary-Definitions#sitesub-site-rules))
+Polygon geometries should follow the [guidelines defined for site and subsite rules](../boundary_definitions.md).
 
 ### Optional Fields
 

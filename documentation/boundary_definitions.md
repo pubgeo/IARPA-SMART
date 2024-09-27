@@ -1,6 +1,8 @@
-# Spatial Boundaries 
+# Site Boundaries
 
-Site spatial boundaries delineate the outer extents of the observed change over the entire duration of the actvitiy. They should be distinguishable using visible features in the imagery and should include supporting infrastructure (i.e. parking lots, pavement, etc.). Examples of features that define site boundaries include the following:
+## Spatial Boundaries 
+
+Site spatial boundaries delineate the outer extents of the observed change **over the entire duration of the actvitiy**. They should be distinguishable using visible features in the imagery and should include supporting infrastructure (i.e. parking lots, pavement, greenery, areas used during the construction of the activity, etc.). Examples of features that can be used as site boundaries include the following:
 - Major roads and above (using [OSM definitions](https://wiki.openstreetmap.org/wiki/United_States/Road_classification))
 - Uninhabited areas
 - Bodies of water (rivers, oceans, etc.)
@@ -12,9 +14,9 @@ Site spatial boundaries may grow over time but will never shrink. They represent
 
 There is also a temporal aspect when considering site spatial boundaries. If activity on one site completely finishes prior to the start of the activity of an adjacent site, a site boundary should be drawn, thereby splitting two adjacent plots of land into two separate sites. If the activity on an adjacent plot of land starts prior to the completion of the original activity AND if no site boundary is present (as indicated above), then the new plot of land should be incorporated into the existing site boundary.  
 
-## Sub-sites
+### <ins>Sub-sites</ins>
 
-### Boundaries
+#### Boundaries
 
 These are features that may be used to further split a site into smaller sections when multiple activity phases are present _within the same time slice and within the bounds of a single site polygon_. Sub-site boundaries are necessary _**if and only if**_ they separate areas within the same site boundary that are in different construction phases at a given observation. They are only required **if and only if** the two separate areas both represent heavy construction activities on their own. For example, subsites should not be drawn to separate open green space or parking lots by themselves since those are not positive examples of heavy construction. Examples of suitable subsite boundaries: 
 - Roads that are completed within the site boundary during the construction activity
@@ -23,7 +25,7 @@ These are features that may be used to further split a site into smaller section
   - Parking lot to dirt transition 
   - Dirt roads separating plots of land or city blocks on which activity is occurring
 
-### Site/sub-site rules
+#### Site/sub-site rules
 
 These rules define the required spatial relationships between and within sites and subsites for a single observation/image (Note: Small amounts of spatial jitter from one image to another may slightly invalidate one or more of these rules between two observations/images.)
 - Site boundaries will never overlap or even touch other site boundaries in the same image.
@@ -31,7 +33,9 @@ These rules define the required spatial relationships between and within sites a
 - Subsites must always exist fully within site boundaries. Subsites cannot exist on their own and must not extend outside the site boundary of which they are a part.
   - Caveat: Subsites can share boundaries with the site polygon(s) in which they exist. 
 
-# Temporal Bounds
+Note that the use of subsites in the heavy construction dataset was supported in early development but ultimately phased out (and often ignored) in later development. They exist in some annotations but are only partially supported and/or included in the metrics evaluation code.  
+
+## Temporal Boundaries (TODO: Finish this description and tie back to the Type 1/2/3/4 definition)
 
 The timespan of a site may be referred to differently depending on the completeness of the annotation (i.e. inclusion of phase classifications).
 

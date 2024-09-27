@@ -64,7 +64,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   </figure>
 </div>
 
-# Capabilities
+# SMART System Capabilities
 
 The IARPA SMART Heavy Construction dataset was created to promote development of algorithms capable of three tasks: 
 
@@ -152,11 +152,11 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 
 ## '_Ignore_' Sites
 
-For the purposes of the IARPA SMART Heavy Construction Dataset, activiy types that are either ambiguous or otherwise unknown at the time of annotation are labeled as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
+For the purposes of the IARPA SMART Heavy Construction Dataset, activity that is either ambiguous or otherwise unknown at the time of annotation are labeled as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
 
-## Phase Labels
+## Activity Phase Labels
 
-To support Activity Classification (AC) and Activity Prediction (AP) tasks, the SMART Heavy Construction dataset defines the following labels to describe the phase of activity at any point in time. These definitions are pulled from [1] (TODO: Add this citation). 
+To support Activity Classification (AC) and Activity Prediction (AP) tasks, the SMART Heavy Construction dataset defines the following labels to describe the phase of activity at any point in time. These definitions are pulled from [1]. 
 
 <table style="width: 80%; margin: auto; border: 1px solid white;">
   <tr>

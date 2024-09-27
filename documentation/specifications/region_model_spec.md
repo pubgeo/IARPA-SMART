@@ -151,26 +151,26 @@ Incrementation indicates a single operation has taken place, not that a single m
 
 ### `mgrs` (string)
 
-This is the [MGRS](https://en.wikipedia.org/wiki/Military_Grid_Reference_System grid ID at the 100km precision level for the region’s centroid. 
+This is the [MGRS](https://en.wikipedia.org/wiki/Military_Grid_Reference_System) grid ID at the 100km precision level for the region’s centroid. 
 For non-polar regions, the grid zone designator should be zero-padded e.g. rather than `4QFJ` you would use `04QFJ`. 
 Accordingly, non-polar regions should have a five-letter MGRS string, two numerics followed by three alphabetics.
 Polar regions should have only three alphabetics.
 
 ### `status` (string)
 
-This must be one of the strings found on the list of (TODO: Update [canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types)).
+This must be one of the strings found on the list of [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 ### `start_date` (string or null)
 
 This value may either be `null` or a datestring of the format `"YYYY-MM-DD"`.
 
-If it is a datestring, this date corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the (TODO: Update [canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types)).
+If it is a datestring, this date corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 ### `end_date` (string or null)
 
 This value may either be `null` or a datestring of the format `"YYYY-MM-DD"`.
 
-If it is a datestring, it corresponds to the latest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the (TODO: Update [canonical site types](https://smartgitlab.com/TE/annotations/-/wikis/Annotation-Status-Types)).
+If it is a datestring, it corresponds to the latest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 ### `model_content` (string)
 

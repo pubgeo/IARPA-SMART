@@ -1,10 +1,10 @@
 # Miscellaneous annotation information
 
-This page describes the possible values of the 'status' field in the site_model specification. This information applies to site models in the SMART Heavy Construction Dataset. It is recommended that system outputs also conform to these guidelines.
+<a name="annotations-status-type-categories"></a>
 
-<a name="site-type-categories"></a>
+## Annotation Status Type Categories
 
-## Site Type Categories
+The list of labels below describes the possible values of the 'status' field in the site_model specification. This information applies to site models included in the SMART Heavy Construction Dataset. It is recommended that system outputs also conform to these guidelines.
 
 * Positive Type: true positive (TP) if detected, false negative (FN) if missed
   * positive_annotated (+)
