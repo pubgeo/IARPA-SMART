@@ -1,0 +1,148 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "NZ_R002",
+                "site_id": "NZ_R002_0172",
+                "version": "2.0.0",
+                "status": "ignore",
+                "mgrs": "59GPM",
+                "score": 1.0,
+                "start_date": "2016-11-01",
+                "end_date": "2020-11-30",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "b6eafec9e01e04d079559a0e0f989eb0842070b9"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            172.508789,
+                            -43.551227
+                        ],
+                        [
+                            172.509253,
+                            -43.55165
+                        ],
+                        [
+                            172.508707,
+                            -43.552214
+                        ],
+                        [
+                            172.507353,
+                            -43.551449
+                        ],
+                        [
+                            172.508034,
+                            -43.550864
+                        ],
+                        [
+                            172.508789,
+                            -43.551227
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-11-01",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                172.508789,
+                                -43.551227
+                            ],
+                            [
+                                172.508034,
+                                -43.550864
+                            ],
+                            [
+                                172.507353,
+                                -43.551449
+                            ],
+                            [
+                                172.508707,
+                                -43.552214
+                            ],
+                            [
+                                172.509253,
+                                -43.55165
+                            ],
+                            [
+                                172.508789,
+                                -43.551227
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-11-30",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                172.508789,
+                                -43.551227
+                            ],
+                            [
+                                172.508034,
+                                -43.550864
+                            ],
+                            [
+                                172.507353,
+                                -43.551449
+                            ],
+                            [
+                                172.508707,
+                                -43.552214
+                            ],
+                            [
+                                172.509253,
+                                -43.55165
+                            ],
+                            [
+                                172.508789,
+                                -43.551227
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

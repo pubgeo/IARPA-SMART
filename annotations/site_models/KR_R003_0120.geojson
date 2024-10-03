@@ -1,0 +1,136 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "KR_R003",
+                "site_id": "KR_R003_0120",
+                "version": "2.0.0",
+                "status": "negative",
+                "mgrs": "52SEG",
+                "score": 1.0,
+                "start_date": "2015-06-01",
+                "end_date": "2019-02-28",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "b6eafec9e01e04d079559a0e0f989eb0842070b9"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            129.170352,
+                            37.44121
+                        ],
+                        [
+                            129.171887,
+                            37.44023
+                        ],
+                        [
+                            129.171014,
+                            37.43866
+                        ],
+                        [
+                            129.169466,
+                            37.439368
+                        ],
+                        [
+                            129.170352,
+                            37.44121
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2015-06-01",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                129.170352,
+                                37.44121
+                            ],
+                            [
+                                129.169466,
+                                37.439368
+                            ],
+                            [
+                                129.171014,
+                                37.43866
+                            ],
+                            [
+                                129.171887,
+                                37.44023
+                            ],
+                            [
+                                129.170352,
+                                37.44121
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-02-28",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                129.170352,
+                                37.44121
+                            ],
+                            [
+                                129.169466,
+                                37.439368
+                            ],
+                            [
+                                129.171014,
+                                37.43866
+                            ],
+                            [
+                                129.171887,
+                                37.44023
+                            ],
+                            [
+                                129.170352,
+                                37.44121
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
