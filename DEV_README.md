@@ -58,4 +58,4 @@ python -m iarpa_smart_metrics.run_evaluation --roi BR_R002 --sequestered_id BR_R
 
 ## Output
 
-See the descriptions for the [example outputs](example/output.compare/).
+See the descriptions for the [example outputs](src/example/output.compare/).
