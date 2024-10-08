@@ -71,7 +71,7 @@ The IARPA SMART Heavy Construction dataset was created to promote development of
 - **Broad area search (BAS)**: Detect and localize (spatially and temporally) activities in a sequence of
 images
 - **Activity classification (AC)**: Label the detected activity at each observation (time step) as one of a
-specified set of activity phases (See Table 1)
+specified set of activity phases 
 - **Activity prediction (AP)**: For a given site that is not yet observed in an end-state, predict when the
 end-state transition will occur
 
