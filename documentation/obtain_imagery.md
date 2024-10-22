@@ -41,11 +41,11 @@ The use of [SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en) facil
 - *[COG: Cloud Optimizied GeoTIFF Format Description](https://www.usgs.gov/media/files/landsat-cloud-optimized-geotiff-data-format-control-book)
 - **The Sentinel 2 v0 STAC catalog is retired now, but was used for most annotations, and may occasionally have images that v1 does not
 
-Examples demonstrating querying calls to the STAC endpoints can be found in IARPA-SMART/utilities/stac_query_example.py. We have also included requirements for the environment at [IARPA-SMART/utilities/requirements.txt](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/requirements.txt) to run the examples. 
+Examples demonstrating querying calls to the STAC endpoints can be found in [IARPA-SMART/utilities/stac_query_example.py](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/stac_query_example.py). We have also included requirements for the environment at [IARPA-SMART/utilities/requirements.txt](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/requirements.txt) to run the examples. 
 
 We recommend using some or all of the images listed in these files:
-- obtain_imagery_supplemental/suggested_LS_images_with_annotated_sites.csv
-- obtain_imagery_supplemental/suggested_S2_images_with_annotated_sites.csv
+- [obtain_imagery_supplemental/suggested_LS_images_with_annotated_sites.csv](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/obtain_imagery_supplemental/suggested_LS_images_with_annotated_sites.csv)
+- [obtain_imagery_supplemental/suggested_S2_images_with_annotated_sites.csv](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/obtain_imagery_supplemental/suggested_S2_images_with_annotated_sites.csv)
 
 There may be additional images beyond those listed that can also be used but this set represents a sufficient baseline. 
 
@@ -57,8 +57,8 @@ For access to these imagery sources, we recommend reaching out to the source ven
 - [Planet Labs](https://www.planet.com/contact-sales/)
 
 We recommend obtaining some or all of the images listed in these files: 
-- obtain_imagery_supplemental/suggested_WV_images_with_annotated_sites.csv
-- obtain_imagery_supplemental/suggested_PL_images_with_annotated_sites.csv
+- [obtain_imagery_supplemental/suggested_WV_images_with_annotated_sites.csv](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/obtain_imagery_supplemental/suggested_WV_images_with_annotated_sites.csv)
+- [obtain_imagery_supplemental/suggested_PL_images_with_annotated_sites.csv](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/obtain_imagery_supplemental/suggested_PL_images_with_annotated_sites.csv)
 
 There may be additional images beyond those listed that can also be used but this set represents a sufficient baseline. 
 
