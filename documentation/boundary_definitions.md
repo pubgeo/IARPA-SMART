@@ -2,7 +2,7 @@
 
 ## Spatial Boundaries 
 
-Site spatial boundaries delineate the outer extents of the observed change **over the entire duration of the actvitiy**. They should be distinguishable using visible features in the imagery and should include supporting infrastructure (i.e. parking lots, pavement, greenery, areas used during the construction of the activity, etc.). Examples of features that can be used as site boundaries include the following:
+Site spatial boundaries delineate the outer extents of the observed change **over the entire duration of the activity**. They should be distinguishable using visible features in the imagery and should include supporting infrastructure (i.e. parking lots, pavement, greenery, areas used during the construction of the activity, etc.). Examples of features that can be used as site boundaries include the following:
 - Major roads and above (using [OSM definitions](https://wiki.openstreetmap.org/wiki/United_States/Road_classification))
 - Uninhabited areas
 - Bodies of water (rivers, oceans, etc.)
@@ -12,7 +12,7 @@ Site spatial boundaries delineate the outer extents of the observed change **ove
 
 Site spatial boundaries may grow over time but will never shrink. They represent all change pertaining to the activity at all times up to the current observation. 
 
-There is also a temporal aspect when considering site spatial boundaries. If activity on one site completely finishes prior to the start of the activity of an adjacent site, a site boundary should be drawn, thereby splitting two adjacent plots of land into two separate sites. If the activity on an adjacent plot of land starts prior to the completion of the original activity AND if no site boundary is present (as indicated above), then the new plot of land should be incorporated into the existing site boundary.  
+There is also a temporal aspect when considering site spatial boundaries. If activity in one area completely finishes prior to the start of the activity in an adjacent area, a site boundary should be drawn, thereby splitting two adjacent plots of land into two separate sites. If the activity on an adjacent plot of land starts prior to the completion of the original activity AND if no feature that can be used as a site boundary is present (as indicated above), then the new plot of land should be incorporated into the existing site boundary.  
 
 ### <ins>Sub-sites</ins>
 
