@@ -12,7 +12,7 @@ Site spatial boundaries delineate the outer extents of the observed change **ove
 
 Site spatial boundaries may grow over time but will never shrink. They represent all change pertaining to the activity at all times up to the current observation. 
 
-There is also a temporal aspect when considering site spatial boundaries. If activity in one area completely finishes prior to the start of the activity in an adjacent area, a site boundary should be drawn, thereby splitting two adjacent plots of land into two separate sites. If the activity on an adjacent plot of land starts prior to the completion of the original activity AND if no feature that can be used as a site boundary is present (as indicated above), then the new plot of land should be incorporated into the existing site boundary.  
+There is also a temporal aspect when considering site spatial boundaries. If activity in one area completely finishes prior to the start of the activity in an adjacent area, a site boundary should be drawn, thereby splitting two adjacent plots of land into two separate sites. If the activity on an adjacent plot of land starts prior to the completion of the original activity AND if no feature that can be used as a site boundary is present (as indicated above), then the new plot of land should be incorporated into the existing site boundary. If additional activity occurs on the same plot of land after several years where the site from the initial activity is clearly complete, unchanging, and in use, the same spatial bounds can be used for a second site separated by a later temporal bound.
 
 ### <ins>Sub-sites</ins>
 
@@ -35,14 +35,15 @@ These rules define the required spatial relationships between and within sites a
 
 Note that the use of subsites in the heavy construction dataset was supported in early development but ultimately phased out (and often ignored) in later development. They exist in some annotations but are only partially supported and/or included in the metrics evaluation code.  
 
-## Temporal Boundaries (TODO: Finish this description and tie back to the Type 1/2/3/4 definition)
+## Temporal Boundaries
 
 The timespan of a site may be referred to differently depending on the completeness of the annotation (i.e. inclusion of phase classifications).
 
-**Start and end dates** may have either been identified with Google Earth or Sentinel imagery, and will not be tied to a specific image. These are sort-of "default" dates, which appear on all negative and ignore sites, in addition to delivered `positive_pending` and iMerit-annotated ("coarse annotation") sites.
+**Activity dates** may be referenced for [Type 1 or Type 2](https://github.com/pubgeo/IARPA-SMART/blob/main/README.md#annotation-types) sites, which have at least partial phase classification annotations. Phase classification is tied to an annotated image, so these dates will also correspond to a specific source and image tag.
+- `activity start` refers to the first annotated instance of visible change for a site. This will ideally be indicated by the first instance of `site preparation`, though not necessarily depending on the completeness of the annotation or the availability of imagery.
+- `activity end` refers to the last annotated instance of construction-related change, before a site is completed. This will ideally be the last instance of `active construction`, though not necessarily depending on the completeness of the annotation or the availability of imagery.
+
+**Start and end dates** have either been identified with Google Earth or Sentinel imagery, but will not be explicitly tied to a specific image. These are "default" dates, which will be present for all [Type 3 or Type 4](https://github.com/pubgeo/IARPA-SMART/blob/main/README.md#annotation-types) sites (sites without phase labels, including all `negative` (Type 3), `positive_excluded` (3), `ignore` (3), and `positive_pending` (4) sites).
 - start_date refers to the last timestamp on which no activity was seen, i.e. the time right before construction began.
 - end_date refers to the first timestamp after all construction is verified to be completed, typically when the site is visibly in-use.
-
-**Activity dates** may be referenced for sites which have at least partial phase classification annotations. Because it is tied to an annotated image, these dates will also correspond to a specific source and image tag.
-- `activity start` refers to the first annotated instance of visible change for a site. This will ideally be indicated by the first instance of `site preparation`, though not necessarily depending on the completeness of the annotation or the availability of imagery
-- `activity end` refers to the last annotated instance of construction-related change, before a site is completed. This will ideally be the first instance of `post construction`, though not necessarily depending on the completeness of the annotation or the availability of imagery
+- Note that the `start_date` and `end_date` fields in Type 1 or Type 2 site annotation files do not correspond to this "default" date range. They instead give the date of the earliest/latest images annotated with a phase label, which may be many images before/after any construction activity begins/ends. The equivalent to a Type 3 or 4 "default" start_date is the date of the last annotated instance of `no activity` before `site preparation` or `active construction` begins, while a Type 3 or 4 "default" end_date is the date of the first annotated instance of `post_construction`.
