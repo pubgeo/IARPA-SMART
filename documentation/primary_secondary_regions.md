@@ -34,16 +34,16 @@ All regions in the primary dataset are formatted like [country code]_R### (or _R
 | ZA_R001 | Test | Yes |
 
 In addition to the regions listed above, many countries include additional annotations which do not fall within the named region boundaries. These sites will have region codes with the same country code, followed by "Rxxx" (e.g. US_Rxxx). None of these "regions" are cleared, as they may fall anywhere else in the country, and are mostly negative sites found as part of a concerted effort to find more negative examples.
+
+## Train Region Map
 ![train-regions](https://github.com/user-attachments/assets/c6a12a20-82f1-4bb4-83fa-ed23ad431610)
+## Test Region Map
 ![test-regions](https://github.com/user-attachments/assets/5163b825-8dce-486a-a928-6f18c0a1b448)
 
 # Secondary Dataset
 The "secondary dataset" only contains a single annotation type, which does not have activity phase labels or  imagery associations. While more numerous, none of these regions are cleared, and they only contain positive examples of heavy construction. They will contain a single polygon boundary of the site, a start date, and an end date (which may be null if the site was still active as of the most recent Google Earth imagery).
 
 These sites are not annotated with the same fidelity as the primary dataset, and may have small date or polygon inconsistencies in comparison. When issues are identified and brought to the data curation team's attention, they will be updated or changed to "ignore" status if they are too ambiguous to properly annotate.
-
-![secondary-data](https://github.com/user-attachments/assets/43a2e613-ca01-4c39-a3f1-a705fef762dc)
-
 
 All of these regions identifiers are formatted as [country code]_C###
 - AE_C001
@@ -126,3 +126,6 @@ All of these regions identifiers are formatted as [country code]_C###
 - VE_C004
 - VN_C001
 - VN_C002
+
+## Secondary Regions Map
+![secondary-data](https://github.com/user-attachments/assets/43a2e613-ca01-4c39-a3f1-a705fef762dc)
