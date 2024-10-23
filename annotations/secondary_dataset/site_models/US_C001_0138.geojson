@@ -1,0 +1,160 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "US_C001",
+                "site_id": "US_C001_0138",
+                "version": "2.0.1",
+                "status": "positive_pending",
+                "mgrs": "14SQB",
+                "score": 1.0,
+                "start_date": "2018-12-28",
+                "end_date": "2020-10-01",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "0783c71a6864f6a7478bf1c46ad4cdfc05cadbbd"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -96.649592,
+                            32.971528
+                        ],
+                        [
+                            -96.649475,
+                            32.971939
+                        ],
+                        [
+                            -96.650222,
+                            32.9723
+                        ],
+                        [
+                            -96.650155,
+                            32.97382
+                        ],
+                        [
+                            -96.648035,
+                            32.973769
+                        ],
+                        [
+                            -96.648084,
+                            32.970904
+                        ],
+                        [
+                            -96.649592,
+                            32.971528
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2018-12-28",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -96.648084,
+                                32.970904
+                            ],
+                            [
+                                -96.649592,
+                                32.971528
+                            ],
+                            [
+                                -96.649475,
+                                32.971939
+                            ],
+                            [
+                                -96.650222,
+                                32.9723
+                            ],
+                            [
+                                -96.650155,
+                                32.97382
+                            ],
+                            [
+                                -96.648035,
+                                32.973769
+                            ],
+                            [
+                                -96.648084,
+                                32.970904
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2020-10-01",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -96.648084,
+                                32.970904
+                            ],
+                            [
+                                -96.649592,
+                                32.971528
+                            ],
+                            [
+                                -96.649475,
+                                32.971939
+                            ],
+                            [
+                                -96.650222,
+                                32.9723
+                            ],
+                            [
+                                -96.650155,
+                                32.97382
+                            ],
+                            [
+                                -96.648035,
+                                32.973769
+                            ],
+                            [
+                                -96.648084,
+                                32.970904
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

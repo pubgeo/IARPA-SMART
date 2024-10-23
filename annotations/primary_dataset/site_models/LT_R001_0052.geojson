@@ -1,0 +1,628 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "LT_R001",
+                "site_id": "LT_R001_0052",
+                "version": "2.1.1",
+                "status": "positive_annotated",
+                "mgrs": "35ULA",
+                "score": 1.0,
+                "start_date": "2015-06-12",
+                "end_date": "2016-06-26",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "269d539f02fdc48eccdc4cefa6dc4535ecdf3cda"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            24.013551,
+                            54.938175
+                        ],
+                        [
+                            24.013387,
+                            54.938126
+                        ],
+                        [
+                            24.011858,
+                            54.939277
+                        ],
+                        [
+                            24.012131,
+                            54.939349
+                        ],
+                        [
+                            24.012101,
+                            54.939372
+                        ],
+                        [
+                            24.012272,
+                            54.939417
+                        ],
+                        [
+                            24.012216,
+                            54.93946
+                        ],
+                        [
+                            24.012247,
+                            54.939468
+                        ],
+                        [
+                            24.012203,
+                            54.939501
+                        ],
+                        [
+                            24.013189,
+                            54.939763
+                        ],
+                        [
+                            24.013348,
+                            54.939645
+                        ],
+                        [
+                            24.013651,
+                            54.939726
+                        ],
+                        [
+                            24.015151,
+                            54.938601
+                        ],
+                        [
+                            24.014882,
+                            54.93852
+                        ],
+                        [
+                            24.014902,
+                            54.938505
+                        ],
+                        [
+                            24.014715,
+                            54.938449
+                        ],
+                        [
+                            24.014739,
+                            54.938431
+                        ],
+                        [
+                            24.013783,
+                            54.938141
+                        ],
+                        [
+                            24.013755,
+                            54.938162
+                        ],
+                        [
+                            24.0137,
+                            54.938145
+                        ],
+                        [
+                            24.01367,
+                            54.938168
+                        ],
+                        [
+                            24.013592,
+                            54.938144
+                        ],
+                        [
+                            24.013551,
+                            54.938175
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2015-06-12",
+                "source": "LC08_L1TP_186022_20150612_20200909_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "No Activity",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.012191,
+                                54.939298
+                            ],
+                            [
+                                24.0137,
+                                54.938145
+                            ],
+                            [
+                                24.014646,
+                                54.938434
+                            ],
+                            [
+                                24.013159,
+                                54.93956
+                            ],
+                            [
+                                24.012191,
+                                54.939298
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2015-08-15",
+                "source": "LC08_L1TP_186022_20150815_20200908_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.012216,
+                                54.93946
+                            ],
+                            [
+                                24.013724,
+                                54.938306
+                            ],
+                            [
+                                24.014671,
+                                54.938596
+                            ],
+                            [
+                                24.013184,
+                                54.939721
+                            ],
+                            [
+                                24.012216,
+                                54.93946
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-01-06",
+                "source": "LC08_L1TP_186022_20160106_20200907_02_T1",
+                "sensor_name": "Landsat 8",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.012083,
+                                54.939297
+                            ],
+                            [
+                                24.013592,
+                                54.938144
+                            ],
+                            [
+                                24.014538,
+                                54.938433
+                            ],
+                            [
+                                24.013051,
+                                54.939559
+                            ],
+                            [
+                                24.012083,
+                                54.939297
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-02-17",
+                "source": "S2A_34UFF_20160217_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.012268,
+                                54.93944
+                            ],
+                            [
+                                24.013804,
+                                54.938289
+                            ],
+                            [
+                                24.014769,
+                                54.938579
+                            ],
+                            [
+                                24.013255,
+                                54.939702
+                            ],
+                            [
+                                24.012268,
+                                54.93944
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-03-28",
+                "source": "S2A_34UFF_20160328_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.012203,
+                                54.939501
+                            ],
+                            [
+                                24.013738,
+                                54.93835
+                            ],
+                            [
+                                24.014703,
+                                54.93864
+                            ],
+                            [
+                                24.013189,
+                                54.939763
+                            ],
+                            [
+                                24.012203,
+                                54.939501
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-04-07",
+                "source": "S2A_34UFG_20160407_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "True",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.013651,
+                                54.939726
+                            ],
+                            [
+                                24.015151,
+                                54.938601
+                            ],
+                            [
+                                24.014195,
+                                54.938312
+                            ],
+                            [
+                                24.012673,
+                                54.939464
+                            ],
+                            [
+                                24.013651,
+                                54.939726
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-05-07",
+                "source": "S2A_34UFF_20160507_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "True",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.013388,
+                                54.939628
+                            ],
+                            [
+                                24.014902,
+                                54.938505
+                            ],
+                            [
+                                24.013937,
+                                54.938215
+                            ],
+                            [
+                                24.012402,
+                                54.939366
+                            ],
+                            [
+                                24.013388,
+                                54.939628
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-05-10",
+                "source": "S2A_34UFG_20160510_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.013238,
+                                54.939556
+                            ],
+                            [
+                                24.014739,
+                                54.938431
+                            ],
+                            [
+                                24.013783,
+                                54.938141
+                            ],
+                            [
+                                24.01226,
+                                54.939294
+                            ],
+                            [
+                                24.013238,
+                                54.939556
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-05-20",
+                "source": "S2A_34UFF_20160520_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.013088,
+                                54.939634
+                            ],
+                            [
+                                24.014601,
+                                54.938511
+                            ],
+                            [
+                                24.013636,
+                                54.938221
+                            ],
+                            [
+                                24.012101,
+                                54.939372
+                            ],
+                            [
+                                24.013088,
+                                54.939634
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-05-23",
+                "source": "16MAY23091113-P2AS_R2C1-500409447010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.011858,
+                                54.939277
+                            ],
+                            [
+                                24.013387,
+                                54.938126
+                            ],
+                            [
+                                24.014348,
+                                54.938416
+                            ],
+                            [
+                                24.012841,
+                                54.939538
+                            ],
+                            [
+                                24.011858,
+                                54.939277
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-05-27",
+                "source": "S2A_34UFG_20160527_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Unknown",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.012296,
+                                54.939427
+                            ],
+                            [
+                                24.013818,
+                                54.938275
+                            ],
+                            [
+                                24.014774,
+                                54.938565
+                            ],
+                            [
+                                24.013273,
+                                54.939689
+                            ],
+                            [
+                                24.012296,
+                                54.939427
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2016-06-26",
+                "source": "S2A_34UFF_20160626_0_L1C",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Post Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.013225,
+                                54.939635
+                            ],
+                            [
+                                24.014739,
+                                54.938512
+                            ],
+                            [
+                                24.013774,
+                                54.938222
+                            ],
+                            [
+                                24.012239,
+                                54.939373
+                            ],
+                            [
+                                24.013225,
+                                54.939635
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

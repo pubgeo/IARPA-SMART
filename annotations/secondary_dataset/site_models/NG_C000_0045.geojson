@@ -1,0 +1,172 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "NG_C000",
+                "site_id": "NG_C000_0045",
+                "version": "2.0.1",
+                "status": "positive_pending",
+                "mgrs": "31NEH",
+                "score": 1.0,
+                "start_date": "2009-01-13",
+                "end_date": "2021-01-20",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "0783c71a6864f6a7478bf1c46ad4cdfc05cadbbd"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            3.460687,
+                            6.453112
+                        ],
+                        [
+                            3.461033,
+                            6.453239
+                        ],
+                        [
+                            3.4614,
+                            6.453473
+                        ],
+                        [
+                            3.46192,
+                            6.452848
+                        ],
+                        [
+                            3.46154,
+                            6.452564
+                        ],
+                        [
+                            3.461959,
+                            6.451838
+                        ],
+                        [
+                            3.461326,
+                            6.451548
+                        ],
+                        [
+                            3.460687,
+                            6.453112
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2009-01-13",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                3.460687,
+                                6.453112
+                            ],
+                            [
+                                3.461326,
+                                6.451548
+                            ],
+                            [
+                                3.461959,
+                                6.451838
+                            ],
+                            [
+                                3.46154,
+                                6.452564
+                            ],
+                            [
+                                3.46192,
+                                6.452848
+                            ],
+                            [
+                                3.4614,
+                                6.453473
+                            ],
+                            [
+                                3.461033,
+                                6.453239
+                            ],
+                            [
+                                3.460687,
+                                6.453112
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2021-01-20",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                3.460687,
+                                6.453112
+                            ],
+                            [
+                                3.461326,
+                                6.451548
+                            ],
+                            [
+                                3.461959,
+                                6.451838
+                            ],
+                            [
+                                3.46154,
+                                6.452564
+                            ],
+                            [
+                                3.46192,
+                                6.452848
+                            ],
+                            [
+                                3.4614,
+                                6.453473
+                            ],
+                            [
+                                3.461033,
+                                6.453239
+                            ],
+                            [
+                                3.460687,
+                                6.453112
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

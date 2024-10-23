@@ -1,0 +1,858 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "US_R001",
+                "site_id": "US_R001_0002",
+                "version": "2.0.1",
+                "status": "positive_annotated",
+                "mgrs": "17RMP",
+                "score": 1.0,
+                "start_date": "2018-05-09",
+                "end_date": "2019-12-27",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "023e58afa6e6a0cd9bbf129c4acf4a62d529be35"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -81.605835,
+                            30.360688
+                        ],
+                        [
+                            -81.605811,
+                            30.360635
+                        ],
+                        [
+                            -81.605841,
+                            30.360626
+                        ],
+                        [
+                            -81.60584,
+                            30.360623
+                        ],
+                        [
+                            -81.605882,
+                            30.360613
+                        ],
+                        [
+                            -81.605964,
+                            30.360588
+                        ],
+                        [
+                            -81.606872,
+                            30.360368
+                        ],
+                        [
+                            -81.607554,
+                            30.360154
+                        ],
+                        [
+                            -81.608028,
+                            30.360014
+                        ],
+                        [
+                            -81.608044,
+                            30.360069
+                        ],
+                        [
+                            -81.608048,
+                            30.360068
+                        ],
+                        [
+                            -81.608049,
+                            30.360073
+                        ],
+                        [
+                            -81.608075,
+                            30.360065
+                        ],
+                        [
+                            -81.608077,
+                            30.36007
+                        ],
+                        [
+                            -81.608107,
+                            30.360061
+                        ],
+                        [
+                            -81.608213,
+                            30.360346
+                        ],
+                        [
+                            -81.608368,
+                            30.360879
+                        ],
+                        [
+                            -81.608368,
+                            30.360881
+                        ],
+                        [
+                            -81.608537,
+                            30.361338
+                        ],
+                        [
+                            -81.608557,
+                            30.361376
+                        ],
+                        [
+                            -81.608535,
+                            30.361377
+                        ],
+                        [
+                            -81.60853,
+                            30.361414
+                        ],
+                        [
+                            -81.606134,
+                            30.361481
+                        ],
+                        [
+                            -81.606095,
+                            30.361375
+                        ],
+                        [
+                            -81.606092,
+                            30.361367
+                        ],
+                        [
+                            -81.606083,
+                            30.361367
+                        ],
+                        [
+                            -81.605955,
+                            30.360991
+                        ],
+                        [
+                            -81.605906,
+                            30.360858
+                        ],
+                        [
+                            -81.605831,
+                            30.360689
+                        ],
+                        [
+                            -81.605835,
+                            30.360688
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2018-05-09",
+                "source": "T17RMP_20180509T155859_TCI",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "No Activity",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608442,
+                                30.36127
+                            ],
+                            [
+                                -81.606158,
+                                30.361316
+                            ],
+                            [
+                                -81.605891,
+                                30.360749
+                            ],
+                            [
+                                -81.606926,
+                                30.360488
+                            ],
+                            [
+                                -81.608108,
+                                30.360141
+                            ],
+                            [
+                                -81.608442,
+                                30.36127
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2018-10-16",
+                "source": "T17RMP_20181016T160229_TCI",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Site Preparation",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608408,
+                                30.361243
+                            ],
+                            [
+                                -81.606111,
+                                30.36129
+                            ],
+                            [
+                                -81.605857,
+                                30.360722
+                            ],
+                            [
+                                -81.606011,
+                                30.360675
+                            ],
+                            [
+                                -81.606919,
+                                30.360455
+                            ],
+                            [
+                                -81.6076,
+                                30.360241
+                            ],
+                            [
+                                -81.608075,
+                                30.360101
+                            ],
+                            [
+                                -81.608408,
+                                30.361243
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-01-06",
+                "source": "19JAN06161423-M1BS-012579346010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608472,
+                                30.361308
+                            ],
+                            [
+                                -81.608493,
+                                30.361348
+                            ],
+                            [
+                                -81.606115,
+                                30.361395
+                            ],
+                            [
+                                -81.605854,
+                                30.360659
+                            ],
+                            [
+                                -81.606483,
+                                30.360514
+                            ],
+                            [
+                                -81.607352,
+                                30.360315
+                            ],
+                            [
+                                -81.608069,
+                                30.360102
+                            ],
+                            [
+                                -81.608472,
+                                30.361308
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-03-07",
+                "source": "19MAR07160743-M1BS-012579340010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608535,
+                                30.361377
+                            ],
+                            [
+                                -81.60853,
+                                30.361414
+                            ],
+                            [
+                                -81.606134,
+                                30.361481
+                            ],
+                            [
+                                -81.60586,
+                                30.360731
+                            ],
+                            [
+                                -81.606494,
+                                30.360579
+                            ],
+                            [
+                                -81.607378,
+                                30.360378
+                            ],
+                            [
+                                -81.60809,
+                                30.360178
+                            ],
+                            [
+                                -81.608535,
+                                30.361377
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-05-24",
+                "source": "T17RMP_20190524T155829_TCI_10m",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608362,
+                                30.361156
+                            ],
+                            [
+                                -81.606064,
+                                30.361203
+                            ],
+                            [
+                                -81.605811,
+                                30.360635
+                            ],
+                            [
+                                -81.605964,
+                                30.360588
+                            ],
+                            [
+                                -81.606872,
+                                30.360368
+                            ],
+                            [
+                                -81.607554,
+                                30.360154
+                            ],
+                            [
+                                -81.608028,
+                                30.360014
+                            ],
+                            [
+                                -81.608362,
+                                30.361156
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-09-06",
+                "source": "T17RMP_20190906T155901_TCI_10m",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608382,
+                                30.36121
+                            ],
+                            [
+                                -81.606084,
+                                30.361256
+                            ],
+                            [
+                                -81.605831,
+                                30.360689
+                            ],
+                            [
+                                -81.605984,
+                                30.360642
+                            ],
+                            [
+                                -81.606892,
+                                30.360422
+                            ],
+                            [
+                                -81.607574,
+                                30.360208
+                            ],
+                            [
+                                -81.608048,
+                                30.360068
+                            ],
+                            [
+                                -81.608382,
+                                30.36121
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-09-24",
+                "source": "19SEP24160739-M1BS-012579333010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608505,
+                                30.361313
+                            ],
+                            [
+                                -81.608526,
+                                30.36135
+                            ],
+                            [
+                                -81.606125,
+                                30.361397
+                            ],
+                            [
+                                -81.605874,
+                                30.360659
+                            ],
+                            [
+                                -81.606499,
+                                30.360525
+                            ],
+                            [
+                                -81.607391,
+                                30.360313
+                            ],
+                            [
+                                -81.608082,
+                                30.360128
+                            ],
+                            [
+                                -81.608505,
+                                30.361313
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-10",
+                "source": "T17RMP_20191110T160459_TCI",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608382,
+                                30.36121
+                            ],
+                            [
+                                -81.606084,
+                                30.361256
+                            ],
+                            [
+                                -81.605831,
+                                30.360689
+                            ],
+                            [
+                                -81.605984,
+                                30.360642
+                            ],
+                            [
+                                -81.606892,
+                                30.360422
+                            ],
+                            [
+                                -81.607574,
+                                30.360208
+                            ],
+                            [
+                                -81.608048,
+                                30.360068
+                            ],
+                            [
+                                -81.608382,
+                                30.36121
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-12",
+                "source": "19NOV12160303-M1BS-012579326010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608537,
+                                30.361338
+                            ],
+                            [
+                                -81.608557,
+                                30.361376
+                            ],
+                            [
+                                -81.606151,
+                                30.361446
+                            ],
+                            [
+                                -81.605895,
+                                30.360711
+                            ],
+                            [
+                                -81.606525,
+                                30.360573
+                            ],
+                            [
+                                -81.60739,
+                                30.360361
+                            ],
+                            [
+                                -81.608101,
+                                30.360158
+                            ],
+                            [
+                                -81.608537,
+                                30.361338
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-11-30",
+                "source": "T17RMP_20191130T160619_TCI_10m",
+                "sensor_name": "Sentinel-2",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608382,
+                                30.36121
+                            ],
+                            [
+                                -81.606084,
+                                30.361256
+                            ],
+                            [
+                                -81.605831,
+                                30.360689
+                            ],
+                            [
+                                -81.605984,
+                                30.360642
+                            ],
+                            [
+                                -81.606892,
+                                30.360422
+                            ],
+                            [
+                                -81.607574,
+                                30.360208
+                            ],
+                            [
+                                -81.608048,
+                                30.360068
+                            ],
+                            [
+                                -81.608382,
+                                30.36121
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-06",
+                "source": "19DEC06162029-M1BS-012579324010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608471,
+                                30.361271
+                            ],
+                            [
+                                -81.608491,
+                                30.361312
+                            ],
+                            [
+                                -81.606095,
+                                30.361375
+                            ],
+                            [
+                                -81.60584,
+                                30.360623
+                            ],
+                            [
+                                -81.606471,
+                                30.360476
+                            ],
+                            [
+                                -81.60736,
+                                30.360275
+                            ],
+                            [
+                                -81.608075,
+                                30.360065
+                            ],
+                            [
+                                -81.608471,
+                                30.361271
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-09",
+                "source": "19DEC09160916-M1BS-012579318010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Active Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608366,
+                                30.361271
+                            ],
+                            [
+                                -81.608386,
+                                30.361323
+                            ],
+                            [
+                                -81.606083,
+                                30.361367
+                            ],
+                            [
+                                -81.605876,
+                                30.360759
+                            ],
+                            [
+                                -81.606352,
+                                30.360642
+                            ],
+                            [
+                                -81.607082,
+                                30.36046
+                            ],
+                            [
+                                -81.607562,
+                                30.360309
+                            ],
+                            [
+                                -81.608104,
+                                30.360107
+                            ],
+                            [
+                                -81.608295,
+                                30.360629
+                            ],
+                            [
+                                -81.608366,
+                                30.361271
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2019-12-27",
+                "source": "19DEC27162009-M1BS-012579312010_01_P001",
+                "sensor_name": "WorldView",
+                "type": "observation",
+                "current_phase": "Post Construction",
+                "is_occluded": "False",
+                "is_site_boundary": "True",
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                -81.608367,
+                                30.361317
+                            ],
+                            [
+                                -81.60613,
+                                30.361372
+                            ],
+                            [
+                                -81.605847,
+                                30.36064
+                            ],
+                            [
+                                -81.606666,
+                                30.360429
+                            ],
+                            [
+                                -81.607538,
+                                30.360233
+                            ],
+                            [
+                                -81.608107,
+                                30.360061
+                            ],
+                            [
+                                -81.608213,
+                                30.360346
+                            ],
+                            [
+                                -81.608368,
+                                30.360879
+                            ],
+                            [
+                                -81.608367,
+                                30.361317
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
