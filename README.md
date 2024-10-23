@@ -172,6 +172,9 @@ Other considerations for 'Positive' activity types, or activity that should be i
   </p>
 </div>
 
+### Annotation Levels of Completion
+As mentioned in the Annotation Types section, "positive" annotations include a variety of levels of information. All of the possible statuses are broken out (TODO INSERT LINK). In summary, 'positive_annotated' indicates that the site is annotated from start to finish: that is, the pre-construction state is annotated as well as the post-construction state. The site boundaries are also able to change through time in these sites, with each observation having an updated site boundary and possibly multiple 'sub-sites' and activity phases for each. 'positive_annotated_static' is similar, but the site boundary remains constant with a singular activity phase classification through all activity phases, not allowing for so-called "sub-sites" within the site boundary. The addition of the 'partial' tag indicates that either the beginning or completion of the construction activity was not annotated.
+
 ## Negative activity types
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'negative' set. That is, we expect algorithms to detect these types of heavy construction activity. 
@@ -298,7 +301,7 @@ The SMART Heavy Construction dataset is further categorized by the annotation pr
   </table>
 </div>
 
-- TODO: Add a list of regions and an indication of whether they are Primary/Secondary and whether the region is cleared. 
+A full listing of region codes in the primary vs secondary dataset, including whether they are cleared, can be found [here] TODO: Insert link.
 
 ## Dataset Statistics
 
