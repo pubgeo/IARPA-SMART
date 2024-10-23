@@ -25,6 +25,8 @@ The "Primary Regions" of the dataset are those which include a higher level of d
 | US_R001 | Train | Yes |
 | US_R003 | Test | Yes |
 | US_R004 | Train | Yes |
+| US_R006 | Train | No |
+| US_R007 | Train | No |
 | US_R005 | Train | Yes |
 | US_R012 | Test | Yes |
 | ZA_R001 | Test | Yes |
@@ -66,7 +68,6 @@ These sites are not annotated with the same fidelity as the primary dataset, and
 - CO_C008
 - CO_C009
 - CO_C010
-- CO_C011
 - EC_C001
 - EC_C002
 - EC_C003
@@ -97,7 +98,6 @@ These sites are not annotated with the same fidelity as the primary dataset, and
 - SA_C003
 - SA_C004
 - SA_C005
-- SA_C006
 - SN_C000
 - TH_C001
 - TR_C000
@@ -118,4 +118,3 @@ These sites are not annotated with the same fidelity as the primary dataset, and
 - VE_C004
 - VN_C001
 - VN_C002
-- VN_C003
