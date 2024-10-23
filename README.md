@@ -1,12 +1,12 @@
 # IARPA SMART Overview
-The [IARPA Space-Based Machine Automated Recognition Technique (SMART) program](https://www.iarpa.gov/research-programs/smart) aims to automate global-scale detection, classficiation, and monitoring of large-scale anthropogenic activites on the Earth's surface using satellite imagery. 
+The [IARPA Space-Based Machine Automated Recognition Technique (SMART) program](https://www.iarpa.gov/research-programs/smart) aims to automate global-scale detection, classification, and monitoring of large-scale anthropogenic activities on the Earth's surface using satellite imagery. 
 
 For more information on the problem formulation and the dataset, please see our [publication](https://doi.org/10.1117/12.2663071). A video recording of the presentation of this paper can be found [here](https://doi.org/10.1117/12.2663071) as well. 
 
 
 # About this repository
 
-The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large Computer Vision/Machine Learning (CV/ML) dataset containing spatio-temporal annotations of large scale heavy construction activity for the purposes of algorithm development and evaluation for automated broad area search and classification of anthropogenic activities from satellite iamgery. 
+The Johns Hopkins University Applied Physics Laboratory (JHU/APL) led the development of a large Computer Vision/Machine Learning (CV/ML) dataset containing spatio-temporal annotations of large scale heavy construction activity for the purposes of algorithm development and evaluation for automated broad area search and classification of anthropogenic activities from satellite imagery. 
 
 This repository contains the following key components: 
 
@@ -20,7 +20,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
 # Terminology
 
 - **Observation**:
-  - A single image capturing the actitivy of interest on a specific day. A day is the most granular time-scale considered by SMART
+  - A single image capturing the activity of interest on a specific day. A day is the most granular time-scale considered by SMART
 
 - **Region**: 
   -  An area of interest defining spatial bounds for processing and annotation
@@ -48,7 +48,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   - A cartoon representation of a site model can be found below. 
 
 - **"Cleared" regions**: 
-  - A region is said to be "cleared" when all activity (positive, negative, ignore) has been labeled and site models for each activity have been generated. Clearing regions is necessary for evaluation purposes. Not all regions in the SMART dataset are cleared. For a list of cleared regions, see <COMING SOON: Add list of cleared regions>
+  - A region is said to be "cleared" when all activity (positive, negative, ignore) has been labeled and site models for each activity have been generated. Clearing regions is necessary for evaluation purposes. Not all regions in the SMART dataset are cleared. For a list of cleared regions, see the Primary and Supplemental Datasets section below.
 
 <div style="text-align: center;">
   <figure>
@@ -60,7 +60,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
 <div style="text-align: center;">
   <figure>
     <img src="resources/site_model_cartoon.png" alt="Description" style="width: 200px;">
-    <figcaption>Cartoon illustration of an annotated site model with nine (9) observations at times t<sub>1</sub> through t<sub>9</sub>. Each observation contains a polygon representing the spatial boundary of the activity at that time step. Notice how the polygon size can change with time as the activity (construction) expands. Each observation also contains one of five (5) phase labels (shown here in different colors) representing the phase of activity observed at that time step.</figcaption>
+    <figcaption>Cartoon illustration of an annotated site model with nine (9) observations at times t<sub>1</sub> through t<sub>9</sub>. Each observation contains a polygon representing the spatial boundary of the activity at that time step. Notice how the polygon size can change with time as the activity (construction) expands. Each observation also contains one of five (5) phase labels (shown here in different colors; see the Activity Phase Labels section below for descriptions) representing the phase of activity observed at that time step.</figcaption>
   </figure>
 </div>
 
@@ -84,6 +84,50 @@ Note that for this application, we are interested in spatially and temporally lo
 Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity, not simply the building footprints of the buildings being constructed. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (heavy construction activity which we intend algorithms to detect) and negative examples (heavy construction or large scale change which we intend algorithms **_not_** detect). 
 
 (NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found [here](annotations\supplemental_data\supplemental_annotation_info.json).
+
+## Annotation Types
+
+The SMART Heavy Construction Dataset consists of different types of annotations, each with unique characteristics and intended for a specific purpose. The table below provides a description of these site types. While all types can be used for BAS algorithm development and evaluation, only Types 1 and 2 can be used for AC and AP. Type 3 sites are intended to be the `negative` class. See [here](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/miscellaneous_annotation_details.md#annotation-status-type-categories) for specific annotation statuses in these type categories.
+
+<div style="display: flex; justify-content: center;">
+  <table>
+    <tr>
+      <th style="text-align: center;">Type</th>
+      <th style="text-align: center;">No. of Annotated<br>Observations Per Site</th>
+      <th style="text-align: center;">Has Phase Labels?</th>
+      <th style="text-align: center;">Completed Activity?</th>
+      <th style="text-align: center;">Notes</th>
+    </tr>
+    <tr>
+      <td style="text-align: center;">1</td>
+      <td style="text-align: center;">Many</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Positive Sites</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">2</td>
+      <td style="text-align: center;">Many</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Positive Sites</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">3</td>
+      <td style="text-align: center;">2 (Start and End)</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">Negative Sites (negative, excluded, ignore)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">4</td>
+      <td style="text-align: center;">2 (Start and End)</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">Yes or No</td>
+      <td style="text-align: center;">Positive Sites (pending phase labels)</td>
+    </tr>
+  </table>
+</div>
 
 ## Positive activity types
 
@@ -222,55 +266,11 @@ To support Activity Classification (AC) and Activity Prediction (AP) tasks, the 
   </figure>
 </div>
 
-## Annotation Types
-
-The SMART Heavy Construction Dataset consists of different types of annotations, each with unique characteristics and intended for a specific purpose. The table below provides a description of these site types. While all types can be used for BAS algorithm development and evaluation, only Types 1 and 2 can be used for AC and AP. Type 3 sites are intended to be the `negative` class.
-
-<div style="display: flex; justify-content: center;">
-  <table>
-    <tr>
-      <th style="text-align: center;">Type</th>
-      <th style="text-align: center;">No. of Annotated<br>Observations Per Site</th>
-      <th style="text-align: center;">Has Phase Labels?</th>
-      <th style="text-align: center;">Completed Activity?</th>
-      <th style="text-align: center;">Notes</th>
-    </tr>
-    <tr>
-      <td style="text-align: center;">1</td>
-      <td style="text-align: center;">Many</td>
-      <td style="text-align: center;">Yes</td>
-      <td style="text-align: center;">Yes</td>
-      <td style="text-align: center;">Positive Sites</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">2</td>
-      <td style="text-align: center;">Many</td>
-      <td style="text-align: center;">Yes</td>
-      <td style="text-align: center;">No</td>
-      <td style="text-align: center;">Positive Sites</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">3</td>
-      <td style="text-align: center;">2 (Start and End)</td>
-      <td style="text-align: center;">No</td>
-      <td style="text-align: center;">Yes</td>
-      <td style="text-align: center;">Negative Sites</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">4</td>
-      <td style="text-align: center;">2 (Start and End)</td>
-      <td style="text-align: center;">No</td>
-      <td style="text-align: center;">Yes or No</td>
-      <td style="text-align: center;">Positive sites pending phase labels</td>
-    </tr>
-  </table>
-</div>
-
 ## Primary and Supplemental Datasets
 
 The content of this section is extracted from [1].
 
-The SMART Heavy Construction dataset is further categorized by the annotation process and the purpose for which annotations were generated. These categories, described in the table below, notionally describe a tradeoff between annotation quality and quantity. This table also notes which site types are included in each dataset. The following sections provide additional nformation on each of these two dataset categories, which we generically refer to here as the `Primary Dataset` and the `Supplemental Dataset`. 
+The SMART Heavy Construction dataset is further categorized by the annotation process and the purpose for which annotations were generated. These categories, described in the table below, notionally describe a tradeoff between annotation quality and quantity. This table also notes which site types are included in each dataset. The following sections provide additional information on each of these two dataset categories, which we generically refer to here as the `Primary Dataset` and the `Supplemental Dataset`. 
 
 <div style="display: flex; justify-content: center;">
   <table>
@@ -302,7 +302,7 @@ The SMART Heavy Construction dataset is further categorized by the annotation pr
 
 ## Dataset Statistics
 
-Activity in all regions are annotated over the span of more than 7.5 years from at least January 2014 through August 2021. In many cases, sites outside of these temporal bounds are also included for algorithm training and validation purposes. However, evaluation is limited to the dates identified above due to increased reliability and availability of sufficient information to support annotation of site boundaries and phase labels. [1].
+Activity in all regions is annotated over the span of more than 7.5 years from at least January 2014 through August 2021. In many cases, sites outside of these temporal bounds are also included for algorithm training and validation purposes. However, evaluation is limited to the dates identified above due to increased reliability and availability of sufficient information to support annotation of site boundaries and phase labels. [1].
 
 TODO: Add Map
 TODO: Chart showing total number of positive and negatives sites in each dataset
