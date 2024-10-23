@@ -303,16 +303,37 @@ The SMART Heavy Construction dataset is further categorized by the annotation pr
   </table>
 </div>
 
-A full listing of region codes in the primary vs secondary dataset, including whether they are cleared, can be found [here] TODO: Insert link.
+A full listing of region codes in the primary vs secondary dataset, including whether they are cleared, can be found [here](https://github.com/pubgeo/IARPA-SMART/blob/add_annotations/documentation/primary_secondary_regions.md).
 
 ## Dataset Statistics
 
 Activity in all regions is annotated over the span of more than 7.5 years from at least January 2014 through August 2021. In many cases, sites outside of these temporal bounds are also included for algorithm training and validation purposes. However, evaluation is limited to the dates identified above due to increased reliability and availability of sufficient information to support annotation of site boundaries and phase labels. [1].
 
-TODO: Add Map
-TODO: Chart showing total number of positive and negatives sites in each dataset
-TODO: Chart showing how many observations and annotated phase labels
+### Primary Dataset
 
+#### Site Statuses
+
+![image](https://github.com/user-attachments/assets/759ac0d2-e1b1-4d86-926b-5bd2111977a6)
+
+#### Site Observations
+
+All sites, regardless of annotation type, will at least have 2 observations: a starting observation and an end observation. These will not be referenced to an image or activity phase.
+
+Site types 1 and 2 will contain phase labels for each annotated image. Below is a summary of how many of each activity classification phase are contained in the dataset (excluding all of the default "Null" observations). Note that sites with status "positive_annotated" (as opposed to "positive_annotated_static") may have multiple subsites with multiple activity phases. The geometry for those observations will have multiple polygons to designate the different subsites.
+
+| Activity Phase | Labels in Dataset |
+|----------------|-------------------|
+| No Activity | 7487 |
+| Site Preparation | 8080 |
+| Active Construction | 29663 |
+| Post Construction | 7625 |
+| Unknown | 6475 |
+
+### Secondary Dataset
+
+The secondary dataset will only include a start and end date, with the exception of sites which are not completed as of the most recent Google Earth imagery. These sites will have a null end date. Sites in this dataset will generally be type 4, though when issues are found that are too ambiguous to corrent, they will be updated to "ignore."
+
+There are 29,818 'positive_pending' sites, and 6 'ignore' sites in the current dataset.
 
 ## File Format Specifications
 
