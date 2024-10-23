@@ -6,8 +6,7 @@ The "Primary Regions" of the dataset are those which include a higher level of d
 
 | Region ID | Train/Test | Cleared? |
 |-----------|------------|----------|
-| AE_R001 | Train | Yes |
-| AE_R002 | Test | No |
+| AE_R001 | Train | No |
 | BH_R001 | Train | Yes |
 | BR_R001 | Train | Yes |
 | BR_R002 | Train | Yes |
@@ -30,18 +29,12 @@ The "Primary Regions" of the dataset are those which include a higher level of d
 | US_R012 | Test | Yes |
 | ZA_R001 | Test | Yes |
 
-In addition to the regions listed above, many countries include additional annotations which do not fall within the named region boundaries. These sites will have region codes with the same country code, followed by "Rxxx." None of these "regions" are cleared, as they may fall anywhere else in the country. All sites with these codes (with the exception of ZA_Rxxx) were included in the training dataset. None were used for validation runs, and ZA_Rxxx was kept sequestered to support a fully-blind region in South Africa.
-- AE_Rxxx
-- BR_Rxxx
-- CH_Rxxx
-- KR_Rxxx
-- NZ_Rxxx
-- PE_Rxxx
-- US_Rxxx
-- ZA_Rxxx (test)
+In addition to the regions listed above, many countries include additional annotations which do not fall within the named region boundaries. These sites will have region codes with the same country code, followed by "Rxxx" (e.g. US_Rxxx). None of these "regions" are cleared, as they may fall anywhere else in the country, and are mostly negative sites found as part of a concerted effort to find more negative examples.
 
 # Secondary Dataset
 The "secondary dataset" only contains a single annotation type, which does not have activity phase labels or  imagery associations. While more numerous, none of these regions are cleared, and they only contain positive examples of heavy construction. They will contain a single polygon boundary of the site, a start date, and an end date (which may be null if the site was still active as of the most recent Google Earth imagery).
+
+These sites are not annotated with the same fidelity as the primary dataset, and may have small date or polygon inconsistencies in comparison. When issues are identified and brought to the data curation team's attention, they will be updated or changed to "ignore" status if they are too ambiguous to properly annotate.
 
 - AE_C001
 - AE_C002
