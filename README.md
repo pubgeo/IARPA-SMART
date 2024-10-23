@@ -312,8 +312,7 @@ Activity in all regions is annotated over the span of more than 7.5 years from a
 ### Primary Dataset
 
 #### Site Statuses
-
-![image](https://github.com/user-attachments/assets/759ac0d2-e1b1-4d86-926b-5bd2111977a6)
+![image](https://github.com/user-attachments/assets/75cdcf48-2f3c-44b7-9a6a-6e4adf4b315e)
 
 #### Site Observations
 
@@ -333,7 +332,7 @@ Site types 1 and 2 will contain phase labels for each annotated image. Below is 
 
 The secondary dataset will only include a start and end date, with the exception of sites which are not completed as of the most recent Google Earth imagery. These sites will have a null end date. Sites in this dataset will generally be type 4, though when issues are found that are too ambiguous to corrent, they will be updated to "ignore."
 
-There are 29,818 'positive_pending' sites, and 6 'ignore' sites in the current dataset.
+There are 27,297 'positive_pending' sites, and 4 'ignore' sites in the current dataset.
 
 ## File Format Specifications
 
