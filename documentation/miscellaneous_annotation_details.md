@@ -10,7 +10,6 @@ The list of labels below describes the possible values of the 'status' field in 
   * positive_annotated (Type 1) [+] 
   * positive_annotated_static (Type 1) [+]
   * positive_partial (Type 2) [+]
-  * positive_partial_static (Type 2) [+]
   * positive_pending (Type 4)
 
 * Negative Type: false positive (FP) if detected, true negative (TN) if missed
