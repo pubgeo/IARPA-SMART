@@ -155,6 +155,8 @@ Other considerations for 'Positive' activity types, or activity that should be i
 
 ### _Examples of site progressions over time_
 
+Note: this section includes gifs that GitHub cannot display at this time, but which should display fine when this file is opened locally in most modern IDEs. If viewing on GitHub only, the examples are available [here](resources/pos_site_US.mp4), [here](resources/pos_site_BR.mp4), and [here](resources/pos_site_AE.mp4) for download.
+
 <div style="text-align: center;">
   <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
       <video width="400" height="400" controls>
