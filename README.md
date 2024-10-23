@@ -150,6 +150,10 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 |:----------------------:|:----------------------:|:----------------------:|
 | Recreational Fields             | Resurfacing       | Solar Panels              |
 
+## '_Excluded_' Sites
+
+For the purposes of the IARPA SMART Heavy Construction Dataset, activity that is less than 8000 m² is considered part of the negative set. If a site fits the characteristics of a positive site but is too small, it is labeled as 'positive_excluded'. We expect algorithms to detect these types of activity. 
+
 ## '_Ignore_' Sites
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, activity that is either ambiguous or otherwise unknown at the time of annotation are labeled as 'ignore'. These sites should not be counted or considered in the evaluation of algorithm performance. 
