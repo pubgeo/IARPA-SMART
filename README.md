@@ -133,7 +133,7 @@ The SMART Heavy Construction Dataset consists of different types of annotations,
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'positive' set. That is, we expect algorithms to detect these types of heavy construction activity. 
 
-- Medium Residential (Low-rise apartments/condos, townhouse/row homes with 5 stories or below, Does not matter how many of these buildings there are)
+- Medium Residential (Low-rise apartments/condos, townhouse/row homes with 5 stories or below, does not matter how many of these buildings there are)
 - Heavy Residential (Large apartment or condo high rise building that is over 5 stories tall)
 - Commercial (e.g. malls, grocery stores, strip malls, gas stations, hospitals, stadiums, office buildings, hotels, storage units)
 - Industrial (e.g. factories, power plants, manufacturing facility, warehouses, distribution center, shipping infrastructure (shipping ports) etc.)
@@ -142,7 +142,7 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 Other considerations for 'Positive' activity types, or activity that should be included within site boundaries:
 
 - Sports fields if also associated with large-scale construction buildings (i.e., a school with new sports fields)
-- Roads/driveways/Parking lots that are associated with construction of a build (i.e., a parking lot that is part of a new store, a new access road that leads to a new factory)
+- Roads/driveways/parking lots that are associated with construction of a build (i.e., a parking lot that is part of a new store, a new access road that leads to a new factory)
 - The creation of artificial islands/land if associated with the construction of a man-made structure on that land
 
 | ![Image 1](resources/pos_activity_industrial_1.png) | ![Image 2](resources/pos_activity_heavyres_2.png) | ![Image 3](resources/pos_activity_commercial_1.png) | ![Image 4](resources/pos_activity_commercial_2.png) |
@@ -176,7 +176,7 @@ Other considerations for 'Positive' activity types, or activity that should be i
 
 For the purposes of the IARPA SMART Heavy Construction Dataset, the following activity types are considered to be in the 'negative' set. That is, we expect algorithms to detect these types of heavy construction activity. 
 
-- Light residential (A collection of one or more detached single family homes)
+- Light residential (a collection of one or more detached single family homes)
 - Sports fields not associated with the construction of large building or facility
 - Golf courses (even with the presence of a clubhouse)
 - Standalone surface parking lots not associated with the construction of at least one other 'Positive' example (e.g. a park and ride, an airport parking lot)
