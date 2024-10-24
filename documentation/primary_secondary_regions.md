@@ -41,9 +41,9 @@ In addition to the regions listed above, many countries include additional annot
 ![test-regions](https://github.com/user-attachments/assets/5163b825-8dce-486a-a928-6f18c0a1b448)
 
 # Secondary Dataset
-The "secondary dataset" only contains a single annotation type, which does not have activity phase labels or  imagery associations. While more numerous, none of these regions are cleared, and they only contain positive examples of heavy construction. They will contain a single polygon boundary of the site, a start date, and an end date (which may be null if the site was still active as of the most recent Google Earth imagery).
+The "secondary dataset" contains Type 4 (positive_pending) annotations, which do not have activity phase labels or imagery associations (they include a single polygon, a start date, and an end date only). While more numerous, none of these regions are cleared, and they do not include any negative examples of heavy construction. 
 
-These sites are not annotated with the same fidelity as the primary dataset, and may have small date or polygon inconsistencies in comparison. When issues are identified and brought to the data curation team's attention, they will be updated or changed to "ignore" status if they are too ambiguous to properly annotate.
+These sites are not annotated with the same fidelity as the primary dataset, so they may have small date or polygon inconsistencies and are significantly more likely to have null start or end dates. When sites with issues were identified and brought to the data curation team's attention, they were updated or changed to "ignore" status if they were too ambiguous to properly annotate.
 
 All of these regions identifiers are formatted as [country code]_C###
 - AE_C001
