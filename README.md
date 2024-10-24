@@ -26,7 +26,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   -  An area of interest defining spatial bounds for processing and annotation
 
 - **Region Model**:
-  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md). 
+  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/primary_dataset/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md). 
 
   ***Empty Region Model***: 
   - We also define the concept of an _empty region model_, which defines only the spatial and temporal bounds of the region without the list of sites contained within those regions bounds. These files (also in GeoJSON format) are meant to serve as an input to an algorithm for the sole purpose of defining the spatial and temporal extents over which the algorithm is expected to process (search for activity). 
@@ -83,7 +83,7 @@ Note that for this application, we are interested in spatially and temporally lo
 
 Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity, not simply the building footprints of the buildings being constructed. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (heavy construction activity which we intend algorithms to detect) and negative examples (heavy construction or large scale change which we intend algorithms **_not_** detect). 
 
-(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found [here](annotations\supplemental_data\supplemental_annotation_info.json).
+(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found [here](annotations/primary_dataset/supplemental_data/supplemental_annotation_info.json).
 
 ## Annotation Types
 
@@ -275,7 +275,7 @@ To support Activity Classification (AC) and Activity Prediction (AP) tasks, the 
 
 The content of this section is extracted from [1].
 
-The SMART Heavy Construction dataset is further categorized by the annotation process and the purpose for which annotations were generated. These categories, described in the table below, notionally describe a tradeoff between annotation quality and quantity. This table also notes which site types are included in each dataset. The following sections provide additional information on each of these two dataset categories, which we generically refer to here as the `Primary Dataset` and the `Supplemental Dataset`. 
+The SMART Heavy Construction dataset is further categorized by the annotation process and the purpose for which annotations were generated. These categories, described in the table below, notionally describe a tradeoff between annotation quality and quantity. This table also notes which site types are included in each dataset. The following sections provide additional information on each of these two dataset categories, which we generically refer to here as the `Primary Dataset` and the `Secondary Dataset`. 
 
 <div style="display: flex; justify-content: center;">
   <table>
@@ -307,9 +307,9 @@ A full listing of region codes in the primary vs secondary dataset, including wh
 
 ## Dataset Statistics
 
-Activity in all regions is annotated over the span of more than 7.5 years from at least January 2014 through August 2021. In many cases, sites outside of these temporal bounds are also included for algorithm training and validation purposes. However, evaluation is limited to the dates identified above due to increased reliability and availability of sufficient information to support annotation of site boundaries and phase labels. [1].
-
 ### Primary Dataset
+
+Activities in primary regions are annotated over the span of more than 7.5 years from at least January 2014 through August 2021. In many cases, sites outside of these temporal bounds are also included for algorithm training and validation purposes. However, evaluation is limited to the dates identified above due to increased reliability and availability of sufficient information to support annotation of site boundaries and phase labels. [1].
 
 #### Site Statuses
 ![image](https://github.com/user-attachments/assets/75cdcf48-2f3c-44b7-9a6a-6e4adf4b315e)
@@ -330,7 +330,7 @@ Site types 1 and 2 will contain phase labels for each annotated image. Below is 
 
 ### Secondary Dataset
 
-The secondary dataset will only include a start and end date, with the exception of sites which are not completed as of the most recent Google Earth imagery. These sites will have a null end date. Sites in this dataset will generally be type 4, though when issues are found that are too ambiguous to corrent, they will be updated to "ignore."
+Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date, with the exception of sites which are not completed as of the most recent Google Earth imagery. These sites will have a null end date. Sites in this dataset will generally be type 4, though when issues are found that are too ambiguous to correct, they will be updated to "ignore." 
 
 There are 27,297 'positive_pending' sites, and 4 'ignore' sites in the current dataset.
 

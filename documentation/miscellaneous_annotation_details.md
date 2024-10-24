@@ -4,7 +4,7 @@
 
 ## Annotation Status Type Categories
 
-The list of labels below describes the possible values of the 'status' field in the site_model specification. This information applies to site models included in the SMART Heavy Construction Dataset. It is recommended that system outputs also conform to these guidelines. See [here](https://github.com/pubgeo/IARPA-SMART/edit/main/README.md#annotation-types) for a description of annotation types 1-4.
+The list of labels below describes the possible values of the 'status' field in the site_model specification. This information applies to site models included in the SMART Heavy Construction Dataset. It is recommended that system outputs also conform to these guidelines. See [here](https://github.com/pubgeo/IARPA-SMART/blob/main/README.md#annotation-types) for a description of annotation types 1-4.
 
 * Positive Type: true positive (TP) if detected, false negative (FN) if missed
   * positive_annotated (Type 1) [+] 

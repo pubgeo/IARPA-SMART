@@ -1,6 +1,6 @@
 # Primary Regions
 
-The "Primary Regions" of the dataset are those which include a higher level of detail in their annotations (see [Annotation Types](https://github.com/pubgeo/IARPA-SMART/blob/add_annotations/README.md#annotation-types)). These regions are listed below, including whether they were included in the training/validation dataset ("Train") or the sequestered test set ("Test").
+The "Primary Regions" of the dataset are those which include a higher level of detail in their annotations (see [Annotation Types](https://github.com/pubgeo/IARPA-SMART/blob/main/README.md#annotation-types)). These regions are listed below, including whether they were included in the training/validation dataset ("Train") or the sequestered test set ("Test").
 
 "Cleared" indicates whether a region underwent a detailed search by an annotator to identify all visible examples of heavy construction within the January 2014 through August 2021 timeframe.
 

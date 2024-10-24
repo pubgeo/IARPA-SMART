@@ -86,7 +86,7 @@ if __name__ == "__main__":
     # For additional guidance on how to interact with STAC query results, see https://stacspec.org/en/tutorials/1-read-stac-python/
 
     #bounds_path = '' # INSERT PATH TO FILE WITH POLYGON BOUNDS (e.g. a kml, a site model (code will use site feature geometry), an empty region model)
-    bounds_path = 'IARPA-SMART/annotations/site_models/AE_R001_0000.geojson'
+    bounds_path = '../annotations/primary_dataset/site_models/AE_R001_0000.geojson'
 
     # Set up spatial bound filtering
     if os.path.splitext(bounds_path)[-1] == '.kml':
