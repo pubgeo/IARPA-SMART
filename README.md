@@ -13,7 +13,7 @@ This repository contains the following key components:
 - The **annotation dataset** (found in [`annotations/`](annotations/)). Throughout the documentation in this Github repository, we refer to this dataset as the `SMART Heavy Construction Dataset`.
 - [Instructions for how to obtain some of the underlying and corresponding satellite imagery](documentation/obtain_imagery.md) in which these activities can be observed. 
 - Useful **utilities** (found in [`utilities/`](utilities/)) to help get started with and make use of the dataset. 
-- A Python-based implementation of **semi-custom performance evaluation metrics** (tailored specifically to the data formats and application introduced here) can be found in `src/`. A publication describing the formulation of the evaluation metrics will be made available soon (expected May 2025 but available upon request prior to official release). 
+- A Python-based implementation of **semi-custom performance evaluation metrics** (tailored specifically to the data formats and application introduced here) can be found in [`src/`](src/). A publication describing the formulation of the evaluation metrics will be made available soon (expected May 2025 but available upon request prior to official release). 
 
 NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing by the program. Expected release is by January 2025. 
 
@@ -26,7 +26,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   -  An area of interest defining spatial bounds for processing and annotation
 
 - **Region Model**:
-  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/primary_dataset/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md). 
+  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/primary_dataset/region_models/) and [here](annotations/secondary_dataset/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md), and the script that creates files of that format can be found [here](utilities/region_model_generator.py).
 
   ***Empty Region Model***: 
   - We also define the concept of an _empty region model_, which defines only the spatial and temporal bounds of the region without the list of sites contained within those regions bounds. These files (also in GeoJSON format) are meant to serve as an input to an algorithm for the sole purpose of defining the spatial and temporal extents over which the algorithm is expected to process (search for activity). 
@@ -45,6 +45,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   **Site Model**:
   - A data format (GeoJSON) that temporally and spatially describes a single activity. Each site model contains some number (N) of observations, each containing spatial and temporal information of the site as well as a phase label describing the observed status of the activity on that observation date. 
   - A site model format specification file can be found [here](documentation/specifications/site_model_spec.md).
+  - The script that creates files of that format for Type 3 and Type 4 sites (see the Annotation Types section below) can be found [here](utilities/site_model_generator.py). Creation of site models for Type 1 and Type 2 sites depends heavily on specific details of the phase annotation workflow established by a user, so no script is provided for those types. 
   - A cartoon representation of a site model can be found below. 
 
 - **"Cleared" regions**: 
@@ -83,7 +84,7 @@ Note that for this application, we are interested in spatially and temporally lo
 
 Therefore, for our problem, we have defined the concept of a `site` which is meant to spatially and temporally bound all construction-related activity, not simply the building footprints of the buildings being constructed. Given the above, note that the spatial boundaries of SMART 'sites' are almost always larger than the building footprints themselves. The SMART Heavy Construction dataset does not include the explicit labeling of individual buildings themselves. See below for examples of site boundaries of positive examples (heavy construction activity which we intend algorithms to detect) and negative examples (heavy construction or large scale change which we intend algorithms **_not_** detect). 
 
-(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site can be found [here](annotations/primary_dataset/supplemental_data/supplemental_annotation_info.json).
+(NOTE: The assignment of specific activity types to the positive and negative classes were explicitly defined to meet the needs of expected end-users at the time of problem definition. Other applications may require slightly different assignments and users of this dataset are encouraged to re-define the breakdown in other ways if desired. A list of the activity type of each site in the primary dataset can be found [here](annotations/primary_dataset/supplemental_data/supplemental_annotation_info.json); activity type category metadata was not tracked for the secondary dataset (see the Primary and Supplemental Datasets section below for more detail on the different datasets).)
 
 ## Annotation Types
 
@@ -175,7 +176,7 @@ Note: this section includes gifs that GitHub cannot display at this time, but wh
 </div>
 
 ### Annotation Levels of Completion
-As mentioned in the Annotation Types section, "positive" annotations include a variety of levels of information. All of the possible statuses are broken out (TODO INSERT LINK). In summary, 'positive_annotated' indicates that the site is annotated from start to finish: that is, the pre-construction state is annotated as well as the post-construction state. The site boundaries are also able to change through time in these sites, with each observation having an updated site boundary and possibly multiple 'sub-sites' and activity phases for each. 'positive_annotated_static' is similar, but the site boundary remains constant with a singular activity phase classification through all activity phases, not allowing for so-called "sub-sites" within the site boundary. The addition of the 'partial' tag indicates that either the beginning or completion of the construction activity was not annotated.
+As mentioned in the Annotation Types section, "positive" annotations include a variety of levels of information. All of the possible statuses are broken out [here](documentation/miscellaneous_annotation_details.md). In summary, 'positive_annotated' indicates that the site is annotated from start to finish: that is, the pre-construction state is annotated as well as the post-construction state. The site boundaries are also able to change through time in these sites, with each observation having an updated site boundary and possibly multiple 'sub-sites' and activity phases for each. 'positive_annotated_static' is similar, but the site boundary remains constant with a singular activity phase classification through all activity phases, not allowing for so-called "sub-sites" within the site boundary. The addition of the 'partial' tag indicates that either the beginning or completion of the construction activity was not annotated.
 
 ## Negative activity types
 
@@ -330,13 +331,13 @@ Site types 1 and 2 will contain phase labels for each annotated image. Below is 
 
 ### Secondary Dataset
 
-Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date, with the exception of sites which are not completed as of the most recent Google Earth imagery. These sites will have a null end date. Sites in this dataset will generally be type 4, though when issues are found that are too ambiguous to correct, they will be updated to "ignore." 
+Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date. Sites in this dataset are generally Type 4, though when issues were found that were too ambiguous to correct, sites were updated to "ignore." 
 
 There are 27,297 'positive_pending' sites, and 4 'ignore' sites in the current dataset.
 
 ## File Format Specifications
 
-The IARPA SMART Heavy Construction Annotation Dataset is provided in a custom, yet simple human- and machine-readable format ([geoJSON](https://geojson.org/)). More details can on the format can be found in our documentation (found in `documentation/specifications/`). 
+The IARPA SMART Heavy Construction Annotation Dataset is provided in a custom, yet simple human- and machine-readable format ([GeoJSON](https://geojson.org/)). More details can on the format can be found in our documentation (found in `documentation/specifications/`). 
 
 ## Obtaining the Satellite Imagery
 
