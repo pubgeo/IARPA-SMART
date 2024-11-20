@@ -26,34 +26,34 @@ These scripts make use of the Python standard library `argparse` package (see ht
 
 #### Site Model
 
-First, a site model is generated from basic site information: a kml boundary, start date (nullable), end date (nullable), and label. The script also has options for the user to specify an output directory and version number, as well as the option to overwrite an existing geojson.
+A site model is generated from basic site information: a kml boundary, start date (nullable), end date (nullable), and label. The script also has options for the user to specify an output directory and version number, as well as the option to overwrite an existing geojson.
 
 The resulting name of the site model file (and therefore the official site ID) is determined by the region code which should prepend the kml file name. The user may then supply their own 4-digit ID to append to this region code, or a default 0000 is used. This is intended to support batch-processing, where each site kml is located within some region (and tagged as such), and supplied an ID that the user may increment themselves or pull from the kml filename if they keep the same site ID format. The simplest way to do this is to keep all site kmls formatted the same as their eventual site ID, and to extract out that "starting_id" from the filename.
 
-The example below shows the site model generation process for an example site (AE_R001_0014), which would produce the site model found in `../annotations/primary_dataset/site_models/AE_R001_0014.geojson` just with a different version as this particular site saw a minor update before release, and this script will default back to 2.0.0 for the version.
+The example below shows the site model generation process for an example site (AE_R001_0014), which would produce the site model found in `../annotations/primary_dataset/site_models/AE_R001_0014.geojson`. This example site has been previously updated and no longer has the default version value (2.0.0), so the optional version_number argument is included.
 
 ```bash
 # gets command line argument descriptions
 python site_model_generator.py --help
 
-# evaluates BR_R002
-python site_model_generator.py --kml_path sample_kmls/AE_R001_0014.kml --starting_id 0014 --label positive_pending --start_date 2021-02-01 --end_date 2022-08-26
+# evaluates AE_R001_0014
+python site_model_generator.py --kml_path sample_kmls/AE_R001_0014.kml --starting_id 0014 --label positive_pending --start_date 2021-02-01 --end_date 2022-08-26 --version_number 2.0.1
 ```
 
 #### Region Model
 
-A collection of site models typically resides within a defined region, and that collection is the resulting "region model." These region models are the main files used in broad area search processing and evaluation, as they contain all of the basic site information without the observations.
+A collection of site models typically resides within a defined larger area; region models are used to give boundaries for these larger areas. While region models generally include the region information and the full collection of site models within the defined area, they can also provide region information alone ("empty" region models). Region models are the main files used in broad area search processing and evaluation, as they contain all of the basic site information (e.g. start/end dates, status, geometry) without the observations.
 
-Generating a region model technically only requires a region kml, as there is a `-e` flag the user may specify to create an "empty" region model. If, however, you want to include sites within the region itself, you will point to a directory with site models within that region. Note: this is determined by file name, not by containment.
+All region model generation requires a region_id and a region kml. For the primary mode of region model generation (site information included), a path to a directory with site models for that region must also be provided (geojson_dir argument). Note that a site's association with a region is determined by matching region_id in the site model filename, not by spatial intersection between site and region bounds. For the "empty" mode of region model generation (region information only), the -e flag should be used and no site model geojson directory is needed. In either mode, the script also has options for the user to specify an originator, output directory, and region version number.
 
-In the following example, the user creates a new copy of the AE_R001 region model, by pointing to the site models in this repository. Default start and end dates will be used, as specified in the help documentation.
+In the following example, the user creates a new copy of the AE_R001 region model by pointing to the site models in this repository. Default start and end dates and version number are used, as specified in the help documentation.
 
 ```bash
 # gets command line argument descriptions
 python region_model_generator.py --help
 
-# evaluates BR_R002
-python site_model_generator.py --region_id AE_R001 --region_kml sample_kmls/AE_R001.kml --geojson_dir ../annotations/primary_dataset/site_models
+# evaluates AE_R001
+python region_model_generator.py --region_id AE_R001 --region_kml sample_kmls/AE_R001.kml --geojson_dir ../annotations/primary_dataset/site_models
 ```
 
 ### STAC Query Example
