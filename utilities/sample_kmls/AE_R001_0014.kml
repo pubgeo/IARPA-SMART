@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="AE_C001">
+	<name>AE_R001_0014.kml</name>
+	<open>1</open>
+	<description>Site proposal</description>
+	<Style id="failed">
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>5</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="mfailed">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#failed</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.2</scale>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>5</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+		</PolyStyle>
+	</Style>
+	<Placemark id="AE_C001">
+		<name>AE_R001_0014</name>
+		<description>Site boundary</description>
+		<styleUrl>#mfailed</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						55.04734975453832,24.86392020917502,0 55.04951815027083,24.86531507632281,0 55.04855083169739,24.86640951420115,0 55.0464482479782,24.86503028873431,0 55.04734975453832,24.86392020917502,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
