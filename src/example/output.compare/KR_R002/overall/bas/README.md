@@ -129,7 +129,7 @@ measure activity localization and tracking.
 | tp under IoU | The number of detections made by using under-segmentation and the IoU similarity score.
 | tp under IoT | The number of detections made by using under-segmentation and the IoT similarity score (used if the IoU similarity score is insufficient to meet the spatial association thresholds).
 | tp over | The number of detections made by using over-segmentation, in which a single ground truth site is associated with multiple proposals combined together.
-| fp sites | The number of proposed sites that did not detect a positive ground truth site.
+| fp sites | The number of proposed sites that did not detect a positive or an ignore-type ground truth site.
 | fp area (sq km) | The area of the geometric union of the false positive sites.
 | ffpa (sq km) | The fractional (normalized) false positive area. ffpa = fp area / region model area.
 | proposal area (sq km) | The area of the geometric union of the proposed sites.
@@ -138,8 +138,8 @@ measure activity localization and tracking.
 | truth annotations | The number of ground truth geojson annotation files.
 | truth sites | The effective number of positive ground truth sites that should be detected. Truth sites = tp sites + fn sites.
 | proposed annotations | The number of proposed geojson annotation files.
-| proposed sites | The effective number of proposed site models (might be less than the number of proposed annotations because of over-segmentation, which combines annotations into a single site model).
-| total sites | The total number of sites. total sites = truth sites + proposed sites.
+| proposed sites | The effective number of proposed site models that impact the F1 score. proposed sites = tp sites + fp sites
+| total sites | The effective number of sites that impact the F1 score. total sites = tp sites + fp sites + fn sites
 | truth slices | The total number of observations in the truth sites.
 | proposed slices | The total number of observations in the proposed site models (might be less than the number of observations in the proposed annotations because of over-segmentation, which combines observations into a single observation).
 | precision | precision = tp sites / (tp sites + fp sites).
