@@ -797,7 +797,9 @@ class GeometryUtil:
         # convert from square meters to square kilometers
         if type(poly_area) == pd.Series:
             poly_area = float(poly_area.iloc[0])
-        return poly_area / 1e6
+
+        # return area in units of square kilometers and round to the nearest square centimeter
+        return round(poly_area / 1e6, 10)
 
     @classmethod
     @timer
