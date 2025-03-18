@@ -26,7 +26,7 @@ sudo apt install pip
 python3.11 -m ensurepip
 ```
 
-- **Install Python modules for Python 3.11** 
+- **Install Python modules for Python 3.11**
 (use `--default-timeout` if needed, for downloading larger packages)
 
 ```
@@ -41,7 +41,7 @@ alias python=python3.11
 alias python3=python3.11
 ```
 
-- **Run the example script** 
+- **Run the example script**
 (run the .sh script *directly*, without using `/bin/sh`)
 
 ```
@@ -73,7 +73,7 @@ sudo dnf install python3-pip
 python3.11 -m ensurepip
 ```
 
-- **Install Python modules for Python 3.11** 
+- **Install Python modules for Python 3.11**
 (use `--default-timeout` if needed, for downloading larger packages)
 
 ```
@@ -88,7 +88,7 @@ alias python=python3.11
 alias python3=python3.11
 ```
 
-- **Run example script** 
+- **Run example script**
 (run the .sh script *directly*, without using `/bin/sh`)
 
 ```
@@ -121,7 +121,7 @@ conda install pip
 python -m ensurepip
 ```
 
-- **Install Python modules for Python 3.11** 
+- **Install Python modules for Python 3.11**
 (use `--default-timeout` if needed, for downloading larger packages)
 
 ```
@@ -129,7 +129,7 @@ cd IARPA-SMART/src
 python -m pip install -r requirements.txt --default-timeout=1000
 ```
 
-- **Run example script** 
+- **Run example script**
 (run the .sh script *directly*, *without* using `/bin/sh`)
 
 ```
@@ -160,7 +160,7 @@ python3.11 "$REPO/iarpa_smart_metrics/run_evaluation.py" \
 
 - **Python PROJ setup**
 
-If you get messages like the one below, your Python pyproj is not properly configured / cannot find its support files.  
+If you get messages like the one below, your Python pyproj is not properly configured / cannot find its support files.
 
     ERROR - collection.py:__init__:243 - PROJ: proj_create_from_database: proj.db lacks DATABASE.LAYOUT.VERSION.MAJOR / DATABASE.LAYOUT.VERSION.MINOR metadata. It comes from another PROJ installation.
 
@@ -169,3 +169,4 @@ You may need to either re-install pyproj or hardcode a line like the one below i
 ```
 export PROJ_LIB="C:\ProgramData\anaconda3\Library\share\proj"
 ```
+

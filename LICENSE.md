@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 The Johns Hopkins University Applied Physics Laboratory
+Copyright (c) 2025 The Johns Hopkins University Applied Physics Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
