@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# REPO must point to root directory of METRICS-AND-TEST-FRAMEWORK
-REPO="$HOME"
+# assumes that the IARPA-SMART repository is located in the HOME directory
+REPO="$HOME/IARPA-SMART/src"
 alias python3=python
 python3 -V
+export PYTHONPATH=.
 
 if ! [ -z "$1" ]; then
     parentdir="$(dirname "$1")"
     REPO=$parentdir
 fi
-echo "Using $REPO home directory"
+echo "Using $REPO as home directory"
 
 TH_COMMIT=$(git log | head -n 1 | cut -d' ' -f2 | head -c 8)
 
@@ -17,12 +18,12 @@ TH_COMMIT=$(git log | head -n 1 | cut -d' ' -f2 | head -c 8)
 REGIONS=("BR_R002" "KR_R002")
 
 # directory with performer site models
-INPUT_DIR="$REPO/metrics-and-test-framework/example/input/proposals/"
+INPUT_DIR="$REPO/example/input/proposals/"
 
 # run the test harness for each region
 for REGION in ${REGIONS[@]}; do
 
-    OUTPUT_DIR="$REPO/metrics-and-test-framework/example/output/$REGION"
+    OUTPUT_DIR="$REPO/example/output/$REGION"
     mkdir -p $OUTPUT_DIR
 
     echo "started evaluation for" $REGION
@@ -30,10 +31,10 @@ for REGION in ${REGIONS[@]}; do
 
     OUTPUT_DIR_POLY=$OUTPUT_DIR"/poly"
     mkdir -p $OUTPUT_DIR_POLY
-    python3 "$REPO/metrics-and-test-framework/iarpa_smart_metrics/run_evaluation.py" \
+    python3 "$REPO/iarpa_smart_metrics/run_evaluation.py" \
         --roi $REGION \
-        --gt_dir "$REPO/metrics-and-test-framework/example/input/truth/site_models/" \
-        --rm_path "$REPO/metrics-and-test-framework/example/input/truth/region_models/$REGION.geojson" \
+        --gt_dir "$REPO/example/input/truth/site_models/" \
+        --rm_path "$REPO/example/input/truth/region_models/$REGION.geojson" \
         --sm_dir $INPUT_DIR \
         --output_dir $OUTPUT_DIR_POLY \
         --tau 0.2 \
@@ -55,10 +56,10 @@ for REGION in ${REGIONS[@]}; do
 
     OUTPUT_DIR_POINT=$OUTPUT_DIR"/point"
     mkdir -p $OUTPUT_DIR_POINT
-    python3 "$REPO/metrics-and-test-framework/iarpa_smart_metrics/run_evaluation.py" \
+    python3 "$REPO/iarpa_smart_metrics/run_evaluation.py" \
         --roi $REGION \
-        --gt_points_file "$REPO/metrics-and-test-framework/example/input/truth/point_based_annotations.geojson" \
-        --rm_path "$REPO/metrics-and-test-framework/example/input/truth/region_models/$REGION.geojson" \
+        --gt_points_file "$REPO/example/input/truth/point_based_annotations.geojson" \
+        --rm_path "$REPO/example/input/truth/region_models/$REGION.geojson" \
         --sm_dir $INPUT_DIR \
         --output_dir $OUTPUT_DIR_POINT \
         --minsd 100 \
