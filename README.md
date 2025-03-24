@@ -331,7 +331,7 @@ Site types 1 and 2 will contain phase labels for each annotated image. Below is 
 
 ### Secondary Dataset
 
-Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date. Sites in this dataset are generally Type 4, though when issues were found that were too ambiguous to correct, sites were updated to "ignore." 
+Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date. Sites in this dataset are generally Type 4, though some sites with ambiguous activity are "ignore." 
 
 There are 27,297 'positive_pending' sites, and 4 'ignore' sites in the current dataset.
 
