@@ -26,7 +26,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
   -  An area of interest defining spatial bounds for processing and annotation
 
 - **Region Model**:
-  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/primary_dataset/region_models/) and [here](annotations/secondary_dataset/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md), and the script that creates files of that format can be found [here](utilities/region_model_generator.py).
+  - A data format (GeoJSON) that represents a region's spatial and temporal bounds along with a list of all sites contained within those region bounds. Region models defined in the SMART dataset can be found [here](annotations/primary_dataset/region_models/) and [here](annotations/secondary_dataset/region_models/). A region model format specification file can be found [here](documentation/specifications/region_model_spec.md), and the script that creates files of that format can be found [here](utilities/region_model_generator.py). A script that validates region model formats can be found [here](utilities/validate_site_and_region_models.py).
 
   ***Empty Region Model***: 
   - We also define the concept of an _empty region model_, which defines only the spatial and temporal bounds of the region without the list of sites contained within those regions bounds. These files (also in GeoJSON format) are meant to serve as an input to an algorithm for the sole purpose of defining the spatial and temporal extents over which the algorithm is expected to process (search for activity). 
@@ -44,7 +44,7 @@ NOTE: At the time of the initial release, some annotations in the dataset remain
 
   **Site Model**:
   - A data format (GeoJSON) that temporally and spatially describes a single activity. Each site model contains some number (N) of observations, each containing spatial and temporal information of the site as well as a phase label describing the observed status of the activity on that observation date. 
-  - A site model format specification file can be found [here](documentation/specifications/site_model_spec.md).
+  - A site model format specification file can be found [here](documentation/specifications/site_model_spec.md). A script that validates site model formats can be found [here](utilities/validate_site_and_region_models.py).
   - The script that creates files of that format for Type 3 and Type 4 sites (see the Annotation Types section below) can be found [here](utilities/site_model_generator.py). Creation of site models for Type 1 and Type 2 sites depends heavily on specific details of the phase annotation workflow established by a user, so no script is provided for those types. 
   - A cartoon representation of a site model can be found below. 
 
