@@ -1,0 +1,938 @@
+{
+  "$id": "union.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "_annotated_site_status": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/_type_12_site_status"
+        },
+        {
+          "$ref": "#/$defs/_type_34_site_status"
+        },
+        {
+          "$ref": "#/$defs/_type_transient_site_status"
+        }
+      ]
+    },
+    "_boolchain": {
+      "description": "Comma-delimited list of true/false strings",
+      "pattern": "^((True|False), )*(True|False)$",
+      "type": "string"
+    },
+    "_common_site_properties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/_identified_properties"
+        },
+        {
+          "$ref": "#/$defs/_proposed_originator"
+        },
+        {
+          "if": {
+            "properties": {
+              "model_content": {
+                "const": "annotation"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "$ref": "#/$defs/_annotated_site_status"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "model_content": {
+                "const": "proposed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "$ref": "#/$defs/_system_site_status"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "end_date": {
+          "$ref": "#/$defs/_optional_datestring"
+        },
+        "model_content": {
+          "enum": [
+            "annotation",
+            "proposed",
+            "update"
+          ]
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "start_date": {
+          "$ref": "#/$defs/_optional_datestring"
+        },
+        "status": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/_annotated_site_status"
+            },
+            {
+              "$ref": "#/$defs/_system_site_status"
+            }
+          ]
+        },
+        "validated": {
+          "enum": [
+            "True",
+            "False"
+          ]
+        }
+      },
+      "required": [
+        "model_content",
+        "status",
+        "start_date",
+        "end_date"
+      ],
+      "type": "object"
+    },
+    "_datestring": {
+      "description": "ISO-8601 compatible datestring",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}",
+      "type": "string"
+    },
+    "_geojson_coordinates": {
+      "description": "A longitude/latitude pair of coordinates",
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+    },
+    "_geojson_multipolygon": {
+      "description": "A list of geojson polygons, encoding a collection of polygons",
+      "items": {
+        "$ref": "#/$defs/_geojson_polygon"
+      },
+      "type": "array"
+    },
+    "_geojson_polygon": {
+      "description": "A list of geojson rings, encoding a perimeter and zero or more voids within the polygon",
+      "items": {
+        "$ref": "#/$defs/_geojson_ring"
+      },
+      "type": "array"
+    },
+    "_geojson_ring": {
+      "description": "A list of coordinate pairs, describing a perimeter",
+      "items": {
+        "$ref": "#/$defs/_geojson_coordinates"
+      },
+      "minItems": 4,
+      "type": "array"
+    },
+    "_identified_properties": {
+      "properties": {
+        "mgrs": {
+          "$ref": "#/$defs/_mgrsstring"
+        },
+        "originator": {
+          "ref": "#/$defs/_originators"
+        },
+        "version": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "mgrs",
+        "originator"
+      ],
+      "type": "object"
+    },
+    "_mgrsstring": {
+      "description": "MGRS string, specified at the 100km grid square",
+      "pattern": "^(((0[1-9]|[1-5]\\d|60)[CDEFGHJKLMNPQRSTUVWX][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV])|((A[JKLPQRSTUXYZ]|B[ABCFGHJKLPQR])[ABCDEFGHJKLMNPQRSTUVWXYZ])|((Y[RSTUXYZ]|Z[ABCFGHJ])[ABCDEFGHJKLMNP]))$",
+      "type": "string"
+    },
+    "_multipolygon": {
+      "description": "a GeoJSON spec compliant MultiPolygon object",
+      "properties": {
+        "coordinates": {
+          "$ref": "#/$defs/_geojson_multipolygon"
+        },
+        "type": {
+          "const": "MultiPolygon",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "type": "object"
+    },
+    "_observation_properties": {
+      "oneOf": [
+        {
+          "not": {
+            "required": [
+              "cache"
+            ]
+          },
+          "required": [
+            "misc_info"
+          ]
+        },
+        {
+          "not": {
+            "required": [
+              "misc_info"
+            ]
+          },
+          "required": [
+            "cache"
+          ]
+        },
+        {
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "misc_info"
+                ]
+              },
+              {
+                "required": [
+                  "cache"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "cache": {
+          "type": "object"
+        },
+        "current_phase": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^((No Activity|Site Preparation|Active Construction|Post Construction|Unknown), )*(No Activity|Site Preparation|Active Construction|Post Construction|Unknown)$",
+              "type": "string"
+            }
+          ]
+        },
+        "is_occluded": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/_boolchain"
+            }
+          ]
+        },
+        "is_site_boundary": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/_boolchain"
+            }
+          ]
+        },
+        "misc_info": {
+          "type": "object"
+        },
+        "observation_date": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/_datestring"
+            }
+          ]
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "sensor_name": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^((Landsat 8|Sentinel-2|WorldView|Planet), )*(Landsat 8|Sentinel-2|WorldView|Planet)$",
+              "type": "string"
+            }
+          ]
+        },
+        "source": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "type": {
+          "const": "observation"
+        }
+      },
+      "required": [
+        "type",
+        "observation_date",
+        "source",
+        "sensor_name",
+        "current_phase",
+        "is_occluded",
+        "is_site_boundary"
+      ],
+      "type": "object",
+      "unevaluatedProperties": false
+    },
+    "_optional_datestring": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/_datestring"
+        }
+      ]
+    },
+    "_originators": {
+      "description": "all codes for acceptable originators",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/_performer_originators"
+        },
+        {
+          "$ref": "#/$defs/_program_originators"
+        }
+      ]
+    },
+    "_performer_originators": {
+      "description": "three-letter codes of performer teams",
+      "enum": [
+        "acc",
+        "ara",
+        "ast",
+        "bla",
+        "iai",
+        "kit",
+        "str"
+      ]
+    },
+    "_polygon": {
+      "description": "a GeoJSON spec compliant Polygon object",
+      "properties": {
+        "coordinates": {
+          "$ref": "#/$defs/_geojson_polygon"
+        },
+        "type": {
+          "const": "Polygon",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "type": "object"
+    },
+    "_program_originators": {
+      "description": "codes of program teams",
+      "enum": [
+        "pmo",
+        "te",
+        "iMERIT"
+      ]
+    },
+    "_proposed_originator": {
+      "if": {
+        "properties": {
+          "model_content": {
+            "const": "proposed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "originator": {
+            "$ref": "#/$defs/_performer_originators"
+          }
+        }
+      }
+    },
+    "_region_properties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/_identified_properties"
+        },
+        {
+          "$ref": "#/$defs/_proposed_originator"
+        }
+      ],
+      "oneOf": [
+        {
+          "not": {
+            "required": [
+              "cache"
+            ]
+          },
+          "required": [
+            "performer_cache"
+          ]
+        },
+        {
+          "not": {
+            "required": [
+              "performer_cache"
+            ]
+          },
+          "required": [
+            "cache"
+          ]
+        },
+        {
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "performer_cache"
+                ]
+              },
+              {
+                "required": [
+                  "cache"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "cache": {
+          "type": "object"
+        },
+        "comments": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_date": {
+          "$ref": "#/$defs/_datestring"
+        },
+        "model_content": {
+          "enum": [
+            "empty",
+            "annotation",
+            "proposed"
+          ]
+        },
+        "performer_cache": {
+          "type": "object"
+        },
+        "region_id": {
+          "pattern": "^[A-Z]{2}_([RST]\\d{3}|C[0-7]\\d{2})$",
+          "type": "string"
+        },
+        "start_date": {
+          "$ref": "#/$defs/_datestring"
+        },
+        "type": {
+          "const": "region"
+        }
+      },
+      "required": [
+        "type",
+        "region_id",
+        "model_content",
+        "start_date",
+        "end_date"
+      ],
+      "type": "object",
+      "unevaluatedProperties": false
+    },
+    "_site_properties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/_common_site_properties"
+        },
+        {
+          "if": {
+            "properties": {
+              "region_id": {
+                "pattern": "^[A-Z]{2}_[RC][Xx]{3}$",
+                "type": "string"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "site_id": {
+                "pattern": "^[A-Z]{2}_[RC][Xx]{3}_\\d{4}$",
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "region_id": {
+                "pattern": "^[A-Z]{2}_([RST]\\d{3}|C[0-7]\\d{2})$",
+                "type": "string"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "site_id": {
+                "pattern": "^[A-Z]{2}_([RST]\\d{3}|C[0-7]\\d{2})_\\d{4}$",
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "oneOf": [
+        {
+          "not": {
+            "required": [
+              "cache"
+            ]
+          },
+          "required": [
+            "misc_info"
+          ]
+        },
+        {
+          "not": {
+            "required": [
+              "misc_info"
+            ]
+          },
+          "required": [
+            "cache"
+          ]
+        },
+        {
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "misc_info"
+                ]
+              },
+              {
+                "required": [
+                  "cache"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "cache": {
+          "type": "object"
+        },
+        "misc_info": {
+          "type": "object"
+        },
+        "predicted_phase_transition": {
+          "enum": [
+            "Active Construction",
+            "Post Construction"
+          ]
+        },
+        "predicted_phase_transition_date": {
+          "$ref": "#/$defs/_datestring"
+        },
+        "region_id": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[A-Z]{2}_([RST]\\d{3}|C[0-7]\\d{2}|[RC][Xx]{3})$",
+              "type": "string"
+            }
+          ]
+        },
+        "site_id": {
+          "pattern": "^[A-Z]{2}_([RST]\\d{3}|C[0-7]\\d{2}|[RC][Xx]{3}|[RCST]xxx)_\\d{4}$",
+          "type": "string"
+        },
+        "type": {
+          "const": "site"
+        }
+      },
+      "required": [
+        "type",
+        "site_id",
+        "region_id"
+      ],
+      "type": "object",
+      "unevaluatedProperties": false
+    },
+    "_site_summary_properties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/_common_site_properties"
+        },
+        {
+          "$ref": "#/$defs/_proposed_originator"
+        },
+        {
+          "if": {
+            "properties": {
+              "model_content": {
+                "const": "annotation"
+              },
+              "status": {
+                "$ref": "#/$defs/_type_transient_site_status"
+              }
+            }
+          },
+          "then": {
+            "oneOf": [
+              {
+                "not": {
+                  "required": [
+                    "annotation_cache"
+                  ]
+                },
+                "required": [
+                  "cache"
+                ]
+              },
+              {
+                "not": {
+                  "required": [
+                    "cache"
+                  ]
+                },
+                "required": [
+                  "annotation_cache"
+                ]
+              },
+              {
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "annotation_cache"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "cache"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "properties": {
+              "annotation_cache": {
+                "$ref": "#/$defs/_transient_annotation_cache"
+              },
+              "cache": {
+                "$ref": "#/$defs/_transient_annotation_cache"
+              }
+            }
+          }
+        }
+      ],
+      "oneOf": [
+        {
+          "not": {
+            "required": [
+              "cache"
+            ]
+          },
+          "required": [
+            "annotation_cache"
+          ]
+        },
+        {
+          "not": {
+            "required": [
+              "annotation_cache"
+            ]
+          },
+          "required": [
+            "cache"
+          ]
+        },
+        {
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "annotation_cache"
+                ]
+              },
+              {
+                "required": [
+                  "cache"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "annotation_cache": {
+          "type": "object"
+        },
+        "cache": {
+          "type": "object"
+        },
+        "comments": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "site_id": {
+          "pattern": "^[A-Z]{2}_([RST]\\d{3}|C[0-7]\\d{2})_\\d{4}$",
+          "type": "string"
+        },
+        "type": {
+          "const": "site_summary"
+        }
+      },
+      "required": [
+        "type",
+        "site_id"
+      ],
+      "type": "object",
+      "unevaluatedProperties": false
+    },
+    "_system_site_status": {
+      "enum": [
+        "system_proposed",
+        "system_confirmed",
+        "system_rejected"
+      ]
+    },
+    "_transient_annotation_cache": {
+      "description": "dictionary required in a transient annotation",
+      "properties": {
+        "event_name": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "event_url": {
+          "type": "string"
+        },
+        "location_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_name",
+        "location_name",
+        "event_url",
+        "event_type"
+      ],
+      "type": "object"
+    },
+    "_type_12_site_status": {
+      "enum": [
+        "positive_annotated",
+        "positive_partial",
+        "positive_annotated_static",
+        "positive_partial_static"
+      ]
+    },
+    "_type_34_site_status": {
+      "enum": [
+        "positive_pending",
+        "positive_excluded",
+        "negative",
+        "ignore"
+      ]
+    },
+    "_type_transient_site_status": {
+      "enum": [
+        "transient_positive",
+        "transient_pending",
+        "transient_negative",
+        "transient_excluded",
+        "transient_ignore"
+      ]
+    },
+    "observation_feature": {
+      "properties": {
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/_polygon"
+            },
+            {
+              "$ref": "#/$defs/_multipolygon"
+            }
+          ]
+        },
+        "properties": {
+          "$ref": "#/$defs/_observation_properties"
+        },
+        "type": {
+          "const": "Feature",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "properties",
+        "geometry"
+      ],
+      "type": "object"
+    },
+    "region_feature": {
+      "properties": {
+        "geometry": {
+          "$ref": "#/$defs/_polygon"
+        },
+        "properties": {
+          "$ref": "#/$defs/_region_properties"
+        },
+        "type": {
+          "const": "Feature",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "properties",
+        "geometry"
+      ],
+      "type": "object"
+    },
+    "region_model": {
+      "contains": {
+        "$ref": "#/$defs/region_feature"
+      },
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/region_feature"
+          },
+          {
+            "$ref": "#/$defs/site_summary_feature"
+          }
+        ]
+      },
+      "maxContains": 1,
+      "minContains": 1,
+      "minItems": 1,
+      "type": "array"
+    },
+    "site_feature": {
+      "properties": {
+        "geometry": {
+          "$ref": "#/$defs/_polygon"
+        },
+        "properties": {
+          "$ref": "#/$defs/_site_properties"
+        },
+        "type": {
+          "const": "Feature",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "properties",
+        "geometry"
+      ],
+      "type": "object"
+    },
+    "site_model": {
+      "contains": {
+        "$ref": "#/$defs/site_feature"
+      },
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/site_feature"
+          },
+          {
+            "$ref": "#/$defs/observation_feature"
+          }
+        ]
+      },
+      "maxContains": 1,
+      "minContains": 1,
+      "minItems": 2,
+      "type": "array"
+    },
+    "site_summary_feature": {
+      "properties": {
+        "geometry": {
+          "$ref": "#/$defs/_polygon"
+        },
+        "properties": {
+          "$ref": "#/$defs/_site_summary_properties"
+        },
+        "type": {
+          "const": "Feature",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "properties",
+        "geometry"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "features": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/region_model"
+        },
+        {
+          "$ref": "#/$defs/site_model"
+        }
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "features"
+  ],
+  "title": "Model object",
+  "type": "object"
+}
