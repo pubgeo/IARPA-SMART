@@ -62,3 +62,14 @@ While not intended to be a standalone utility, `stac_query_example.py` provides 
 
 The script runs without any command line arguments, and is supplied with an example boundary file, hard-coded into the script. Functions exist within the script to handle either geojson or kml bounding boxes on which to query STAC. Each of these functions is commented extensively with a working example in addition to a generalized description of relevant fields and query returns.
 
+### Site and Region Validation Example
+
+A user can validate the format, structure, and some contents of site and region models with `validate_site_and_region_models.py`. Model geojsons are checked against the rules in smart.schema.json, unless a path to a different schema is passed as an argument. The contents of the `sample_models_for_validation` folder are available for testing, with one site model example and one region model example that pass the validator, as well as a site model example that will not pass the validator (its site feature date fields have been removed). The following example demonstrates how to run the validator on the contents of the `sample_models_for_validation` folder.
+
+```bash
+# gets command line argument descriptions
+python validate_site_and_region_models.py --help
+
+python validate_site_and_region_models.py --path sample_models_for_validation --schema_file smart.schema.json
+```
+
