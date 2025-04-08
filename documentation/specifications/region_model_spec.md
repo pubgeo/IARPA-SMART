@@ -1,6 +1,6 @@
 # Region Model Specification
 
-This is the schema specification for the _Region model_. [TODO: Link to JSON Schema.] Region model files can be validated by running the validate.py utility. [TODO: Link to validation script]
+This is the [schema specification](../../utilities/smart.schema.json) for the _Region model_. Region model files can be validated by running the [validate_site_and_region_models.py](../../utilities/validate_site_and_region_models.py) utility.
 
 A _Region Model_ defines a large spatio-temporal area of interest (a "Region"). Consequently, a Region Model **must** contain exactly one feature of the Region type, as specified below. It may include zero or more _Site Summary_ features, also specified below.
 
@@ -212,76 +212,331 @@ NOTE: In early versions of the site model schema, a `annotation_cache` property 
 
 ```plaintext
 {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "region",
-        "region_id": "US_R001",
-        "version": "2.0.1",
-        "mgrs": "17RMP",
-        "start_date": "1980-01-01",
-        "end_date": "2038-01-19",
-        "model_content": "proposed",
-        "originator": "xyz",
-        "comments": "Uses version 17.2.3 of Algorithm X"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [80.0,0.0],[81.0,0.0],[81.0,1.0],[80.0,1.0],[80.0,0.0]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "site_summary",
-        "site_id": "US_R001_0001",
-        "version": "2.1.2",
-        "mgrs": "17RMP",
-        "status": "system_rejected",
-        "start_date": "1980-01-01",
-        "end_date": "1983-01-01",
-        "score": 0.0,
-        "model_content": "proposed",
-        "originator": "xyz"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [80.5,0.5],[80.55,0.5],[80.55,0.55],[80.5,0.55],[80.5,0.5]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "site_summary",
-        "site_id": "US_R001_0002",
-        "version": "2.0.3",
-        "mgrs": "17RMP",
-        "status": "system_confirmed",
-        "start_date": "1983-03-25",
-        "end_date": "1984-09-08",
-        "score": 0.75,
-        "model_content": "proposed",
-        "originator": "xyz"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [80.7,0.7],[80.75,0.7],[80.75,0.75],[80.7,0.75],[80.7,0.7]
-          ]
-        ]
-      }
-    }
-  ]
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "region",
+                "region_id": "ZA_R001",
+                "version": "2.5.1",
+                "mgrs": "35HLC",
+                "start_date": "2014-01-01",
+                "end_date": "2021-08-31",
+                "originator": "te",
+                "model_content": "annotation",
+                "comments": null
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.697897,
+                            -33.983596
+                        ],
+                        [
+                            25.62095,
+                            -33.932037
+                        ],
+                        [
+                            25.649194,
+                            -33.842851
+                        ],
+                        [
+                            25.521715,
+                            -33.825722
+                        ],
+                        [
+                            25.467526,
+                            -33.930921
+                        ],
+                        [
+                            25.524414,
+                            -34.005356
+                        ],
+                        [
+                            25.693035,
+                            -34.019951
+                        ],
+                        [
+                            25.697897,
+                            -33.983596
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site_summary",
+                "status": "positive_annotated",
+                "version": "2.0.0",
+                "site_id": "ZA_R001_0000",
+                "mgrs": "35HLC",
+                "start_date": "2015-11-04",
+                "end_date": "2020-01-11",
+                "score": 1.0,
+                "originator": "te",
+                "model_content": "annotation",
+                "validated": "True"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.560556,
+                            -33.88093
+                        ],
+                        [
+                            25.560491,
+                            -33.879798
+                        ],
+                        [
+                            25.560496,
+                            -33.879797
+                        ],
+                        [
+                            25.560494,
+                            -33.879766
+                        ],
+                        [
+                            25.560498,
+                            -33.879766
+                        ],
+                        [
+                            25.560496,
+                            -33.879731
+                        ],
+                        [
+                            25.56171,
+                            -33.87959
+                        ],
+                        [
+                            25.561869,
+                            -33.879241
+                        ],
+                        [
+                            25.561872,
+                            -33.879239
+                        ],
+                        [
+                            25.561882,
+                            -33.879216
+                        ],
+                        [
+                            25.562118,
+                            -33.879012
+                        ],
+                        [
+                            25.562219,
+                            -33.878984
+                        ],
+                        [
+                            25.56225,
+                            -33.878957
+                        ],
+                        [
+                            25.562968,
+                            -33.878758
+                        ],
+                        [
+                            25.563016,
+                            -33.878858
+                        ],
+                        [
+                            25.563027,
+                            -33.878855
+                        ],
+                        [
+                            25.563033,
+                            -33.878869
+                        ],
+                        [
+                            25.563039,
+                            -33.878867
+                        ],
+                        [
+                            25.563044,
+                            -33.878878
+                        ],
+                        [
+                            25.56306,
+                            -33.878874
+                        ],
+                        [
+                            25.563693,
+                            -33.880194
+                        ],
+                        [
+                            25.563705,
+                            -33.880426
+                        ],
+                        [
+                            25.5637,
+                            -33.880427
+                        ],
+                        [
+                            25.563704,
+                            -33.8805
+                        ],
+                        [
+                            25.562067,
+                            -33.880778
+                        ],
+                        [
+                            25.560766,
+                            -33.881002
+                        ],
+                        [
+                            25.560766,
+                            -33.880996
+                        ],
+                        [
+                            25.560726,
+                            -33.881003
+                        ],
+                        [
+                            25.560725,
+                            -33.880989
+                        ],
+                        [
+                            25.560658,
+                            -33.881001
+                        ],
+                        [
+                            25.560656,
+                            -33.880963
+                        ],
+                        [
+                            25.56061,
+                            -33.880971
+                        ],
+                        [
+                            25.56061,
+                            -33.880963
+                        ],
+                        [
+                            25.560572,
+                            -33.88097
+                        ],
+                        [
+                            25.560572,
+                            -33.880963
+                        ],
+                        [
+                            25.56057,
+                            -33.880963
+                        ],
+                        [
+                            25.560568,
+                            -33.880928
+                        ],
+                        [
+                            25.560556,
+                            -33.88093
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site_summary",
+                "status": "positive_annotated_static",
+                "version": "2.0.0",
+                "site_id": "ZA_R001_0001",
+                "mgrs": "35HLC",
+                "start_date": "2017-11-23",
+                "end_date": "2020-01-11",
+                "score": 1.0,
+                "originator": "te",
+                "model_content": "annotation",
+                "validated": "True"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.567997,
+                            -33.883896
+                        ],
+                        [
+                            25.568645,
+                            -33.884269
+                        ],
+                        [
+                            25.568374,
+                            -33.884555
+                        ],
+                        [
+                            25.5674,
+                            -33.883924
+                        ],
+                        [
+                            25.568334,
+                            -33.882879
+                        ],
+                        [
+                            25.568706,
+                            -33.883095
+                        ],
+                        [
+                            25.567997,
+                            -33.883896
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site_summary",
+                "status": "positive_annotated_static",
+                "version": "2.0.0",
+                "site_id": "ZA_R001_0002",
+                "mgrs": "35HLC",
+                "start_date": "2016-01-08",
+                "end_date": "2018-12-02",
+                "score": 1.0,
+                "originator": "te",
+                "model_content": "annotation",
+                "validated": "True"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.631051,
+                            -33.851271
+                        ],
+                        [
+                            25.629864,
+                            -33.85071
+                        ],
+                        [
+                            25.63025,
+                            -33.85018
+                        ],
+                        [
+                            25.631432,
+                            -33.850682
+                        ],
+                        [
+                            25.631051,
+                            -33.851271
+                        ]
+                    ]
+                ]
+            }
+        },
+        ...
+    ]
 }
 ```
