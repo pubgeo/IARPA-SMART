@@ -6,32 +6,32 @@ The "Primary Regions" of the dataset are those which include a higher level of d
 
 All regions in the primary dataset are formatted like [country code]_R### (or _Rxxx, discussed below).
 
-| Region ID | Train/Test | Cleared? |
-|-----------|------------|----------|
-| AE_R001 | Train | No |
-| BH_R001 | Train | Yes |
-| BR_R001 | Train | Yes |
-| BR_R002 | Train | Yes |
-| BR_R004 | Train | Yes |
-| BR_R005 | Train | Yes |
-| BR_R006 | Test | Yes |
-| CH_R001 | Train | Yes |
-| CH_R002 | Test | Yes |
-| KR_R001 | Train | Yes |
-| KR_R002 | Train | Yes |
-| KR_R003 | Test | Yes |
-| LT_R001 | Train | Yes |
-| NZ_R001 | Train | Yes |
-| NZ_R002 | Test | Yes |
-| PE_R001 | Train | Yes |
-| US_R001 | Train | Yes |
-| US_R003 | Test | Yes |
-| US_R004 | Train | Yes |
-| US_R006 | Train | No |
-| US_R007 | Train | No |
-| US_R005 | Train | Yes |
-| US_R012 | Test | Yes |
-| ZA_R001 | Test | Yes |
+| Region ID | Train/Test | Cleared? | Site Count | Positive Sites | Negative Sites | Other Sites |
+|-----------|------------|----------|------------|----------------|----------------|-------------|
+| AE_R001 | Train | No | 637 | 531 | 18 | 88 |
+| BH_R001 | Train | Yes | 70 | 38 | 11 | 21 |
+| BR_R001 | Train | Yes | 99 | 67 | 19 | 13 |
+| BR_R002 | Train | Yes | 12 | 5 | 4 | 3 |
+| BR_R004 | Train | Yes | 51 | 31 | 16 | 4 |
+| BR_R005 | Train | Yes | 220 | 161 | 9 | 50 |
+| BR_R006 | Test | Yes | 402 | 150 | 119 | 133 |
+| CH_R001 | Train | Yes | 214 | 155 | 6 | 53 |
+| CH_R002 | Test | Yes | 91 | 53 | 12 | 26 |
+| KR_R001 | Train | Yes | 28 | 11 | 4 | 13 |
+| KR_R002 | Train | Yes | 118 | 42 | 18 | 58 |
+| KR_R003 | Test | Yes | 155 | 62 | 57 | 36 |
+| LT_R001 | Train | Yes | 136 | 67 | 32 | 37 |
+| NZ_R001 | Train | Yes | 67 | 41 | 9 | 17 |
+| NZ_R002 | Test | Yes | 171 | 65 | 61 | 45 |
+| PE_R001 | Train | Yes | 37 | 18 | 7 | 12 |
+| US_R001 | Train | Yes | 56 | 41 | 9 | 6 |
+| US_R003 | Test | Yes | 149 | 71 | 50 | 28 |
+| US_R004 | Train | Yes | 105 | 62 | 30 | 13 |
+| US_R005 | Train | Yes | 33 | 26 | 3 | 4 |
+| US_R006 | Train | No | 89 | 82 | 0 | 7 |
+| US_R007 | Train | No | 58 | 52 | 2 | 4 |
+| US_R012 | Test | Yes | 40 | 6 | 19 | 15 |
+| ZA_R001 | Test | Yes | 190 | 54 | 98 | 38 |
 
 In addition to the regions listed above, many countries include additional annotations which do not fall within the named region boundaries. These sites will have region codes with the same country code, followed by "Rxxx" (e.g. US_Rxxx). None of these "regions" are cleared, as they may fall anywhere else in the country, and are mostly negative sites found as part of a concerted effort to find more negative examples.
 
