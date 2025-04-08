@@ -1,6 +1,6 @@
 # Site Model Specification
 
-This is the schema specification for a _Site Model_. [TODO: Link to JSON Schema.] Site model files can be validated by running the validate.py utility. [TODO: Link to validation script]
+This is the [schema specification](../../utilities/smart.schema.json) for a _Site Model_. Site model files can be validated by running the [validate_site_and_region_models.py](../../utilities/validate_site_and_region_models.py) utility. 
 
 _Site models_ describe all observed activity in a given site/activity, both spatially and temporally. One _site model_ is produced for each activity/site.
 
@@ -77,9 +77,9 @@ NOTE: This date is not the same as the observed end of the activity described by
 
 ### `model_content` (string)
 
-This must be one of the three strings `["annotation", "proposed", "update"]`
+This must be one of the three strings `["annotation", "proposed"]`
 
-An "annotation" site is a new site defined by the program or a performer, an "update" site changes properties of an existing "annotation" site (e.g. geometry, status, etc.), and "proposed" sites are defined by performer algorithms. Unlike the similarly named property of a Region feature, a Site may not have the model_content "empty".
+An "annotation" site is a new site defined by the program or a performer, and "proposed" sites are defined by performer algorithms. Unlike the similarly named property of a Region feature, a Site may not have the model_content "empty".
 
 ### `originator` (string)
 
@@ -207,80 +207,139 @@ NOTE: In early versions of the site model schema, a `misc_info` property was def
 
 ```
 {
- "features": [ {
-   "geometry": {
-    "coordinates": [ [ [ -123.3, -48.9], [ -123.3, -48.8], [ -123.4, -48.8], [ -123.4, -48.9], [ -123.3, -48.9] ] ], "type": "Polygon"
-   },
-   "properties": {
-    "end_date": "1984-09-08",
-    "mgrs": "10FDL",
-    "misc_info": {},
-    "model_content": "proposed",
-    "originator": "te",
-    "region_id": "XX_R000",
-    "score": 0.75,
-    "site_id": "XX_R000_0000",
-    "start_date": "1983-03-25",
-    "status": "system_confirmed",
-    "type": "site",
-    "version": "0.0.0"
-   },
-   "type": "Feature"
-  },
-  {
-   "geometry": {
-    "coordinates": [ [ [ [ -123.39, -48.9], [ -123.39, -48.89], [ -123.4, -48.89], [ -123.4, -48.9], [ -123.39, -48.9] ] ], [ [ [ -123.38, -48.9], [ -123.38, -48.89], [ -123.39, -48.89], [ -123.39, -48.9], [ -123.38, -48.9] ] ] ], "type": "MultiPolygon"
-   },
-   "properties": {
-    "current_phase": "Active Construction, Site Preparation",
-    "is_occluded": "False, True",
-    "is_site_boundary": "True, True",
-    "misc_info": {
-     "Intermediate File": "s3://path/to/s3/file"
-    },
-    "observation_date": "1983-03-25",
-    "score": 0.42,
-    "sensor_name": "WorldView",
-    "source": "WorldviewFile-1983-03-25.NTF",
-    "type": "observation"
-   },
-   "type": "Feature"
-  },
-  {
-   "geometry": {
-    "coordinates": [ [ [ [ -123.39, -48.9], [ -123.39, -48.89], [ -123.4, -48.89], [ -123.4, -48.9], [ -123.39, -48.9] ] ], [ [ [ -123.38, -48.9], [ -123.38, -48.89], [ -123.39, -48.89], [ -123.39, -48.9], [ -123.38, -48.9] ] ] ], "type": "MultiPolygon"
-   },
-   "properties": {
-    "current_phase": "Active Construction, Active Construction",
-    "is_occluded": "False, False",
-    "is_site_boundary": "True, True",
-    "misc_info": {
-     "Change Map": "s3://path/to/change/map"
-    },
-    "observation_date": "1983-10-09",
-    "score": 0.58,
-    "sensor_name": null,
-    "source": null,
-    "type": "observation"
-   },
-   "type": "Feature"
-  },
-  {
-   "geometry": {
-    "coordinates": [ [ [ [ -123.38, -48.9], [ -123.38, -48.89], [ -123.4, -48.89], [ -123.4, -48.9], [ -123.38, -48.9] ] ] ], "type": "MultiPolygon"
-   },
-   "properties": {
-    "current_phase": "Post Construction",
-    "is_occluded": null,
-    "is_site_boundary": null,
-    "observation_date": "1984-09-08",
-    "score": 0.77,
-    "sensor_name": "Sentinel-2",
-    "source": "SENTINEL2_TCI",
-    "type": "observation"
-   },
-   "type": "Feature"
-  }
- ], "type": "FeatureCollection"
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "AE_R001",
+                "site_id": "AE_R001_0014",
+                "version": "2.0.1",
+                "status": "positive_pending",
+                "mgrs": "40RCN",
+                "score": 1.0,
+                "start_date": "2021-02-01",
+                "end_date": "2022-08-26",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "6bbb83463a734bf8db57673e2a9df144e23a1f1f"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            55.049518,
+                            24.865315
+                        ],
+                        [
+                            55.04735,
+                            24.86392
+                        ],
+                        [
+                            55.046448,
+                            24.86503
+                        ],
+                        [
+                            55.048551,
+                            24.86641
+                        ],
+                        [
+                            55.049518,
+                            24.865315
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2021-02-01",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                55.049518,
+                                24.865315
+                            ],
+                            [
+                                55.04735,
+                                24.86392
+                            ],
+                            [
+                                55.046448,
+                                24.86503
+                            ],
+                            [
+                                55.048551,
+                                24.86641
+                            ],
+                            [
+                                55.049518,
+                                24.865315
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2022-08-26",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                55.049518,
+                                24.865315
+                            ],
+                            [
+                                55.04735,
+                                24.86392
+                            ],
+                            [
+                                55.046448,
+                                24.86503
+                            ],
+                            [
+                                55.048551,
+                                24.86641
+                            ],
+                            [
+                                55.049518,
+                                24.865315
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
 }
 ```
