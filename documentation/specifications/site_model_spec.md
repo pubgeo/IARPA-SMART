@@ -77,7 +77,7 @@ NOTE: This date is not the same as the observed end of the activity described by
 
 ### `model_content` (string)
 
-This must be one of the three strings `["annotation", "proposed"]`
+This must be one of two strings `["annotation", "proposed"]`
 
 An "annotation" site is a new site defined by the program or a performer, and "proposed" sites are defined by performer algorithms. Unlike the similarly named property of a Region feature, a Site may not have the model_content "empty".
 
