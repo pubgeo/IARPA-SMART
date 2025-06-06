@@ -5,19 +5,19 @@
             "type": "Feature",
             "properties": {
                 "type": "site",
-                "mgrs": "48PYT",
                 "region_id": "VN_C001",
-                "version": "2.0.1",
-                "start_date": "2022-08-01",
-                "end_date": "2019-10-30",
-                "originator": "iMERIT",
-                "status": "positive_pending",
                 "site_id": "VN_C001_0875",
-                "model_content": "annotation",
-                "validated": "False",
+                "version": "2.0.2",
+                "status": "positive_pending",
+                "mgrs": "48PYT",
                 "score": 0.0,
+                "start_date": "2018-02-23",
+                "end_date": "2020-01-13",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "True",
                 "misc_info": {
-                    "commit_hash": "8cbd5b0120ce1e05eb78ace6698c0648e1b5a809"
+                    "commit_hash": "09ad7a622ce4c3b3840401c27b2fc588d36033b7"
                 }
             },
             "geometry": {
@@ -25,24 +25,24 @@
                 "coordinates": [
                     [
                         [
-                            106.9567663614245,
-                            10.98032532012665
+                            106.956766,
+                            10.980325
                         ],
                         [
-                            106.957630227492,
-                            10.97972316600745
+                            106.95763,
+                            10.979723
                         ],
                         [
-                            106.9579250954166,
-                            10.98009358324294
+                            106.957925,
+                            10.980094
                         ],
                         [
-                            106.9570671238866,
-                            10.98072551633147
+                            106.957067,
+                            10.980726
                         ],
                         [
-                            106.9567663614245,
-                            10.98032532012665
+                            106.956766,
+                            10.980325
                         ]
                     ]
                 ]
@@ -51,38 +51,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2022-08-01",
+                "observation_date": "2018-02-23",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            106.9567663614245,
-                            10.98032532012665
-                        ],
-                        [
-                            106.957630227492,
-                            10.97972316600745
-                        ],
-                        [
-                            106.9579250954166,
-                            10.98009358324294
-                        ],
-                        [
-                            106.9570671238866,
-                            10.98072551633147
-                        ],
-                        [
-                            106.9567663614245,
-                            10.98032532012665
+                            [
+                                106.956766,
+                                10.980325
+                            ],
+                            [
+                                106.95763,
+                                10.979723
+                            ],
+                            [
+                                106.957925,
+                                10.980094
+                            ],
+                            [
+                                106.957067,
+                                10.980726
+                            ],
+                            [
+                                106.956766,
+                                10.980325
+                            ]
                         ]
                     ]
                 ]
@@ -91,38 +93,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2019-10-30",
+                "observation_date": "2020-01-13",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            106.9567663614245,
-                            10.98032532012665
-                        ],
-                        [
-                            106.957630227492,
-                            10.97972316600745
-                        ],
-                        [
-                            106.9579250954166,
-                            10.98009358324294
-                        ],
-                        [
-                            106.9570671238866,
-                            10.98072551633147
-                        ],
-                        [
-                            106.9567663614245,
-                            10.98032532012665
+                            [
+                                106.956766,
+                                10.980325
+                            ],
+                            [
+                                106.95763,
+                                10.979723
+                            ],
+                            [
+                                106.957925,
+                                10.980094
+                            ],
+                            [
+                                106.957067,
+                                10.980726
+                            ],
+                            [
+                                106.956766,
+                                10.980325
+                            ]
                         ]
                     ]
                 ]

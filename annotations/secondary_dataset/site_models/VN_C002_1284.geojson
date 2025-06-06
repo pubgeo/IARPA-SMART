@@ -6,18 +6,18 @@
             "properties": {
                 "type": "site",
                 "region_id": "VN_C002",
-                "mgrs": "48QXJ",
-                "version": "2.0.0",
-                "model_content": "annotation",
-                "start_date": "2020-05-18",
-                "end_date": "2020-01-14",
-                "originator": "iMERIT",
-                "status": "positive_pending",
                 "site_id": "VN_C002_1284",
-                "validated": "False",
+                "version": "2.0.1",
+                "status": "positive_pending",
+                "mgrs": "48QXJ",
                 "score": 0.0,
+                "start_date": "2019-11-05",
+                "end_date": "2021-06-18",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "True",
                 "misc_info": {
-                    "commit_hash": "8cbd5b0120ce1e05eb78ace6698c0648e1b5a809"
+                    "commit_hash": "09ad7a622ce4c3b3840401c27b2fc588d36033b7"
                 }
             },
             "geometry": {
@@ -25,24 +25,24 @@
                 "coordinates": [
                     [
                         [
-                            105.98797168611743,
-                            20.97874019219924
+                            105.987972,
+                            20.97874
                         ],
                         [
-                            105.98696506714381,
-                            20.980144665338635
+                            105.986965,
+                            20.980145
                         ],
                         [
-                            105.98730540022537,
-                            20.980554503063612
+                            105.987305,
+                            20.980555
                         ],
                         [
-                            105.98881772539767,
-                            20.97948556958209
+                            105.988818,
+                            20.979486
                         ],
                         [
-                            105.98797168611743,
-                            20.97874019219924
+                            105.987972,
+                            20.97874
                         ]
                     ]
                 ]
@@ -51,38 +51,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2020-05-18",
+                "observation_date": "2019-11-05",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            105.98797168611743,
-                            20.97874019219924
-                        ],
-                        [
-                            105.98696506714381,
-                            20.980144665338635
-                        ],
-                        [
-                            105.98730540022537,
-                            20.980554503063612
-                        ],
-                        [
-                            105.98881772539767,
-                            20.97948556958209
-                        ],
-                        [
-                            105.98797168611743,
-                            20.97874019219924
+                            [
+                                105.987972,
+                                20.97874
+                            ],
+                            [
+                                105.986965,
+                                20.980145
+                            ],
+                            [
+                                105.987305,
+                                20.980555
+                            ],
+                            [
+                                105.988818,
+                                20.979486
+                            ],
+                            [
+                                105.987972,
+                                20.97874
+                            ]
                         ]
                     ]
                 ]
@@ -91,38 +93,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2020-01-14",
+                "observation_date": "2021-06-18",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            105.98797168611743,
-                            20.97874019219924
-                        ],
-                        [
-                            105.98696506714381,
-                            20.980144665338635
-                        ],
-                        [
-                            105.98730540022537,
-                            20.980554503063612
-                        ],
-                        [
-                            105.98881772539767,
-                            20.97948556958209
-                        ],
-                        [
-                            105.98797168611743,
-                            20.97874019219924
+                            [
+                                105.987972,
+                                20.97874
+                            ],
+                            [
+                                105.986965,
+                                20.980145
+                            ],
+                            [
+                                105.987305,
+                                20.980555
+                            ],
+                            [
+                                105.988818,
+                                20.979486
+                            ],
+                            [
+                                105.987972,
+                                20.97874
+                            ]
                         ]
                     ]
                 ]

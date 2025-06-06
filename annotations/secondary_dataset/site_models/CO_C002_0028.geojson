@@ -6,18 +6,18 @@
             "properties": {
                 "type": "site",
                 "region_id": "CO_C002",
-                "version": "2.0.2",
-                "mgrs": "18NUJ",
-                "model_content": "annotation",
-                "start_date": "2020-09-28",
-                "end_date": "2020-09-28",
-                "originator": "iMERIT",
                 "site_id": "CO_C002_0028",
+                "version": "2.0.3",
                 "status": "ignore",
-                "validated": "False",
+                "mgrs": "18NUJ",
                 "score": 0.0,
+                "start_date": "2020-03-08",
+                "end_date": null,
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "False",
                 "misc_info": {
-                    "commit_hash": "8cbd5b0120ce1e05eb78ace6698c0648e1b5a809"
+                    "commit_hash": "b2a36269f1cbef9c8830197db1fd1e207add163e"
                 }
             },
             "geometry": {
@@ -75,62 +75,64 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2020-09-28",
+                "observation_date": "2020-03-08",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            -76.523908,
-                            3.367097
-                        ],
-                        [
-                            -76.523125,
-                            3.367364
-                        ],
-                        [
-                            -76.52302,
-                            3.366721
-                        ],
-                        [
-                            -76.521838,
-                            3.367061
-                        ],
-                        [
-                            -76.5217,
-                            3.366016
-                        ],
-                        [
-                            -76.523027,
-                            3.365701
-                        ],
-                        [
-                            -76.523156,
-                            3.366681
-                        ],
-                        [
-                            -76.52338,
-                            3.366648
-                        ],
-                        [
-                            -76.523316,
-                            3.366295
-                        ],
-                        [
-                            -76.523677,
-                            3.366206
-                        ],
-                        [
-                            -76.523908,
-                            3.367097
+                            [
+                                -76.523908,
+                                3.367097
+                            ],
+                            [
+                                -76.523125,
+                                3.367364
+                            ],
+                            [
+                                -76.52302,
+                                3.366721
+                            ],
+                            [
+                                -76.521838,
+                                3.367061
+                            ],
+                            [
+                                -76.5217,
+                                3.366016
+                            ],
+                            [
+                                -76.523027,
+                                3.365701
+                            ],
+                            [
+                                -76.523156,
+                                3.366681
+                            ],
+                            [
+                                -76.52338,
+                                3.366648
+                            ],
+                            [
+                                -76.523316,
+                                3.366295
+                            ],
+                            [
+                                -76.523677,
+                                3.366206
+                            ],
+                            [
+                                -76.523908,
+                                3.367097
+                            ]
                         ]
                     ]
                 ]
@@ -139,62 +141,64 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2020-09-28",
+                "observation_date": null,
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            -76.523908,
-                            3.367097
-                        ],
-                        [
-                            -76.523125,
-                            3.367364
-                        ],
-                        [
-                            -76.52302,
-                            3.366721
-                        ],
-                        [
-                            -76.521838,
-                            3.367061
-                        ],
-                        [
-                            -76.5217,
-                            3.366016
-                        ],
-                        [
-                            -76.523027,
-                            3.365701
-                        ],
-                        [
-                            -76.523156,
-                            3.366681
-                        ],
-                        [
-                            -76.52338,
-                            3.366648
-                        ],
-                        [
-                            -76.523316,
-                            3.366295
-                        ],
-                        [
-                            -76.523677,
-                            3.366206
-                        ],
-                        [
-                            -76.523908,
-                            3.367097
+                            [
+                                -76.523908,
+                                3.367097
+                            ],
+                            [
+                                -76.523125,
+                                3.367364
+                            ],
+                            [
+                                -76.52302,
+                                3.366721
+                            ],
+                            [
+                                -76.521838,
+                                3.367061
+                            ],
+                            [
+                                -76.5217,
+                                3.366016
+                            ],
+                            [
+                                -76.523027,
+                                3.365701
+                            ],
+                            [
+                                -76.523156,
+                                3.366681
+                            ],
+                            [
+                                -76.52338,
+                                3.366648
+                            ],
+                            [
+                                -76.523316,
+                                3.366295
+                            ],
+                            [
+                                -76.523677,
+                                3.366206
+                            ],
+                            [
+                                -76.523908,
+                                3.367097
+                            ]
                         ]
                     ]
                 ]

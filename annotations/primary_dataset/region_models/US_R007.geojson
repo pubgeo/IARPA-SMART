@@ -6,7 +6,7 @@
             "properties": {
                 "type": "region",
                 "region_id": "US_R007",
-                "version": "2.4.0",
+                "version": "2.5.0",
                 "mgrs": "17SKT",
                 "start_date": "2014-01-01",
                 "end_date": "2021-08-31",
@@ -47,7 +47,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0001",
                 "mgrs": "17SKT",
                 "start_date": "2015-04-01",
@@ -98,7 +98,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0003",
                 "mgrs": "17SKT",
                 "start_date": "2016-03-04",
@@ -145,7 +145,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0007",
                 "mgrs": "17SKT",
                 "start_date": "2018-03-31",
@@ -216,7 +216,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0015",
                 "mgrs": "17SKT",
                 "start_date": "2015-04-01",
@@ -322,7 +322,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0025",
                 "mgrs": "17SKU",
                 "start_date": "2016-04-03",
@@ -385,7 +385,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0029",
                 "mgrs": "17SKT",
                 "start_date": "2016-03-04",
@@ -440,7 +440,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0042",
                 "mgrs": "17SKT",
                 "start_date": "2016-04-03",
@@ -495,7 +495,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0045",
                 "mgrs": "17SKT",
                 "start_date": "2018-04-19",
@@ -554,7 +554,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0046",
                 "mgrs": "17SKT",
                 "start_date": "2016-04-03",
@@ -597,7 +597,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0055",
                 "mgrs": "17SKT",
                 "start_date": "2016-04-03",
@@ -644,7 +644,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0056",
                 "mgrs": "17SKT",
                 "start_date": "2015-09-13",
@@ -695,7 +695,7 @@
             "properties": {
                 "type": "site_summary",
                 "status": "positive_annotated_static",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "site_id": "US_R007_0058",
                 "mgrs": "17SKT",
                 "start_date": "2015-09-13",
@@ -1883,6 +1883,57 @@
                         [
                             -83.827842,
                             34.295254
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site_summary",
+                "status": "positive_pending",
+                "version": "2.0.0",
+                "site_id": "US_R007_0081",
+                "mgrs": "17SKT",
+                "start_date": "2013-03-18",
+                "end_date": "2024-02-15",
+                "score": 1.0,
+                "originator": "te",
+                "model_content": "annotation",
+                "validated": "True"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -83.871813,
+                            34.247463
+                        ],
+                        [
+                            -83.87336,
+                            34.246589
+                        ],
+                        [
+                            -83.873865,
+                            34.247081
+                        ],
+                        [
+                            -83.874577,
+                            34.246711
+                        ],
+                        [
+                            -83.875492,
+                            34.247799
+                        ],
+                        [
+                            -83.872938,
+                            34.249532
+                        ],
+                        [
+                            -83.871813,
+                            34.247463
                         ]
                     ]
                 ]
