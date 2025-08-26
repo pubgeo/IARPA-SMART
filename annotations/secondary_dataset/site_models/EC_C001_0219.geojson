@@ -6,18 +6,18 @@
             "properties": {
                 "type": "site",
                 "region_id": "EC_C001",
-                "mgrs": "17MPT",
-                "version": "2.0.2",
-                "start_date": "2021-08-24",
-                "end_date": "2021-08-24",
-                "originator": "iMERIT",
-                "status": "ignore",
                 "site_id": "EC_C001_0219",
-                "model_content": "annotation",
-                "validated": "False",
+                "version": "2.0.3",
+                "status": "ignore",
+                "mgrs": "17MPT",
                 "score": 0.0,
+                "start_date": "2021-04-23",
+                "end_date": "2024-03-17",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "False",
                 "misc_info": {
-                    "commit_hash": "8cbd5b0120ce1e05eb78ace6698c0648e1b5a809"
+                    "commit_hash": "b2a36269f1cbef9c8830197db1fd1e207add163e"
                 }
             },
             "geometry": {
@@ -51,38 +51,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2021-08-24",
+                "observation_date": "2021-04-23",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            -79.86935,
-                            -2.114404
-                        ],
-                        [
-                            -79.868098,
-                            -2.113674
-                        ],
-                        [
-                            -79.867642,
-                            -2.114486
-                        ],
-                        [
-                            -79.868883,
-                            -2.115179
-                        ],
-                        [
-                            -79.86935,
-                            -2.114404
+                            [
+                                -79.86935,
+                                -2.114404
+                            ],
+                            [
+                                -79.868098,
+                                -2.113674
+                            ],
+                            [
+                                -79.867642,
+                                -2.114486
+                            ],
+                            [
+                                -79.868883,
+                                -2.115179
+                            ],
+                            [
+                                -79.86935,
+                                -2.114404
+                            ]
                         ]
                     ]
                 ]
@@ -91,38 +93,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2021-08-24",
+                "observation_date": "2024-03-17",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            -79.86935,
-                            -2.114404
-                        ],
-                        [
-                            -79.868098,
-                            -2.113674
-                        ],
-                        [
-                            -79.867642,
-                            -2.114486
-                        ],
-                        [
-                            -79.868883,
-                            -2.115179
-                        ],
-                        [
-                            -79.86935,
-                            -2.114404
+                            [
+                                -79.86935,
+                                -2.114404
+                            ],
+                            [
+                                -79.868098,
+                                -2.113674
+                            ],
+                            [
+                                -79.867642,
+                                -2.114486
+                            ],
+                            [
+                                -79.868883,
+                                -2.115179
+                            ],
+                            [
+                                -79.86935,
+                                -2.114404
+                            ]
                         ]
                     ]
                 ]

@@ -1,0 +1,136 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "AE_R001",
+                "site_id": "AE_R001_0627",
+                "version": "2.0.0",
+                "status": "positive_pending",
+                "mgrs": "40RCN",
+                "score": 1.0,
+                "start_date": "2013-10-19",
+                "end_date": "2015-11-07",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "8e2cc701facd37559ed12647d70a5e5b3622c6ca"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            55.117004,
+                            24.956385
+                        ],
+                        [
+                            55.1181,
+                            24.957737
+                        ],
+                        [
+                            55.119044,
+                            24.95708
+                        ],
+                        [
+                            55.117986,
+                            24.955705
+                        ],
+                        [
+                            55.117004,
+                            24.956385
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2013-10-19",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                55.117004,
+                                24.956385
+                            ],
+                            [
+                                55.1181,
+                                24.957737
+                            ],
+                            [
+                                55.119044,
+                                24.95708
+                            ],
+                            [
+                                55.117986,
+                                24.955705
+                            ],
+                            [
+                                55.117004,
+                                24.956385
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2015-11-07",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                55.117004,
+                                24.956385
+                            ],
+                            [
+                                55.1181,
+                                24.957737
+                            ],
+                            [
+                                55.119044,
+                                24.95708
+                            ],
+                            [
+                                55.117986,
+                                24.955705
+                            ],
+                            [
+                                55.117004,
+                                24.956385
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

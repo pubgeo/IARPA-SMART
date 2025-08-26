@@ -6,18 +6,18 @@
             "properties": {
                 "type": "site",
                 "region_id": "IN_C001",
-                "version": "2.0.0",
-                "mgrs": "43QBB",
-                "start_date": "2020-05-27",
-                "end_date": "2020-02-02",
-                "model_content": "annotation",
                 "site_id": "IN_C001_0032",
+                "version": "2.0.1",
                 "status": "positive_pending",
+                "mgrs": "43QBB",
+                "score": 1.0,
+                "start_date": "2020-05-08",
+                "end_date": "2021-02-05",
+                "model_content": "annotation",
                 "originator": "iMERIT",
-                "validated": "False",
-                "score": 0.0,
+                "validated": "True",
                 "misc_info": {
-                    "commit_hash": "8cbd5b0120ce1e05eb78ace6698c0648e1b5a809"
+                    "commit_hash": "09ad7a622ce4c3b3840401c27b2fc588d36033b7"
                 }
             },
             "geometry": {
@@ -25,24 +25,24 @@
                 "coordinates": [
                     [
                         [
-                            72.86234734038094,
-                            19.06718622598174
+                            72.862347,
+                            19.067186
                         ],
                         [
-                            72.86381262533752,
-                            19.068098047327002
+                            72.863813,
+                            19.068098
                         ],
                         [
-                            72.8633787227821,
-                            19.06874424082596
+                            72.863379,
+                            19.068744
                         ],
                         [
-                            72.86188295422792,
-                            19.06783375694616
+                            72.861883,
+                            19.067834
                         ],
                         [
-                            72.86234734038094,
-                            19.06718622598174
+                            72.862347,
+                            19.067186
                         ]
                     ]
                 ]
@@ -51,38 +51,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2020-05-27",
+                "observation_date": "2020-05-08",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            72.86234734038094,
-                            19.06718622598174
-                        ],
-                        [
-                            72.86381262533752,
-                            19.068098047327002
-                        ],
-                        [
-                            72.8633787227821,
-                            19.06874424082596
-                        ],
-                        [
-                            72.86188295422792,
-                            19.06783375694616
-                        ],
-                        [
-                            72.86234734038094,
-                            19.06718622598174
+                            [
+                                72.862347,
+                                19.067186
+                            ],
+                            [
+                                72.863813,
+                                19.068098
+                            ],
+                            [
+                                72.863379,
+                                19.068744
+                            ],
+                            [
+                                72.861883,
+                                19.067834
+                            ],
+                            [
+                                72.862347,
+                                19.067186
+                            ]
                         ]
                     ]
                 ]
@@ -91,38 +93,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2020-02-02",
+                "observation_date": "2021-02-05",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            72.86234734038094,
-                            19.06718622598174
-                        ],
-                        [
-                            72.86381262533752,
-                            19.068098047327002
-                        ],
-                        [
-                            72.8633787227821,
-                            19.06874424082596
-                        ],
-                        [
-                            72.86188295422792,
-                            19.06783375694616
-                        ],
-                        [
-                            72.86234734038094,
-                            19.06718622598174
+                            [
+                                72.862347,
+                                19.067186
+                            ],
+                            [
+                                72.863813,
+                                19.068098
+                            ],
+                            [
+                                72.863379,
+                                19.068744
+                            ],
+                            [
+                                72.861883,
+                                19.067834
+                            ],
+                            [
+                                72.862347,
+                                19.067186
+                            ]
                         ]
                     ]
                 ]

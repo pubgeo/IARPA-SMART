@@ -1,0 +1,136 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "site",
+                "region_id": "LT_R001",
+                "site_id": "LT_R001_0135",
+                "version": "2.0.0",
+                "status": "positive_pending",
+                "mgrs": "35ULA",
+                "score": 1.0,
+                "start_date": "2014-03-26",
+                "end_date": "2017-07-31",
+                "model_content": "annotation",
+                "originator": "te",
+                "validated": "True",
+                "misc_info": {
+                    "commit_hash": "8e2cc701facd37559ed12647d70a5e5b3622c6ca"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            24.008368,
+                            54.915489
+                        ],
+                        [
+                            24.009534,
+                            54.915477
+                        ],
+                        [
+                            24.009468,
+                            54.914096
+                        ],
+                        [
+                            24.008292,
+                            54.914161
+                        ],
+                        [
+                            24.008368,
+                            54.915489
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2014-03-26",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.008368,
+                                54.915489
+                            ],
+                            [
+                                24.009534,
+                                54.915477
+                            ],
+                            [
+                                24.009468,
+                                54.914096
+                            ],
+                            [
+                                24.008292,
+                                54.914161
+                            ],
+                            [
+                                24.008368,
+                                54.915489
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "observation_date": "2017-07-31",
+                "source": null,
+                "sensor_name": null,
+                "type": "observation",
+                "current_phase": null,
+                "is_occluded": null,
+                "is_site_boundary": null,
+                "score": 1.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                24.008368,
+                                54.915489
+                            ],
+                            [
+                                24.009534,
+                                54.915477
+                            ],
+                            [
+                                24.009468,
+                                54.914096
+                            ],
+                            [
+                                24.008292,
+                                54.914161
+                            ],
+                            [
+                                24.008368,
+                                54.915489
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

@@ -6,18 +6,18 @@
             "properties": {
                 "type": "site",
                 "region_id": "SA_C004",
-                "mgrs": "37QED",
-                "version": "2.0.2",
-                "start_date": "2019-06-12",
-                "end_date": "2019-06-12",
-                "originator": "iMERIT",
-                "status": "ignore",
                 "site_id": "SA_C004_0126",
-                "validated": "False",
-                "model_content": "annotation",
+                "version": "2.0.3",
+                "status": "ignore",
+                "mgrs": "37QED",
                 "score": 0.0,
+                "start_date": "2015-04-03",
+                "end_date": "2023-05-07",
+                "model_content": "annotation",
+                "originator": "iMERIT",
+                "validated": "False",
                 "misc_info": {
-                    "commit_hash": "8cbd5b0120ce1e05eb78ace6698c0648e1b5a809"
+                    "commit_hash": "b2a36269f1cbef9c8830197db1fd1e207add163e"
                 }
             },
             "geometry": {
@@ -51,38 +51,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2019-06-12",
+                "observation_date": "2015-04-03",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            39.172393,
-                            21.507295
-                        ],
-                        [
-                            39.172718,
-                            21.506297
-                        ],
-                        [
-                            39.174034,
-                            21.50732
-                        ],
-                        [
-                            39.173552,
-                            21.507995
-                        ],
-                        [
-                            39.172393,
-                            21.507295
+                            [
+                                39.172393,
+                                21.507295
+                            ],
+                            [
+                                39.172718,
+                                21.506297
+                            ],
+                            [
+                                39.174034,
+                                21.50732
+                            ],
+                            [
+                                39.173552,
+                                21.507995
+                            ],
+                            [
+                                39.172393,
+                                21.507295
+                            ]
                         ]
                     ]
                 ]
@@ -91,38 +93,40 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "observation",
-                "score": 0.0,
-                "observation_date": "2019-06-12",
+                "observation_date": "2023-05-07",
                 "source": null,
                 "sensor_name": null,
+                "type": "observation",
                 "current_phase": null,
                 "is_occluded": null,
-                "is_site_boundary": null
+                "is_site_boundary": null,
+                "score": 0.0
             },
             "geometry": {
-                "type": "Polygon",
+                "type": "MultiPolygon",
                 "coordinates": [
                     [
                         [
-                            39.172393,
-                            21.507295
-                        ],
-                        [
-                            39.172718,
-                            21.506297
-                        ],
-                        [
-                            39.174034,
-                            21.50732
-                        ],
-                        [
-                            39.173552,
-                            21.507995
-                        ],
-                        [
-                            39.172393,
-                            21.507295
+                            [
+                                39.172393,
+                                21.507295
+                            ],
+                            [
+                                39.172718,
+                                21.506297
+                            ],
+                            [
+                                39.174034,
+                                21.50732
+                            ],
+                            [
+                                39.173552,
+                                21.507995
+                            ],
+                            [
+                                39.172393,
+                                21.507295
+                            ]
                         ]
                     ]
                 ]
