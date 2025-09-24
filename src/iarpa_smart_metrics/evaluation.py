@@ -461,6 +461,8 @@ class StackSlice:
             self.score = 1
 
         self.phase = row["current_phase"]
+        if not self.phase:
+            self.phase = ""
 
         self.set_id()
         self.uuid = uuid.uuid4()
@@ -1049,7 +1051,7 @@ class RegionModel:
         self.area = GeometryUtil.compute_region_area(row.geometry)
         self.start_date = pd.to_datetime(str(row["start_date"]), format="%Y-%m-%d")
         self.end_date = pd.to_datetime(str(row["end_date"]), format="%Y-%m-%d")
-        self.dates = len(pd.date_range(start=self.start_date, end=self.end_date)) - 1
+        self.dates = len(pd.date_range(start=self.start_date, end=self.end_date))
         self.id = str(row["region_id"])
 
 
@@ -1203,6 +1205,16 @@ class GeometryUtil:
         shape = MultiPolygon(list_of_polygons).convex_hull
         return GeometryUtil.compute_region_area(shape) if area else shape
 
+    @classmethod
+    @timer
+    def get_exterior(cls, geom):
+        if isinstance(geom, Polygon):
+            return geom.exterior
+        elif isinstance(geom, MultiPolygon):
+            return geom.convex_hull.exterior
+        else:
+            return geom
+
 
 class Metric:
     """Utility class for computing various similarity and performance metrics"""
@@ -1222,12 +1234,7 @@ class Metric:
 
                 If the projected geometry is invalid, a warning is logged and the original geometry is returned.
         """
-        if isinstance(g, Polygon):
-            coords = g.exterior.coords
-        elif isinstance(g, MultiPolygon):
-            coords = g.convex_hull.exterior.coords
-        else:
-            coords = g.coords
+        coords = GeometryUtil.get_exterior(g).coords
 
         new_coords = []
         for c in coords:
@@ -3000,7 +3007,7 @@ class Evaluation:
                     gt_stack_polys = crs_gt_stack.geometry
                     bound_poly = unary_union(gt_stack_polys)
                     ax.fill(
-                        *bound_poly.exterior.xy,
+                        *GeometryUtil.get_exterior(bound_poly).xy,
                         alpha=1,
                         fc="none",
                         ec=[c / 255 for c in kml_colormap[gt_color]["color_rgb"]],
@@ -3015,7 +3022,7 @@ class Evaluation:
                 else:
                     kml_geom = folder.newpolygon(
                         name=gt_geom_name,
-                        outerboundaryis=unary_union(gt_geom.df.geometry).exterior.coords,
+                        outerboundaryis=GeometryUtil.get_exterior(unary_union(gt_geom.df.geometry)).coords,
                     )
                     # Styling
                     kml_geom.style.linestyle.color = simplekml.Color.rgb(*kml_colormap[gt_color]["color_rgb"])
@@ -3063,7 +3070,7 @@ class Evaluation:
                     bound_poly = unary_union(sm_stack_polys)
 
                     ax.fill(
-                        *bound_poly.exterior.xy,
+                        *GeometryUtil.get_exterior(bound_poly).xy,
                         alpha=1,
                         fc="none",
                         ec=[c / 255 for c in kml_colormap[sm_color]["color_rgb"]],
@@ -3072,7 +3079,7 @@ class Evaluation:
                     folder = kml_colormap[sm_color]["kml_folder"]
                     kml_geom = folder.newpolygon(
                         name=sm_id,
-                        outerboundaryis=unary_union(sm_stack.df.geometry).exterior.coords,
+                        outerboundaryis=GeometryUtil.get_exterior(unary_union(sm_stack.df.geometry)).coords,
                     )
 
                     # Auxiliary info
@@ -3165,7 +3172,7 @@ class Evaluation:
         if self.bas_dir:
             os.makedirs(f"{self.bas_dir}/region", exist_ok=True)
             filename = f"{self.bas_dir}/region/{title}"
-            fig.savefig(f"{filename}.png", bbox_inches="tight", dpi=60)
+            fig.savefig(f"{filename}.png", bbox_inches="tight", dpi=600)
             kml.save(f"{filename}.kml")
 
         plt.close()
@@ -4474,10 +4481,90 @@ class Evaluation:
         # save the f score tables and scoreboards
         if self.bas_dir:
             f_score_tables_concat = (
-                pd.concat(f_score_tables).sort_values("f_1", ascending=False).drop_duplicates().round(4)
+                (pd.concat(f_score_tables))
+                .sort_values(
+                    by=[
+                        "f_1",
+                        "tau",
+                        "rho",
+                        "temporal iop",
+                        "temporal iot",
+                        "transient temporal iop",
+                        "transient temporal iot",
+                        "min proposal area",
+                        "min proposal confidence score",
+                        "min spatial distance threshold",
+                        "central spatial distance threshold",
+                        "max spatial distance threshold",
+                        "min temporal distance threshold",
+                        "central temporal distance threshold",
+                        "max temporal distance threshold",
+                    ],
+                    ascending=[
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        True,
+                        True,
+                        True,
+                        True,
+                        True,
+                        True,
+                    ],
+                )
+                .drop_duplicates()
+                .round(4)
             )
+
+            scoreboards_concat = (
+                pd.concat(scoreboards)
+                .sort_values(
+                    by=[
+                        "F1",
+                        "tau",
+                        "rho",
+                        "temporal iop",
+                        "temporal iot",
+                        "transient temporal iop",
+                        "transient temporal iot",
+                        "min proposal area",
+                        "min proposal confidence score",
+                        "min spatial distance threshold",
+                        "central spatial distance threshold",
+                        "max spatial distance threshold",
+                        "min temporal distance threshold",
+                        "central temporal distance threshold",
+                        "max temporal distance threshold",
+                    ],
+                    ascending=[
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        False,
+                        True,
+                        True,
+                        True,
+                        True,
+                        True,
+                        True,
+                    ],
+                )
+                .drop_duplicates()
+                .round(4)
+            )
+
             f_score_tables_concat.to_csv(f"{self.bas_dir}/f_scores.csv", index=False)
-            scoreboards_concat = pd.concat(scoreboards).sort_values("F1", ascending=False).drop_duplicates().round(4)
             scoreboards_concat.to_csv(f"{self.bas_dir}/scoreboard.csv", index=False)
 
         # save the optimal row from the scoreboard to its own file
