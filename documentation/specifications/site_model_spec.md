@@ -63,7 +63,7 @@ This must be one of the strings found on the list of [annotation status types](.
 
 This value may be `null` ,or a datestring of the format `"YYYY-MM-DD"`.
 
-If it is a datestring, it corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
+If it is a datestring, it corresponds to the earliest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories) and [boundary definitions](../boundary_definitions.md#temporal-boundaries).
 
 NOTE: This date is not the same as the observed start of the activity described by the site model. It is simply the very first observation noted in the annotation (ground truth) file, which could be 'No Activity' (prior to activity starting). 
 
@@ -71,7 +71,7 @@ NOTE: This date is not the same as the observed start of the activity described 
 
 This value may be `null` ,or a datestring of the format `"YYYY-MM-DD"`.
 
-If it is a datestring, it corresponds to the latest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
+If it is a datestring, it corresponds to the latest date of all observation features in this site model. `null` has a special semantic meaning and is only permitted in certain statused sites, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories) and [boundary definitions](../boundary_definitions.md#temporal-boundaries).
 
 NOTE: This date is not the same as the observed end of the activity described by the site model. It is simply the very last observation noted in the annotation (ground truth) file, which could be the last of several 'Post Construction' activities. 
 
@@ -131,7 +131,7 @@ This is specific to the observation feature, and is used to differentiate _obser
 
 This value may either be `null` or a datestring of the format `"YYYY-MM-DD"`.
 
-`null` has a special semantic meaning and is only permitted in certain circumstances, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
+`null` has a special semantic meaning and is only permitted in certain circumstances, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories) and [boundary definitions](../boundary_definitions.md#temporal-boundaries).
 
 ### `source` (string or null)
 
