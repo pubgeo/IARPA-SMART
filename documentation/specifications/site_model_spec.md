@@ -131,7 +131,7 @@ This is specific to the observation feature, and is used to differentiate _obser
 
 This value may either be `null` or a datestring of the format `"YYYY-MM-DD"`.
 
-`null` has a special semantic meaning and is only permitted in certain circumstances, as detailed in the `TODO: FIX THIS canonical site types`
+`null` has a special semantic meaning and is only permitted in certain circumstances, as detailed in the [annotation status types](../miscellaneous_annotation_details.md#annotations-status-type-categories).
 
 ### `source` (string or null)
 
