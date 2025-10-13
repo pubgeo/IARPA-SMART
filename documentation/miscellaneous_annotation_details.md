@@ -9,18 +9,19 @@ The list of labels below describes the possible values of the 'status' field in 
 * Positive Type: true positive (TP) if detected, false negative (FN) if missed
   * positive_annotated (Type 1) [+] 
   * positive_annotated_static (Type 1) [+]
-  * positive_partial (Type 2) [+]
-  * positive_pending (Type 4)
+  * positive_partial (Type 2) [+] [*]
+  * positive_pending (Type 4) [*]
 
 * Negative Type: false positive (FP) if detected, true negative (TN) if missed
   * negative (Type 3)
   * positive_excluded (Type 3)
 
 * Ignore Type: no impact on evaluation score regardless of whether it is successfully detected or missed
-  * ignore (Type 3)
+  * ignore (Type 3) [*]
   * positive_unbounded
 
 * [+] Denotes a positive type that includes activity phase labels
+* [*] Denotes a site type where start_date can be null (indicating that no imagery is available to localize the beginning of activity); note that all site types except positive_annotated and positive_annotated_static can have a null end_date (indicating that at the time of annotation, no imagery is available to localize the end of activity). However, recommended annotation practice includes avoiding null dates whenever possible, particularly null start dates, as they are less useful than annotations with full temporal localization.
 
 
 <a name="Activity Phase Labels"></a>
