@@ -15,8 +15,6 @@ This repository contains the following key components:
 - Useful **utilities** (found in [`utilities/`](utilities/)) to help get started with and make use of the dataset. 
 - A Python-based implementation of **semi-custom performance evaluation metrics** (tailored specifically to the data formats and application introduced here) can be found in [`src/`](src/). A publication describing the formulation of the evaluation metrics will be made available soon (expected May 2025 but available upon request prior to official release). 
 
-NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing by the program. Expected release is by January 2025. 
-
 # Terminology
 
 - **Observation**:
@@ -136,14 +134,14 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 
 - Medium Residential (Low-rise apartments/condos, townhouse/row homes with 5 stories or below, does not matter how many of these buildings there are)
 - Heavy Residential (Large apartment or condo high rise building that is over 5 stories tall)
-- Commercial (e.g. malls, grocery stores, strip malls, gas stations, hospitals, stadiums, office buildings, hotels, storage units)
-- Industrial (e.g. factories, power plants, manufacturing facility, warehouses, distribution center, shipping infrastructure (shipping ports) etc.)
+- Commercial (e.g. malls, grocery stores, strip malls, gas stations, hospitals, stadiums, office buildings, hotels, storage units, etc.)
+- Industrial (e.g. factories, power plants, manufacturing facility, warehouses, distribution centers, shipping infrastructure (shipping ports) etc.)
 - Other: A known type that doesn't fall into any of the above categories. (e.g. schools, parking garages, religious buildings, power substations, fire stations, etc.)
 
 Other considerations for 'Positive' activity types, or activity that should be included within site boundaries:
 
 - Sports fields if also associated with large-scale construction buildings (i.e., a school with new sports fields)
-- Roads/driveways/parking lots that are associated with construction of a build (i.e., a parking lot that is part of a new store, a new access road that leads to a new factory)
+- Roads/driveways/parking lots that are associated with construction of a building (i.e., a parking lot that is part of a new store, a new access road that leads to a new factory)
 - The creation of artificial islands/land if associated with the construction of a man-made structure on that land
 
 | ![Image 1](resources/pos_activity_industrial_1.png) | ![Image 2](resources/pos_activity_heavyres_2.png) | ![Image 3](resources/pos_activity_commercial_1.png) | ![Image 4](resources/pos_activity_commercial_2.png) |
@@ -191,6 +189,7 @@ For the purposes of the IARPA SMART Heavy Construction Dataset, the following ac
 - The general clearing of land or destruction of a building/structure without the explicit or immediate purpose of continued construction (e.g. the destruction of a stadium or factory on land that is then abandoned)
 - The creation of water retention ponds, unless directly associated with the construction of a 'Positive' example
 - Solar panel "fields"
+- Resurfacing of existing building roofs or parking lots, where no new construction is occurring
 
 | ![Image 1](resources/neg_activity_light_res.png) | ![Image 2](resources/neg_activity_infra.png) | ![Image 3](resources/neg_activity_inf_roads.png) |
 |:----------------------:|:----------------------:|:----------------------:|
@@ -317,7 +316,7 @@ Activities in primary regions are annotated over the span of more than 7.5 years
 
 #### Site Observations
 
-All sites, regardless of annotation type, will at least have 2 observations: a starting observation and an end observation. These will not be referenced to an image or activity phase.
+All sites, regardless of annotation type, will at least have 2 observations: a starting observation and an end observation. Only type 1 and type 2 sites will reference start/end observations to an image and activity phase, other types provide a date only.
 
 Site types 1 and 2 will contain phase labels for each annotated image. Below is a summary of how many of each activity classification phase are contained in the dataset (excluding all of the default "Null" observations). Note that sites with status "positive_annotated" (as opposed to "positive_annotated_static") may have multiple subsites with multiple activity phases. The geometry for those observations will have multiple polygons to designate the different subsites.
 
@@ -331,13 +330,13 @@ Site types 1 and 2 will contain phase labels for each annotated image. Below is 
 
 ### Secondary Dataset
 
-Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date. Sites in this dataset are generally Type 4, though some sites with ambiguous activity are "ignore." 
+Activities in secondary regions are annotated over the span of over 4.5 years, from January 2017 through August 2021. Site models in this dataset will only include a start and end date. Most sites in this dataset are Type 4, though some sites with ambiguous activity are "ignore." 
 
-There are 27,297 'positive_pending' sites, and 4 'ignore' sites in the current dataset.
+There are 27,297 'positive_pending' sites and 4 'ignore' sites in the current dataset.
 
 ## File Format Specifications
 
-The IARPA SMART Heavy Construction Annotation Dataset is provided in a custom, yet simple human- and machine-readable format ([GeoJSON](https://geojson.org/)). More details can on the format can be found in our documentation (found in `documentation/specifications/`). 
+The IARPA SMART Heavy Construction Annotation Dataset is provided in a custom, yet simple human- and machine-readable format ([GeoJSON](https://geojson.org/)). More details can on the format can be found in our documentation (see `documentation/specifications/`). 
 
 ## Obtaining the Satellite Imagery
 
