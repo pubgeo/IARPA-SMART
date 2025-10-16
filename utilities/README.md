@@ -10,11 +10,27 @@ The Johns Hopkins University Applied Physics Laboratory
 
 Send email to: iarpa.smart@jhuapl.edu
 
-## Requirements
+## Installation
 
 Requires Python 3.10 (*note that this differs from `src`*)
 
-Dependencies are included in `requirements.txt` and can be installed with `pip install -r requirements.txt`.
+1. Create a new Python 3.10 environment. With conda, this would be 
+```
+conda create -n <env_name> python=3.10
+conda activate <env_name>
+```
+2. Install GDAL via conda
+```
+conda install -c conda-forge gdal
+```
+* Note: gdal must be installed with conda instead of pip since it is not a pure Python package.
+
+3. Install the rest of the packages
+```
+pip install -r requirements.txt
+```
+
+
 
 ## Usage Examples
 
@@ -56,11 +72,6 @@ python region_model_generator.py --help
 python region_model_generator.py --region_id AE_R001 --region_kml sample_kmls/AE_R001.kml --geojson_dir ../annotations/primary_dataset/site_models
 ```
 
-### STAC Query Example
-
-While not intended to be a standalone utility, `stac_query_example.py` provides documentation and guidelines on collecting publicly-available imagery from the Sentinel-2 and Landsat-8 collections.
-
-The script runs without any command line arguments, and is supplied with an example boundary file, hard-coded into the script. Functions exist within the script to handle either geojson or kml bounding boxes on which to query STAC. Each of these functions is commented extensively with a working example in addition to a generalized description of relevant fields and query returns.
 
 ### Site and Region Model Validation Example
 
@@ -72,4 +83,62 @@ python validate_site_and_region_models.py --help
 
 python validate_site_and_region_models.py --path sample_models_for_validation --schema_file smart.schema.json
 ```
+
+
+### STAC Query Example
+
+While not intended to be a standalone utility, `stac_query_example.py` provides documentation and guidelines on collecting publicly-available imagery from the Sentinel-2 and Landsat-8 collections.
+
+The script runs without any command line arguments, and is supplied with an example boundary file, hard-coded into the script. Functions exist within the script to handle either geojson or kml bounding boxes on which to query STAC. Each of these functions is commented extensively with a working example in addition to a generalized description of relevant fields and query returns.
+
+
+### Accessing Satellite Imagery
+Details on the sources of the satellite imagery is provided in [obtain_imagery.md](../documentation/obtain_imagery.md). Here, we provide examples for accessing the imagery through STAC queries.
+
+Only Sentinel-L2A images can be accessed for free currently. `access_imagery_l2a` provides an example on how to access and view these images. Simply run
+```
+python access_imagery_l2a.py
+```
+
+Landsat-8 and Sentinel-L1C images are stored in AWS S3 buckets under "requester pays" permissions; thus, they require an AWS account. Follow the instructions [here](https://repost.aws/knowledge-center/create-and-activate-aws-account) to create an AWS account. Once you have an AWS account, you can provide the credentials in two ways.
+
+1. Store your AWS credentials in a `.aws/credentials` file in your home directory. (Recommended)
+    
+    a. Install the AWS command line interface by following the directions [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+    
+    b. Configure your AWS credentials using the AWS CLI by running `aws configure`. This stores your credentials and config as `~/.aws/credentials` and `~/.aws/config`
+
+    c. Run `access_imagery_aws.py` without an changes. Note: `boto3.Session()` uses the default AWS credentials stored in the files you just created.
+
+    ```
+    python access_imagery_aws.py
+    ```
+
+2. Hardcode your AWS credentials in the script
+
+    a. Uncomment the following lines and add your AWS credentials in place of `AWS_ACCESS_KEY` and `AWS_SECRET_KEY`. Comment out the previous `aws_session` definition
+
+    ```
+    aws_session = AWSSession(
+        boto3.Session(
+            aws_access_key_id='AWS_ACCESS_KEY',
+        aws_secret_access_key='AWS_SECRET_KEY',
+            ), 
+        requester_pays=True)
+    ```
+
+    b. Run `access_imagery_aws.py`
+    ```
+    python access_imagery_aws.py
+    ```
+
+This will showcase 4 images from the Landsat collection. Sentinel-L2A and Sentinel-L1C can be accessed this way as well.
+
+Note:
+- There is a known [error in the hrefs for the L1C collection where they point to the wrong S3 bucket](https://github.com/Element84/earth-search/issues/3). We manually account for this in the `access_images` function by replacing 'sentinel-s2-l2a' with 'sentinel-s2-l1c' in the href.
+- If you encounter an `Access Denied` error for the Sentinel-L1C images but not the other sources, this may be due to restrictions on your AWS account. Sentinel-L1C image are stored in the `eu-central-1` region, which may be restricted for some AWS accounts with stricter security requirements.  
+
+Additional resources for working with STAC queries and accessing imagery in S3 buckets:
+- https://www.matecdev.com/posts/landsat-sentinel-aws-s3-python.html
+- https://code.usgs.gov/eros-user-services/accessing_landsat_data/tutorials/introduction-to-landsat-cloud-access-direct-requester-pays/-/blob/main/Intro_to_Landsat_Direct_Requester_Pays_v2.ipynb?ref_type=heads
 

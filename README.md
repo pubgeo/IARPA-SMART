@@ -13,9 +13,16 @@ This repository contains the following key components:
 - The **annotation dataset** (found in [`annotations/`](annotations/)). Throughout the documentation in this Github repository, we refer to this dataset as the `SMART Heavy Construction Dataset`.
 - [Instructions for how to obtain some of the underlying and corresponding satellite imagery](documentation/obtain_imagery.md) in which these activities can be observed. 
 - Useful **utilities** (found in [`utilities/`](utilities/)) to help get started with and make use of the dataset. 
-- A Python-based implementation of **semi-custom performance evaluation metrics** (tailored specifically to the data formats and application introduced here) can be found in [`src/`](src/). A publication describing the formulation of the evaluation metrics will be made available soon (expected May 2025 but available upon request prior to official release). 
+- A Python-based implementation of **semi-custom performance evaluation metrics** (tailored specifically to the data formats and application introduced here) can be found in [`src/`](src/). A publication describing the formulation of the evaluation metrics is available [here](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13461/1346107/Evaluating-broad-area-search-and-classification-of-heavy-construction-activity/10.1117/12.3053632.full?tab=ArticleLink) [2]. 
 
 NOTE: At the time of the initial release, some annotations in the dataset remain sequestered to support independent test and evaluation for the IARPA SMART program and potential follow-on activities. These will remain sequestered (and unreleased here) until they are no longer needed for sequestered testing by the program. Expected release is by January 2025. 
+
+# Getting Started
+To get started working with this repository, we recommend the following:
+
+1. Follow the instructions in [`src/README.md`](./src/README.md) to install the **iarpa_smart_metrics** package and run the example script for the evaluation process.
+
+2. Follow the instructions in [`utilities/README.md`](./utilities/README.md) to see how region and site models are created and how to access satellite imagery.
 
 # Terminology
 
@@ -369,6 +376,8 @@ Development of the dataset was also supported by:
 
 # References
 [1]: H.R. Goldberg et al., "Automated global-scale detection and characterization of anthropogenic activity using multi-source satellite-based remote sensing imagery" in Geospatial Informatics XIII, SPIE, vol. 12525, pp. 12525-1, 2023.
+
+[2]: C.R. Ratto et al., "Evaluating broad area search and classification of heavy construction activity from multisource, multitemporal satellite image sequences" in Geospatial Informatics XV, SPIE, vol. 13461, pp. 13461-1, 2025.
 
 # Contact the authors
 Please reach out to iarpa.smart@jhuapl.edu with any questions or feedback. 

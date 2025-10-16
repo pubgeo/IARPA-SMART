@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# assumes that the IARPA-SMART repository is located in the HOME directory
-REPO="$HOME/IARPA-SMART/src"
+# assumes that the IARPA-SMART repository is located in the current directory
+REPO="."
 alias python3=python
 python3 -V
 export PYTHONPATH=.

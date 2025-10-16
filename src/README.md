@@ -5,6 +5,8 @@ Copyright 2025
 The Johns Hopkins University Applied Physics Laboratory and BlackSky Inc.
 
 ## Contents
+This directory contains code for evaluating the TA2 metrics proposed in [Evaluating broad area search and classification of heavy construction activity from multisource, multitemporal satellite image sequences](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13461/1346107/Evaluating-broad-area-search-and-classification-of-heavy-construction-activity/10.1117/12.3053632.full?tab=ArticleLink). 
+
 * [Contact](#contact)
 * [Requirements](#requirements)
 * [Installation](#installation)
@@ -18,17 +20,43 @@ Send email to: iarpa.smart@jhuapl.edu
 
 ## Requirements
 
-Requires Python 3.11
+Requires Python 3.11 and the dependencies in `requirements.txt`
 
 Supported operating systems: Unix and macOS
 
 ## Installation
 
-Install the `iarpa_smart_metrics` module using pip:
+1. Clone the repository
+```
+git clone https://github.com/pubgeo/IARPA_SMART.git
+```
 
-```pip3 install -e .```
+2. Create a Python environment with Python 3.11. For a conda environment, this would be
+```
+conda create -n <env_name> python=3.11
+conda activate <env_name>
+```
 
-See the [Installation](INSTALLATION.md) guide for more details.
+3. Within the Python 3.11 environment, install the `iarpa_smart_metrics` module using pip:
+
+```
+cd IARPA-SMART/src
+pip install -e .
+```
+
+4. Run the example script
+(run the .sh script *directly*, without using `/bin/sh`) to verify correct installation
+
+```
+cd IARPA-SMART/src
+./example/example_run.sh
+```
+
+* Check that the script runs without errors
+* Check that the `example/output` and `example/output.compare` folders have been created and populated
+* Verify correct output by comparing the generated output to the expected output in `output.compare`. This comparison can be done using the `diff` command: `diff -r example/output.compare/ example/output/`
+
+See the [Installation](INSTALLATION.md) guide for more details and [example/README.md](./example/README.md) for more details on the example script.
 
 ## Usage Examples
 

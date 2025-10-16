@@ -1,3 +1,6 @@
+# Example
+This is an example of how to use the SMART test harness. The example includes sample data and a script that demonstrates how to run the test harness on the example data. Please follow the instructions below to run the example and ensure your installation was successful. This example should also serve as a guideline on how to structure your own test harness input files.
+
 
 # Example Inputs
 
@@ -7,9 +10,20 @@ Example inputs for the test harness are saved in the [input](./input) directory:
 
 # Example Test Harness Run
 
-* Edit [example_run.sh](example_run.sh) and update the `REPO` variable to point to the parent directory of this code repository.
-* Run [example_run.sh](example_run.sh) and verify correct output by comparing the generated output to the expected output in `output.compare`.
-* This comparison can be done using the `diff` command: `diff -r example/output.compare/ example/output/`
+1. **Run the example script**
+(run the .sh script *directly*, without using `/bin/sh`)
+
+```
+cd IARPA-SMART/src
+./example/example_run.sh
+```
+
+2.  **Check outputs**
+    * Check that the script runs without errors
+    * Check that the `example/output` and `example/output.compare` folders have been created and populated
+    * Verify correct output by comparing the generated output to the expected output in `output.compare`. This comparison can be done using the `diff` command: `diff -r example/output.compare/ example/output/`
+
+
 
 # Example Outputs
 

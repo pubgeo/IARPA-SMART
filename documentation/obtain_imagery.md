@@ -15,20 +15,8 @@ However, for the purposes of algorithm performance evaluation, only observations
 ## Publicly available data (Landsat and Sentinel)
 The Landsat 8 (L8 or LS) and Sentinel 2 (S2) imagery are publicly available. There are a number of ways to obtain these images. We recommend one of the following
 
-### Landsat 8
-Landsat 8 data can be obtained via one of the following links: 
 
-- [USGS Landsat Commercial Cloud Access Guide](https://www.usgs.gov/landsat-missions/landsat-commercial-cloud-data-access)
-
-### Sentinel 2
-Sentinel 2 data can be obtained via one of the following links: 
-
-- [ESA Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/)
-- [Copernicus Sentinel-2 API Guide](https://dataspace.copernicus.eu/news/2023-9-28-accessing-sentinel-mission-data-new-copernicus-data-space-ecosystem-apis)
-- [Sentinel Hub EO Browser](https://apps.sentinel-hub.com/eo-browser/)
-- [USGS Earth Explorer](https://earthexplorer.usgs.gov/)
-
-### Using STAC
+### Using STAC (Recommended)
 The use of [SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en) facilitates the search, discovery, and acquisition of geospatial imagery. For faster, automated imagery retrieval, we recommend obtaining imagery in this fashion. Both Landsat 8 and Sentinel 2 imagery are available via STAC endpoints hosted on Amazon Web Services (AWS). See the table below for more information: 
 
 | Satellite Sensor<br>Source   | STAC API Endpoint | Format | AWS Location | 
@@ -41,13 +29,26 @@ The use of [SpatioTemporal Asset Catalogs (STAC)](https://stacspec.org/en) facil
 - *[COG: Cloud Optimizied GeoTIFF Format Description](https://www.usgs.gov/media/files/landsat-cloud-optimized-geotiff-data-format-control-book)
 - **The Sentinel 2 v0 STAC catalog is retired now, but was used for most annotations, and may occasionally have images that v1 does not
 
-Examples demonstrating querying calls to the STAC endpoints can be found in [IARPA-SMART/utilities/stac_query_example.py](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/stac_query_example.py). We have also included requirements for the environment at [IARPA-SMART/utilities/requirements.txt](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/requirements.txt) to run the examples. 
+Examples demonstrating querying calls to the STAC endpoints can be found in [IARPA-SMART/utilities/stac_query_example.py](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/stac_query_example.py). See [IARPA_SMART/utilities/README.md](../utilities/README.md) for instructions on running examples to access and view the images. We have also included requirements for the environment at [IARPA-SMART/utilities/requirements.txt](https://github.com/pubgeo/IARPA-SMART/blob/main/utilities/requirements.txt) to run the examples. 
 
 We recommend using some or all of the images listed in these files:
 - [obtain_imagery_supplemental/suggested_LS_images_with_annotated_sites.csv](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/obtain_imagery_supplemental/suggested_LS_images_with_annotated_sites.csv)
 - [obtain_imagery_supplemental/suggested_S2_images_with_annotated_sites.csv](https://github.com/pubgeo/IARPA-SMART/blob/main/documentation/obtain_imagery_supplemental/suggested_S2_images_with_annotated_sites.csv)
 
 There may be additional images beyond those listed that can also be used but this set represents a sufficient baseline. 
+
+### Landsat 8
+Landsat 8 data can be obtained via one of the following links: 
+
+- [USGS Landsat Commercial Cloud Access Guide](https://www.usgs.gov/landsat-missions/landsat-commercial-cloud-data-access)
+
+### Sentinel 2
+Sentinel 2 data can be obtained via one of the following links: 
+
+- [ESA Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/)
+- [Copernicus Sentinel-2 API Guide](https://dataspace.copernicus.eu/news/2023-9-28-accessing-sentinel-mission-data-new-copernicus-data-space-ecosystem-apis)
+- [Sentinel Hub EO Browser](https://apps.sentinel-hub.com/eo-browser/)
+- [USGS Earth Explorer](https://earthexplorer.usgs.gov/)
 
 ## Non-publicly available data (WorldView and Planet Labs)
 Due to licensing restrictions, we are not able to disseminate the WorldView or Planet imagery. While not technically required, having these imagery sources for algorithm development is beneficial.  
